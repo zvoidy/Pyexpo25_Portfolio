@@ -154,11 +154,15 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
 }
-
+#header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 #header.header-scrolled,
 #header.header-fixed {
   background: rgba(6, 12, 34, 0.98);
-  height: 70px;
+  height: auto;
   padding: 15px 0;
   transition: all 0.5s;
 }
@@ -186,7 +190,7 @@ h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 60px;
 }
 
 /*--------------------------------------------------------------
@@ -361,7 +365,7 @@ h6 {
   right: 0;
   top: 0;
   z-index: 999;
-  margin: 15px 15px 0 0;
+  margin: 25px 20px 0 0;
   border: 0;
   background: none;
   font-size: 24px;
@@ -469,15 +473,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url(../img/intro-bg.jpg) top center;
-  background-size: cover;
+  background: url(../img/intro-bg1.jpg) no-repeat center center;
+  background-size: cover; /* Ensures the whole image is visible */
+  background-color: #000; /* Optional: Adds a fallback color for gaps */
   overflow: hidden;
   position: relative;
 }
 
+
 #intro:before {
   content: "";
-  background: rgba(6, 12, 34, 0.8);
+  background: rgba(6, 12, 34, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -655,12 +661,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 #about {
-  background: url("../img/about-bg.jpg");
+  /* background: url("../img/about-bg.jpg"); */
   background-size: cover;
   overflow: hidden;
   position: relative;
   color: #fff;
   padding: 60px 0 40px 0;
+  height: 100vh;
 }
 
 #about:before {
@@ -671,6 +678,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   top: 0;
   left: 0;
   right: 0;
+}
+
+.about-content {
+  position: relative;
+ display: flex;
 }
 
 #about h2 {
@@ -1593,7 +1605,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 991px) {
   #header {
     background: rgba(6, 12, 34, 0.98);
-    height: 70px;
+    height: auto;
     padding: 15px 0;
     transition: all 0.5s;
   }
