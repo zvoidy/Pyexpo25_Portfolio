@@ -8,18 +8,22 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  
+
 
   <!-- Favicons -->
   <link href="assets/img/KiTE-Logo.png" rel="icon">
   <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
-  <link href="assets/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link
+    href="assets/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Lugrasimo&family=Nova+Cut&family=Orbitron:wght@400..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Lugrasimo&family=Nova+Cut&family=Orbitron:wght@400..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 
 
   <!-- Bootstrap CSS File -->
@@ -75,34 +79,34 @@
   </header><!-- #header -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-menu a");
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-menu a");
 
-  const observerOptions = {
-    root: null, // Use the viewport
-    threshold: 0.6, // 60% of the section must be visible
-  };
+      const observerOptions = {
+        root: null, // Use the viewport
+        threshold: 0.6, // 60% of the section must be visible
+      };
 
-  const observerCallback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // Remove active class from all links
-        navLinks.forEach((link) => link.parentElement.classList.remove("menu-active"));
+      const observerCallback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Remove active class from all links
+            navLinks.forEach((link) => link.parentElement.classList.remove("menu-active"));
 
-        // Add active class to the current section's link
-        const activeLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
-        if (activeLink) {
-          activeLink.parentElement.classList.add("menu-active");
-        }
-      }
+            // Add active class to the current section's link
+            const activeLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
+            if (activeLink) {
+              activeLink.parentElement.classList.add("menu-active");
+            }
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+      // Observe each section
+      sections.forEach((section) => observer.observe(section));
     });
-  };
-
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-  // Observe each section
-  sections.forEach((section) => observer.observe(section));
-});
 
   </script>
 
@@ -111,12 +115,32 @@
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn" style="font-family:'Orbitron', sans-serif ;">
-      <h1 class="mb-4 pb-0" style="font-family:'Orbitron', sans-serif ;">Unleash Your Coding Skills <br>Dive Into <span>PYEXPO</span> 25</h1>
+      <h1 class="mb-4 pb-0" style="font-family:'Orbitron', sans-serif ;">Unleash Your Coding Skills <br>Dive Into
+        <span>PYEXPO</span> 25</h1>
       <p class="mb-4 pb-0">March, Kgisl Institute of technology, Coimbatore.</p>
       
-    
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
+      <span class="countdown">Countdown for Pyexpo</span>
+      <div class="timer">
+        <div class="time">
+          <h1 id="days">00</h1>
+          <span>Days</span>
+        </div>
+        <div class="time">
+          <h1 id="hours">00</h1>
+          <span>Hours</span>
+        </div>
+        <div class="time">
+          <h1 id="min">00</h1>
+          <span>Minutes</span>
+        </div>
+        <div class="time">
+          <h1 id="sec">00</h1>
+          <span>Seconds</span>
+        </div>
+      </div>
+
+      <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a> -->
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
   </section>
@@ -147,7 +171,7 @@
       </div>
     </section>
 
-   </main>
+  </main>
 
   <!--==========================
     Footer
@@ -159,7 +183,9 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <img src="assets/img/PyExpoLogo.png" alt="TheEvenet">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro.
+              Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore
+              consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
