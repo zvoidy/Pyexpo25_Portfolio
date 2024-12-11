@@ -656,18 +656,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 /* timer start */
-.intro-wrapper{
-  display:flex;
-  flex-direction: column;
-}
-.intro-container .countdown{
+
+.countdown{
   font-weight: 600;
   font-size: 2rem;
   color:white;
+  margin-top: 30px;
 }
 .timer{
   width:80%;
   height:200px;
+  backdrop-filter: blur(20px);
   display: flex;
   justify-content: space-around;
   align-items: center;
