@@ -8,7 +8,11 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face{
+  font-family:timer;
+  src: url('../lib/Font/DS-DIGIB.TTF') format('truetype');
 
+}
 body {
   background: #fff;
   color: #2f3138;
@@ -33,7 +37,7 @@ p {
   margin: 0 0 30px 0;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -44,7 +48,7 @@ h6 {
   margin: 0 0 20px 0;
   padding: 0;
   color: #0e1b4d;
-}
+} */
 
 .main-page {
   margin-top: 70px;
@@ -664,19 +668,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-top: 30px;
 }
 .timer{
-  width:80%;
+  width:60%;
   height:200px;
   backdrop-filter: blur(20px);
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.timer .time h1{
-  font-size:4rem;
+.timer h1{
+  font-family: timer !important;
+  font-size:5rem;
 }
 .timer .time span{
   color:white;
   font-weight:600;
+}
+.timer .time-btn{
+  font-size:3rem;
+  color:white;
 }
 
 /* media query for time start */
@@ -699,25 +708,47 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about {
   /* background: url("../img/about-bg.jpg"); */
-  background-size: cover;
-  overflow: hidden;
+  background: rgba(1, 1, 1, 0.8);
+  /* background-size: cover; */
+  /* overflow: hidden; */
+  font-family: 'Orbitron', sans-serif;
   position: relative;
   color: #fff;
-  padding: 60px 0 40px 0;
+  display:flex;
+  flex-direction: column;  
   height: 100vh;
 }
 
-#about:before {
+/* #about:before {
   content: "";
-  background: rgba(13, 20, 41, 0.8);
+  background: rgba(1, 1, 1, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+} */
+#about .container{
+  width:90%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index:100;
+  gap:10%;
 }
-
-.about-content {
+#about .container h1{
+  color:white !important;
+  margin-top:30px;
+}
+#about .container .content{
+  width:100%;
+  height:auto;
+  min-height:30px;
+  border: 1px solid red;
+}
+/* .about-content {
   position: relative;
  display: flex;
 }
@@ -741,7 +772,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
   margin-bottom: 20px;
   color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # Speakers Section
