@@ -655,7 +655,44 @@ body.mobile-nav-active #mobile-nav-toggle {
     opacity: 0;
   }
 }
+/* timer start */
 
+.countdown{
+  font-weight: 600;
+  font-size: 2rem;
+  color:white;
+  margin-top: 30px;
+}
+.timer{
+  width:80%;
+  height:200px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.timer .time h1{
+  font-size:4rem;
+}
+.timer .time span{
+  color:white;
+  font-weight:600;
+}
+
+/* media query for time start */
+@media (max-width:400px){
+  .timer{
+    width:100%;
+  }
+  .timer .time h1{
+    font-size: 1rem;
+  }
+  .timer .time span{
+    font-weight: 400;
+  }
+}
+/* media query for time end */
+/* timer end */
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
