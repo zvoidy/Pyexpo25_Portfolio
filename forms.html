@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PYEXPO'25</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+
+
+  <!-- Favicons -->
+  <link href="assets/img/KiTE-Logo.png" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <!-- <link
+    href="assets/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Lugrasimo&family=Nova+Cut&family=Orbitron:wght@400..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Bootstrap CSS File -->
+  <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="assets/lib/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="assets/css/timer.css"> -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="assets/img/PyExpoLogo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="#intro">Home</a></li>
+          <!-- <li><a href="#about">About</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#domain">Domain</a></li> -->
+          <!-- <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#hotels">Hotels</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#supporters">Sponsors</a></li>
+          <li><a href="#contact">Contact</a></li> -->
+          <li class="login"><a class="disabled" href="javascript:void(0);">Login / Register</a></li>        
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-menu a");
+
+      const observerOptions = {
+        root: null, // Use the viewport
+        threshold: 0.6, // 60% of the section must be visible
+      };
+
+      const observerCallback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Remove active class from all links
+            navLinks.forEach((link) => link.parentElement.classList.remove("menu-active"));
+
+            // Add active class to the current section's link
+            const activeLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
+            if (activeLink) {
+              activeLink.parentElement.classList.add("menu-active");
+            }
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+      // Observe each section
+      sections.forEach((section) => observer.observe(section));
+    });
+
+  </script>
+
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    
+
+    <div class="container">
+      <div class="copyright">
+        &copy; <strong>Pyexpo'25</strong>. All Rights Reserved
+      </div>
+      <div class="dev">
+        Developed & Handled by <a href="">IPS TECH COMMUNITY</a>
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="assets/lib/jquery/jquery.min.js"></script>
+  <script src="assets/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/lib/easing/easing.min.js"></script>
+  <script src="assets/lib/superfish/hoverIntent.js"></script>
+  <script src="assets/lib/superfish/superfish.min.js"></script>
+  <script src="assets/lib/wow/wow.min.js"></script>
+  <script src="assets/lib/venobox/venobox.min.js"></script>
+  <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="assets/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
