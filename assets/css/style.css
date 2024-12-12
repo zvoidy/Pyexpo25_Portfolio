@@ -307,7 +307,7 @@ h6 {
   width: 100%;
 }
 
-.nav-menu li.buy-tickets a {
+.nav-menu li.login a {
   color: #fff;
   background: #f82249;
   padding: 7px 22px;
@@ -319,16 +319,35 @@ h6 {
   margin-top: 2px;
   line-height: 1;
   font-size: 13px;
+  
 }
 
-.nav-menu li.buy-tickets a:hover {
+.nav-menu li.login a:hover {
   background: none;
 }
 
-.nav-menu li.buy-tickets:hover a:before,
-.nav-menu li.buy-tickets.menu-active a:before {
+.nav-menu li.login:hover a:before,
+.nav-menu li.login.menu-active a:before {
   visibility: hidden;
 }
+
+.nav-menu li.login a.disabled {
+  color: #a5a5a5; /* Disabled color */
+  background: #e0e0e0; /* Grey background */
+  border-color: #e0e0e0; /* Border matches background */
+  cursor: not-allowed; /* Show 'not-allowed' cursor */
+}
+
+.nav-menu li.login a.disabled:hover {
+  background: #e0e0e0; /* Keep background same on hover */
+  color: #ccc; /* Prevent hover styles */
+}
+
+.nav-menu li.login a.disabled:before,
+.nav-menu li.login.menu-active a.disabled:before {
+  visibility: hidden; /* Hide any hover effects */
+}
+
 
 .nav-menu ul {
   margin: 4px 0 0 0;
@@ -638,7 +657,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 0;
 }
 
-#about .about-btn {
+#intro .about-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -655,7 +674,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 2px solid #f82249;
 }
 
-#about .about-btn:hover {
+#intro .about-btn:hover {
   background: #f82249;
   color: #fff;
 }
@@ -1677,11 +1696,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   padding-top: 30px;
 }
+#footer .dev{
+  text-align: center;
+}
 
 #footer .credits {
   text-align: center;
-  font-size: 1px;
-  color: #ddd;
+  font-size: 0px;
+  color: #000000;
 }
 
 /*--------------------------------------------------------------
