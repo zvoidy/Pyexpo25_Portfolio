@@ -387,11 +387,11 @@ h6 {
 #mobile-nav {
   position: fixed;
   top: 0;
-  padding-top: 18px;
+  padding-top:80px;
   bottom: 0;
   z-index: 998;
   background: rgba(6, 12, 34, 0.9);
-  left: -260px;
+  right: -260px;
   width: 260px;
   overflow-y: auto;
   transition: 0.4s;
@@ -417,10 +417,16 @@ h6 {
   width: 100%;
   display: block;
   outline: none;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 #mobile-nav ul li a:hover {
   color: #f82249;
+}
+#mobile-nav ul li.active > a {
+  color: #f82249;
+  font-weight: bold;
 }
 
 #mobile-nav ul li li {
@@ -462,11 +468,21 @@ body.mobile-nav-active {
 }
 
 body.mobile-nav-active #mobile-nav {
-  left: 0;
+  right: 0;
 }
 
 body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
+}
+
+@media (min-width: 991px) {
+#mobile-nav {
+  display: none;
+}
+#mobile-body-overly{
+  background: none;
+}
+  
 }
 
 /*--------------------------------------------------------------
@@ -476,15 +492,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh !important;
-  /* background: url(../img/intro-bg1.jpg) no-repeat center center; */
+  background: url(../img/intro-bg1.jpg) no-repeat center center;
   background-size: cover; /* Ensures the whole image is visible */
   background-color: #000; /* Optional: Adds a fallback color for gaps */
   overflow: hidden;
-  position: relative;
-  background: radial-gradient(circle at top left, rgba(128, 0, 128, 0.5), transparent 25%), 
-  radial-gradient(circle at bottom right, rgba(255, 0, 0, 0.5),  transparent 25%);
-background-color: black; /* Fallback color */
-background-blend-mode: screen;
+ 
 }
 
 
@@ -1713,6 +1725,19 @@ background-blend-mode: screen;
     display: inline;
   }
 
+  #intro{
+    margin: 0 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    background: radial-gradient(circle at top left, #7033ffda, transparent 35%),
+        radial-gradient(circle at bottom right, #ff00448a, transparent 35%);
+    background-color: black!important;
+    /* Fallback color */
+    background-attachment: fixed!important;
+    background-repeat: no-repeat!important;
+    box-sizing: border-box;
+
+  }
+
   #intro .intro-container {
     top: 70px;
   }
@@ -1725,7 +1750,7 @@ background-blend-mode: screen;
   }
 
   #intro p {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 400;
     letter-spacing: 1px;
   }
