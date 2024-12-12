@@ -152,7 +152,7 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("min");
 const seconds = document.getElementById("sec");
 
-const timerSet = new Date(2025, 1, 15, 10, 0, 0);
+// const timerSet = new Date(2025, 1, 15, 10, 0, 0);
 
 function updateCountDown(){
   const currentTime = new Date();
