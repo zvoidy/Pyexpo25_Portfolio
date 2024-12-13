@@ -833,8 +833,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .second-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
 }
 
 
