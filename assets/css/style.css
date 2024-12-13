@@ -1087,13 +1087,11 @@ Domain section
 -----------------------------------------------------------------*/
 #domain {
   width: 100%;
-  height: auto;
-  /* border:1px solid red; */
-  background-color: #040919;
+  min-height: 90vh;
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding:50px 0;
 }
 
 #domain .container-fluid {
@@ -1125,6 +1123,24 @@ Domain section
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+}
+
+#domain a {
+  padding: 9px 25px;
+  cursor: pointer;
+  background: var(--red-color);
+  color: #fff;
+  transition: all 0.3s ease;
+  outline: none;
+  font-size: 14px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  
+}
+
+#domain a:hover {
+  background: #e0072f;
+  transition: all 0.3s ease;
 }
 
 /* Card Styling */
