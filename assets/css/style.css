@@ -517,7 +517,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh !important;
-  background: url(../img/intro-bg1.jpg) no-repeat center center;
+  background: url(../img/bg/intro-bg1.jpg) no-repeat center center;
   background-size: cover; /* Ensures the whole image is visible */
   background-color: #000; /* Optional: Adds a fallback color for gaps */
   overflow: hidden;
