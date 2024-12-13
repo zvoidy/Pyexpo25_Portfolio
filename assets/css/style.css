@@ -1099,6 +1099,13 @@ Roadmap Section
   #roadmap ul li .date{
     font-size: 1rem !important;
   }
+  
+  #roadmap .roadmap-heading p{
+    font-size: 1rem;
+  }
+  #roadmap .roadmap-heading{
+    font-size: 2rem;
+  }
 }
 
 
