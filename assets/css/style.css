@@ -1918,7 +1918,7 @@ Domain section
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.footer {
+/* .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1931,7 +1931,6 @@ Domain section
   flex: 1;
   display: flex;
   justify-content: center;
-  /* border:1px solid blue; */
 }
 
 .footer-left img {
@@ -1945,7 +1944,6 @@ Domain section
   flex: 2;
   display: flex;
   justify-content: center;
-  /* border:1px solid red; */
 }
 
 .footer-container {
@@ -1953,7 +1951,6 @@ Domain section
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  /* border:1px solid green; */
 }
 
 .social-media, 
@@ -1988,7 +1985,7 @@ Domain section
 }
 
 .social-icons a:hover[title="Twitter"] {
-  background-color: #1da1f2; /* Twitter color */
+  background-color: #1da1f2; 
 }
 .social-icons a:hover[title="LinkedIn"] {
   background-color: #0a66c2; 
@@ -2046,11 +2043,11 @@ Domain section
   .contact-item i {
     font-size: 18px;
   }
-}
+} */
 
 
 
-/* 
+
 #footer {
   background: #101522;
   padding: 0 0 25px 0;
@@ -2198,7 +2195,7 @@ Domain section
   text-align: center;
   font-size: 0px;
   color: #000000;
-} */
+}
 
 /*--------------------------------------------------------------
 # Responsive Media Queries
