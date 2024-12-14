@@ -589,6 +589,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   letter-spacing: 1px;
 }
 
+/* Logo styling */
+#intro .intro-logo {
+  max-width: 220px; /* Adjust logo size */
+  margin-bottom: 20px; /* Spacing below the logo */
+}
+
+/* Center-align adjustments */
+#intro .intro-container {
+  align-items: center; /* Ensure vertical alignment with the logo */
+  text-align: center;
+}
+
+#intro .intro-h1,
+#intro .intro-h2,
+#intro p {
+  margin-top: 10px; /* Adjust spacing for neat alignment */
+}
+
 #about .play-btn {
   width: 94px;
   height: 94px;
@@ -2341,6 +2359,9 @@ Domain section
     font-size: 15px;
     font-weight: 400;
     letter-spacing: 1px;
+  }
+  #intro .intro-logo {
+    width: 180px;
   }
 
 
