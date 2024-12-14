@@ -1821,7 +1821,7 @@ Domain section
   font-size: 14px;
 }
 
-#subscribe button {
+#subscribe a {
   border: 0;
   padding: 9px 25px;
   cursor: pointer;
@@ -1834,7 +1834,7 @@ Domain section
   transition: all 0.3s ease;
 }
 
-#subscribe button:hover {
+#subscribe a:hover {
   background: #e0072f;
   transition: all 0.3s ease;
 }
