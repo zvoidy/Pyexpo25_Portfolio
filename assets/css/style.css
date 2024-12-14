@@ -2022,6 +2022,102 @@ Domain section
 #contact .form button[type="submit"]:hover {
   background: #e0072f;
 }
+/*--------------------------------------------------------------
+# contact-text section
+--------------------------------------------------------------*/
+/* Inforamation Bar */
+#contact-text {
+  background: #101522;
+}
+
+#contact-text .contact-wrapper {
+  background: #fff;
+  margin-bottom: -35px;
+  margin-top: 0px;
+  padding: 30px 0;
+  border-radius: 4px;
+  position: relative;
+  top: -40px;
+  z-index: 999;
+}
+
+#contact-text ul {
+  text-align: center;
+}
+
+#contact-text ul li {
+  display: inline-block;
+}
+
+#contact-text ul li i {
+  text-align: center;
+  padding: 0 12px;
+  font-size: 28px;
+  vertical-align: middle;
+  color:var(--red-color);
+}
+
+#contact-text ul li span {
+  font-size: 14px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  color: white !important;
+}
+
+#contact-text ul li span b {
+  font-size: 20px;
+  color: var(--purple-color)!important;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+#contact-text .contact-wrapper {
+  box-shadow: 0 8px 24px #000;
+  background: #1c1c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact-text .contact-wrapper {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px 0;
+    gap: 1rem;
+  }
+
+  #contact-text ul li i {
+    font-size: 24px; /* Slightly smaller icons */
+    padding: 0 10px;
+  }
+
+  #contact-text ul li span {
+    font-size: 13px;
+  }
+
+  #contact-text ul li span b {
+    font-size: 18px;
+  }
+  #contact-text ul{
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact-text ul li i {
+    font-size: 20px; /* Even smaller icons for mobile */
+  }
+
+  #contact-text ul li span {
+    font-size: 12px;
+  }
+
+  #contact-text ul li span b {
+    font-size: 16px;
+  }
+  #contact-text ul{
+    text-align: left !important;
+  }
+}
 
 /*--------------------------------------------------------------
 # Footer
