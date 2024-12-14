@@ -868,7 +868,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-logo1 {
-  max-width: 120px; /* Adjust logo size */
+  max-width: 180px; /* Adjust logo size */
   height: auto; /* Maintain aspect ratio */
   transition: transform 0.3s ease; /* Add hover effect */
 }
@@ -889,12 +889,16 @@ body.mobile-nav-active #mobile-nav-toggle {
     gap: 1rem;
   }
 
-  #about .about-logo {
-    max-width: 100px; /* Smaller size on smaller screens */
+  #about .about-logo1 {
+    max-width: 130px; /* Smaller size on smaller screens */
   }
-  #about .logos-container {
+  #about .about-logo2 {
+    max-width: 120px; /* Smaller size on smaller screens */
+  }
+
+  /* #about .logos-container {
     margin-left: 8%;
-    }
+    } */
 }
 
 
