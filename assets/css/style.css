@@ -858,6 +858,46 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: bold;
 }
 
+/* Logos Container */
+#about .logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Space between the logos */
+  margin-bottom: 2rem; /* Space below the logos */
+}
+
+#about .about-logo1 {
+  max-width: 120px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+#about .about-logo2 {
+  max-width: 160px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+#about .about-logo1:hover ,
+#about .about-logo2:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Adjust content gap for responsive design */
+@media (max-width: 768px) {
+  #about .logos-container {
+    gap: 1rem;
+  }
+
+  #about .about-logo {
+    max-width: 100px; /* Smaller size on smaller screens */
+  }
+  #about .logos-container {
+    margin-left: 8%;
+    }
+}
+
+
 
 /* Animations */
 @keyframes fade-in {
