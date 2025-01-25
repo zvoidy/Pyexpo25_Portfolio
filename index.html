@@ -112,6 +112,13 @@
 
   </script>
 
+  <!-- Initializing vanilla js -->
+  <script>
+    VanillaTilt.init(document.querySelectorAll('.cards'));
+  </script>
+
+
+
   <!--==========================
     Intro Section
   ============================-->
@@ -169,10 +176,10 @@
         <h1 class="fade-in section-header">About <span style="color:var(--purple-color)">PY<span
               style="color:var(--red-color)">EXPO</span></span> 25</h1>
                <!-- Logos Section -->
-    <div class="logos-container">
-      <img src="assets/img/logos/KiTE-NewLogo.png" alt="Logo 1" class="about-logo1">
-      <img src="assets/img/logos/ipsTechLogo.png" alt="Logo 2" class="about-logo2">
-    </div>
+        <div class="logos-container">
+          <img src="assets/img/logos/KiTE-NewLogo.png" alt="Logo 1" class="about-logo1">
+          <img src="assets/img/logos/ipsTechLogo.png" alt="Logo 2" class="about-logo2">
+        </div>
         <div class="content">
           <div class="first-content slide-in-left">
             <p>
@@ -284,7 +291,7 @@
         <div class="domain-body">
           <!-- Card 1 -->
           <div class="card-container">
-            <div class="cards">
+            <div class="cards" data-tilt data-tilt-glare data-tilt-max-glare data-tilt-speed="100">
               <img src="assets/img/gif/web_dev.gif" alt="Web Development">
               <div class="card-body">
                 <h5 class="card-title">Web Development</h5>
@@ -295,7 +302,7 @@
 
           <!-- Card 2 -->
           <div class="card-container">
-            <div class="cards">
+            <div class="cards" data-tilt data-tilt-glare data-tilt-max-glare data-tilt-speed="100">
               <img src="assets/img/gif/IOT.gif" alt="IOT">
               <div class="card-body">
                 <h5 class="card-title">I.O.T</h5>
@@ -306,7 +313,7 @@
 
           <!-- Card 3 -->
           <div class="card-container">
-            <div class="cards">
+            <div class="cards" data-tilt data-tilt-glare data-tilt-max-glare data-tilt-speed="100">
               <img src="assets/img/gif/pyGame.gif" alt="PyGames">
               <div class="card-body">
                 <h5 class="card-title">PyGames</h5>
@@ -317,7 +324,7 @@
 
           <!-- Card 4 -->
           <div class="card-container">
-            <div class="cards">
+            <div class="cards" data-tilt data-tilt-glare data-tilt-max-glare data-tilt-speed="100">
               <img src="assets/img/gif/AiMl.gif" alt="Ai & Ml">
               <div class="card-body">
                 <h5 class="card-title">AI&ML</h5>
@@ -328,7 +335,7 @@
 
           <!-- Card 5 -->
           <div class="card-container">
-            <div class="cards">
+            <div class="cards" data-tilt data-tilt-glare data-tilt-max-glare data-tilt-speed="100">
               <img src="assets/img/gif/student.gif" alt="Student innovation">
               <div class="card-body">
                 <h5 class="card-title">Student Innovation</h5>
@@ -485,6 +492,9 @@
   <script src="assets/lib/wow/wow.min.js"></script>
   <script src="assets/lib/venobox/venobox.min.js"></script>
   <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Vanilla JS -->
+  <script src="assets/js/vanilla-tilt.js"></script>
 
   <!-- Contact Form JavaScript File -->
   <script src="assets/contactform/contactform.js"></script>
