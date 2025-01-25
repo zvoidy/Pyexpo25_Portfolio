@@ -1243,6 +1243,8 @@ Domain section
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
   animation: breathe 3s ease-in-out infinite; 
+  -webkit-animation: breathe 3s ease-in-out infinite; /* For Safari/Older Webkit */
+  -moz-animation: breathe 3s ease-in-out infinite;    /* For Firefox */
 }
 
 /* Staggered animation delays */
