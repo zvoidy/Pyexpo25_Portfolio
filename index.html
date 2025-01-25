@@ -123,17 +123,49 @@
 
   <!-- Js for scroll -->
   <script>
-    document.addEventListener("scroll", function() {
-      let introSection = document.getElementById("intro");
+    window.addEventListener('scroll', function () {
+      const sections = document.querySelectorAll('section');  // Get all sections
+      const navLinks = document.querySelectorAll('.nav-menu a'); // Get all nav links
   
-      // Hide intro when scrolled past it
-      if (window.scrollY > window.innerHeight * 1.5) {
-        introSection.classList.add("hidden");
-      } else {
-        introSection.classList.remove("hidden");
+      let currentSection = "";
+  
+      // Check which section is currently in the viewport
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const scrollPosition = window.scrollY;
+  
+        if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
+          currentSection = section.id;
+        }
+      });
+  
+      // Remove active class from all links
+      navLinks.forEach(link => link.classList.remove('active'));
+  
+      // Add active class to the current section's corresponding link
+      if (currentSection) {
+        const currentLink = document.querySelector(`.nav-menu a[href="#${currentSection}"]`);
+        if (currentLink) {
+          currentLink.classList.add('active');
+        }
       }
     });
+  
+    // Optionally, scroll smoothly to section when nav link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the default action
+  
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
   </script>
+  
   
   <!--==========================
     Intro Section
