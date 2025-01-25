@@ -513,17 +513,28 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
-
 #intro {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh !important;
-  background: url(../img/bg/intro-bg1.jpg) no-repeat center center;
-  background-size: cover; /* Ensures the whole image is visible */
-  background-color: #000; /* Optional: Adds a fallback color for gaps */
-  overflow: hidden;
- 
+  height: 100vh;
+  background: black;
+  z-index: 1;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+#intro.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#main {
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  padding-top: 100vh; 
+}
 
 #intro:before {
   content: "";
@@ -781,11 +792,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     
   }
 }
-/* media query for time end */
-/* timer end */
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
+/* media query for time end */
+/* timer end */
 
 #about {
   /* background: linear-gradient(135deg, #1d1f21 0%, #0f0f10 100%); */
@@ -1174,7 +1187,6 @@ Roadmap Section
 
 /* --------------------------------------------------------------
 Domain section
-
 -----------------------------------------------------------------*/
 #domain {
   width: 100%;

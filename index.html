@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>PYEXPO'25</title>
+  <title>PYEXPO'25 - Empowering First-Year Innovators | KGISL Institute of Technology
+</title>
+
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta name="keywords" content="PYEXPO, hackathon, KGISL Institute of Technology, IPS Tech Community, first-year students, innovation, collaboration, technical growth, hackathon event, student empowerment, coding competition, technology, teamwork, technical excellence, industry, industy embedded, team, crew, Hackathon in Coimbatore, Hack">
+
+  <meta name="description" content="PYEXPO is an exclusive hackathon event hosted at KGISL Institute of Technology, organized by the IPS Tech Community. Designed specifically for first-year students, this event offers a unique opportunity to dive into the exciting world of hackathons, often a first-time experience for many participants. The IPS Tech Community is dedicated to empowering students by promoting innovation, teamwork, and technical excellence." >
 
 
 
@@ -54,10 +57,11 @@
   <header id="header">
     <div class="container">
 
-      <div id="logo" class="pull-left">
+      <div id="logo" class="pull-left" itemprop="competition">
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="#intro" class="scrollto"><img src="assets/img/logos/PYexpoTypoCropped.png" alt="" title=""></a>
+        <a href="#intro" class="scrollto"><img src="assets/img/logos/PYexpoTypoCropped.png" alt="Students collaborating during PYEXPO hackathon at KGISL.
+" title="PYEXPO"></a>
       </div>
 
       <nav id="nav-menu-container">
@@ -117,8 +121,20 @@
     VanillaTilt.init(document.querySelectorAll('.cards'));
   </script>
 
-
-
+  <!-- Js for scroll -->
+  <script>
+    document.addEventListener("scroll", function() {
+      let introSection = document.getElementById("intro");
+  
+      // Hide intro when scrolled past it
+      if (window.scrollY > window.innerHeight * 1.5) {
+        introSection.classList.add("hidden");
+      } else {
+        introSection.classList.remove("hidden");
+      }
+    });
+  </script>
+  
   <!--==========================
     Intro Section
   ============================-->
@@ -176,10 +192,10 @@
         <h1 class="fade-in section-header">About <span style="color:var(--purple-color)">PY<span
               style="color:var(--red-color)">EXPO</span></span> 25</h1>
                <!-- Logos Section -->
-        <div class="logos-container">
-          <img src="assets/img/logos/KiTE-NewLogo.png" alt="Logo 1" class="about-logo1">
-          <img src="assets/img/logos/ipsTechLogo.png" alt="Logo 2" class="about-logo2">
-        </div>
+    <div class="logos-container">
+      <img src="assets/img/logos/KiTE-NewLogo.png" alt="PYEXPO/Logo 1" class="about-logo1">
+      <img src="assets/img/logos/ipsTechLogo.png" alt="PYEXPO/Logo 2" class="about-logo2">
+    </div>
         <div class="content">
           <div class="first-content slide-in-left">
             <p>
@@ -228,7 +244,7 @@
       <ul>
         <!-- Idea Review -->
         <li style="--accent-color:#6b48cf">
-          <div class="date">IDEA EVALUATION</div>
+          <div class="date" itemprop="evaluation">IDEA EVALUATION</div>
           <div class="title"><span style="font-weight: bold ;">Date : </span> Dec 19-20, 2024</div>
           <div class="descr">
             Experience the exciting journey of PyExpo'25 as we guide participants from preparation and idea development
@@ -501,6 +517,8 @@
 
   <!-- Template Main Javascript File -->
   <script src="assets/js/main.js"></script>
+
+
 </body>
 
 </html>
