@@ -14,7 +14,7 @@
 
 
   <!-- Favicons -->
-  <link href="assets/img/logos/KiTE-Logo.png" rel="icon">
+  <link href="assets/img/logos/PyexpoNewLogo.png" rel="icon">
 
   <!-- Google Fonts -->
   <!-- <link
@@ -47,6 +47,31 @@
   <!-- Main Stylesheet File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="assets/css/timer.css"> -->
+
+
+  <!-- test -->
+
+       <!-- Google Web Fonts -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">   
+   
+       <!-- Icon Font Stylesheet -->
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+   
+       <!-- Libraries Stylesheet -->
+       <link href="lib/animate/animate.min.css" rel="stylesheet">
+       <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+       <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+   
+       <!-- Customized Bootstrap Stylesheet -->
+       <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+       
+  
+  <!-- -->
+
+
 </head>
 
 <body>
@@ -58,31 +83,31 @@
     <div class="container">
 
       <div id="logo" class="pull-left" itemprop="competition">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="#intro" class="scrollto"><img src="assets/img/logos/PYexpoTypoCropped.png" alt="Students collaborating during PYEXPO hackathon at KGISL.
-" title="PYEXPO"></a>
-      </div>
+        <!-- New Logo next to PYEXPO Logo -->
+        <a href="#intro" class="scrollto">
+          <img src="assets/img/logos/PyexpoNewLogo.png" alt="Your new logo" title="Your New Logo" class="new-logo">
+        </a>
+        <!-- Current PYEXPO Logo -->
+        <a href="#intro" class="scrollto">
+          <img src="assets/img/logos/PYexpoTypoCropped.png" alt="Students collaborating during PYEXPO hackathon at KGISL." title="PYEXPO">
+        </a>
 
+      </div>
+    
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#roadmap">Roadmap</a></li>
           <li><a href="#domain">Domain</a></li>
-          <!-- <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#venue">Venue</a></li>
-          <li><a href="#hotels">Hotels</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#supporters">Sponsors</a></li>
-          <li><a href="#contact">Contact</a></li> -->
-          <!-- <li class="login"><a class="disabled" href="javascript:void(0);">Login</a></li> -->
           <li class="login"><a href="https://portal.pyexpo.co">Login</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
+    
     </div>
+    
   </header><!-- #header -->
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const sections = document.querySelectorAll("section");
@@ -123,67 +148,89 @@
 
   <!-- Js for scroll -->
   <script>
-    window.addEventListener('scroll', function () {
-      const sections = document.querySelectorAll('section');  // Get all sections
-      const navLinks = document.querySelectorAll('.nav-menu a'); // Get all nav links
+    document.addEventListener("scroll", function () {
+      let introSection = document.getElementById("intro");
+      let aboutSection = document.getElementById("about");
+      let roadmapSection = document.getElementById("roadmap");
+      let domainSection = document.getElementById("domain");
   
-      let currentSection = "";
+      // Get the scroll position relative to the viewport height
+      let scrollPosition = window.scrollY;
+      let introHeight = introSection.offsetHeight;
+      let aboutHeight = aboutSection.offsetHeight;
+      let roadmapHeight = roadmapSection.offsetHeight;
+      let domainHeight = domainSection.offsetHeight;
   
-      // Check which section is currently in the viewport
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const scrollPosition = window.scrollY;
+      // Fade out the intro section when scrolled past a certain point
+      if (scrollPosition > window.innerHeight * 1.5) {
+        introSection.style.opacity = "0";  // Fade out the intro
+        introSection.style.visibility = "hidden";
+        introSection.style.pointerEvents = "none"; // Disable interactions after hiding
+      } else {
+        introSection.style.opacity = "1";  // Show the intro again if scrolling back up
+        introSection.style.visibility = "visible";
+        introSection.style.pointerEvents = "auto";
+      }
   
-        if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
-          currentSection = section.id;
-        }
-      });
+      // Apply sticky effect to About Section after Intro
+      if (scrollPosition >= introHeight && scrollPosition < introHeight + aboutHeight) {
+        aboutSection.classList.add("fixed");
+      } else {
+        aboutSection.classList.remove("fixed");
+      }
   
-      // Remove active class from all links
-      navLinks.forEach(link => link.classList.remove('active'));
+      // Apply sticky effect to Roadmap Section after About
+      if (scrollPosition >= introHeight + aboutHeight && scrollPosition < introHeight + aboutHeight + roadmapHeight) {
+        roadmapSection.classList.add("fixed");
+      } else {
+        roadmapSection.classList.remove("fixed");
+      }
   
-      // Add active class to the current section's corresponding link
-      if (currentSection) {
-        const currentLink = document.querySelector(`.nav-menu a[href="#${currentSection}"]`);
-        if (currentLink) {
-          currentLink.classList.add('active');
-        }
+      // Apply sticky effect to Domain Section after Roadmap
+      if (scrollPosition >= introHeight + aboutHeight + roadmapHeight) {
+        domainSection.classList.add("fixed");
+      } else {
+        domainSection.classList.remove("fixed");
       }
     });
+  </script>  
   
-    // Optionally, scroll smoothly to section when nav link is clicked
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent the default action
-  
-        const targetSection = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: 'smooth'
-        });
-      });
-    });
+  <!-- Dynamic banner script-->
+  <script>
+    function updateVideoSource() {
+      let videoElement = document.getElementById("bannerVideo");
+      let sourceElement = document.getElementById("videoSource");
+
+      if (window.innerWidth <= 768) {
+        sourceElement.src = "assets/img/gif/Banner-mob-cropped.mp4";
+      } else {
+        sourceElement.src = "assets/img/gif/Banner.mp4";
+      }
+
+      videoElement.load(); // Reload the video to apply the new source
+    }
+
+    // Run function on page load and on window resize
+    window.onload = updateVideoSource;
+    window.onresize = updateVideoSource;
   </script>
+
   
-  
+
+
   <!--==========================
     Intro Section
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn" style="font-family:'Orbitron', sans-serif;">
-      <!-- Logo -->
-      <img src="assets/img/logos/PyexpoOld.png" alt="Pyexpo Logo" class="intro-logo" />
-  
-      <!-- Welcome Text -->
-      <h1 class="mb-1 pb-0 intro-h1" style="font-family:'Orbitron', sans-serif;">
-        Welcome to <span class="span1">PY</span><span class="span2">EXPO</span>'25
-      </h1>
-      <h2 class="mb-1 pb-0 intro-h2" style="font-family:'Orbitron', sans-serif;">
-        Unleash your problem solving skills using python
-      </h2>
-      <p class="mb-1 pb-0">Kgisl Institute of technology, Coimbatore.</p>
-  
+      <div class="banner-container">
+        <video id="bannerVideo" autoplay loop muted playsinline>
+          <source src="assets/img/gif/Banner.mp4" type="video/mp4" id="videoSource">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+
       <!-- Countdown Timer -->
       <div class="timer">
         <div class="time">
@@ -205,16 +252,16 @@
           <h1 id="sec">--</h1>
           <span>Seconds</span>
         </div>
-      </div>
+      </div> 
   
       <!-- Down Arrow Button -->
       <a href="#about" class="about-btn scrollto"><i class="fa fa-chevron-down"></i></a>
     </div>
   </section>
+
    <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a> -->
 
-  <main id="main">
 
     <!--==========================
       About Section
@@ -224,10 +271,10 @@
         <h1 class="fade-in section-header">About <span style="color:var(--purple-color)">PY<span
               style="color:var(--red-color)">EXPO</span></span> 25</h1>
                <!-- Logos Section -->
-    <div class="logos-container">
-      <img src="assets/img/logos/KiTE-NewLogo.png" alt="PYEXPO/Logo 1" class="about-logo1">
-      <img src="assets/img/logos/ipsTechLogo.png" alt="PYEXPO/Logo 2" class="about-logo2">
-    </div>
+        <div class="logos-container">
+          <img src="assets/img/logos/KiTE-NewLogo.png" alt="PYEXPO/Logo 1" class="about-logo1">
+          <img src="assets/img/logos/ipsTechLogo.png" alt="PYEXPO/Logo 2" class="about-logo2">
+        </div>
         <div class="content">
           <div class="first-content slide-in-left">
             <p>
@@ -399,9 +446,6 @@
       </div>
     </section>
 
-
-  </main>
-
   <!--==========================
       Navigating  Section
     ============================-->
@@ -465,9 +509,6 @@
     </div>
 </section>
 
-
-
-
   <!--==========================
     Footer -  Yogesh
   ============================-->
@@ -513,8 +554,6 @@
   ============================-->
 
   <footer id="footer">
-
-
     <div class="container">
       <div class="copyright">
         &copy; <strong style="color: var(--purple-color);">PYEXPO</strong> '25 | All Rights Reserved.

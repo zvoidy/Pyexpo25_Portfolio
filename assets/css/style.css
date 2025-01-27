@@ -510,9 +510,78 @@ body.mobile-nav-active #mobile-nav-toggle {
   
 }
 
+
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
+.image-stack {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjust size */
+  margin: 0 auto;
+}
+
+.image-stack img {
+  position: absolute;
+  width: 100%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Stack effect with offsets */
+.image-stack img:nth-child(1) {
+  z-index: 3;
+  transform: translate(0, 0);
+}
+
+.image-stack img:nth-child(2) {
+  z-index: 2;
+  transform: translate(20px, 20px);
+}
+
+.image-stack img:nth-child(3) {
+  z-index: 1;
+  transform: translate(40px, 40px);
+}
+
+/* Hover effect */
+.image-stack:hover img:nth-child(1) {
+  transform: translate(-10px, -10px);
+  opacity: 1;
+}
+
+.image-stack:hover img:nth-child(2) {
+  transform: translate(0, 0);
+  opacity: 0.9;
+}
+
+.image-stack:hover img:nth-child(3) {
+  transform: translate(10px, 10px);
+  opacity: 0.8;
+}
+
+
+/* Banner Styling */
+.banner-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height for the banner */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-out; /* Optional smooth transition */
+}
+
+.banner-container video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease-out; /* Optional smooth transition */
+}
+
+
 /* Ensure the intro section covers the screen initially */
 #intro {
   position: fixed;
@@ -526,32 +595,28 @@ body.mobile-nav-active #mobile-nav-toggle {
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: opacity 0.3s ease-out; /* Smooth fade-out */
 }
 
-/* Set a margin to reveal about section after scrolling */
+/* To make sure the main content has a margin and no overlap */
 #about {
+  margin-top: 100vh; /* To ensure main starts after the intro */
+  z-index: 1;
+  max-height: 100vh; /* Maximum scrollable height */
+  overflow: hidden; /* Hide anything beyond the maximum height */
+}
+
+/* Regular sections styled normally */
+#roadmap {
   position: relative;
   z-index: 15;
-  margin-top: 100vh;  /* Push down to be below the intro section */
+  background-color: white;
+  padding: 40px 20px;
+  transition: all 0.3s ease-out;
+  max-height: 300vh; /* Maximum scrollable height */
+  overflow: hidden; /* Hide anything beyond the maximum height */
 }
 
-#main {
-  position: relative;
-  z-index: 0;
-  background-color: transparent;
-  margin-top: 100vh; 
-}
-
-
-#intro:before {
-  content: "";
-  background: rgba(6, 12, 34, 0.4);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
 
 #intro .intro-container {
   position: absolute;
@@ -820,6 +885,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .container-fluid {
+  padding-top: 5vh;
   width: 90%;
   text-align: center;
   z-index: 100;
@@ -1202,7 +1268,22 @@ Domain section
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
+
+#domain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  backdrop-filter: blur(10px); /* Adjust the blur level */
+  z-index: -1;
+}
+
 
 #domain .container-fluid {
   width: 95%;
@@ -2601,3 +2682,4 @@ Domain section
     margin-top: 10px;
   }
 }
+
