@@ -878,7 +878,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 50px 0;
   color: #fff;
   position: relative;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   align-items: center;
   justify-content: center;
