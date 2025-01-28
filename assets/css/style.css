@@ -64,7 +64,7 @@ body {
   background: #fff;
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
-  
+
 }
 
 a {
@@ -1346,6 +1346,9 @@ Domain section
 
   .card-body {
     height: 50% !important;
+  }
+  html{
+    width:110vw;
   }
 }
 

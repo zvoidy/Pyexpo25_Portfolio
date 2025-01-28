@@ -89,7 +89,8 @@
         </a>
         <!-- Current PYEXPO Logo -->
         <a href="#intro" class="scrollto">
-          <img style="width: 30vw; height: 100%;" src="assets/img/gif/pyexpo.gif" alt="Students collaborating during PYEXPO hackathon at KGISL." title="PYEXPO">
+          <!-- <img style="width: 30vw; height: 100%;" src="assets/img/gif/pyexpo.gif" alt="Students collaborating during PYEXPO hackathon at KGISL." title="PYEXPO"> -->
+          <img src="assets/img/logos/PYexpoTypoCropped.png" alt="Students collaborating during PYEXPO hackathon at KGISL." title="PYEXPO">
         </a>
       </div>
     
@@ -153,11 +154,11 @@
       const sourceElement = document.getElementById("videoSource");
   
       // Define the video paths
-      const desktopVideo = "assets/img/gif/banernewpc.mp4";
+      const desktopVideo = "assets/img/gif/bannernewpc.mp4";
       const mobileVideo = "assets/img/gif/bannernewmob.mp4";
   
       // Determine which video to load based on screen width
-      const newSource = window.innerWidth <= 400 ? mobileVideo : desktopVideo;
+      const newSource = window.innerWidth <= 768 ? mobileVideo : desktopVideo;
   
       // Update the video source only if it changes
       if (sourceElement.src !== newSource) {
@@ -171,52 +172,81 @@
     window.addEventListener("resize", updateVideoSource);
   </script>
 
+<script>
+  function updateTimerLabels() {
+    const isMobile = window.innerWidth <= 768; // Check if screen width is 768px or less
+
+    // Get label elements
+    const daysLabel = document.getElementById("daysLabel");
+    const hoursLabel = document.getElementById("hoursLabel");
+    const minutesLabel = document.getElementById("minutesLabel");
+    const secondsLabel = document.getElementById("secondLabel");
+
+    if (isMobile) {
+      // Set short forms for mobile
+      daysLabel.textContent = "Day";
+      hoursLabel.textContent = "Hrs";
+      minutesLabel.textContent = "Min";
+      secondsLabel.textContent = "Sec";
+    } else {
+      // Set full forms for larger screens
+      daysLabel.textContent = "Days";
+      hoursLabel.textContent = "Hours";
+      minutesLabel.textContent = "Minutes";
+      secondsLabel.textContent = "Seconds";
+    }
+  }
+
+  // Run the function on page load and when the window is resized
+  window.onload = updateTimerLabels;
+  window.onresize = updateTimerLabels;
+</script>
   <!--==========================
     Intro Section
   ============================-->
   <section id="intro">
-    <div class="intro-container" style="font-family: 'Orbitron', sans-serif;">
-      <!-- Video Banner -->
-      <div class="banner-container">
-        <video id="bannerVideo" autoplay muted playsinline>
-          <source id="videoSource" src="assets/img/gif/Banner.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="intro-container" style="font-family: 'Orbitron', sans-serif;">
+          <!-- Video Banner -->
+          <div class="banner-container">
+            <video id="bannerVideo" autoplay muted playsinline>
+              <source id="videoSource" src="assets/img/gif/Banner.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+
+        
+          <!-- Countdown Timer -->
+          <div class="timer">
+            <div class="time">
+              <h1 id="days">--</h1>
+              <span id="daysLabel">Days</span>
+            </div>
+            <div class="time-btn">:</div>
+            <div class="time">
+              <h1 id="hours">--</h1>
+              <span id="hoursLabel">Hours</span>
+            </div>
+            <div class="time-btn">:</div>
+            <div class="time">
+              <h1 id="min">--</h1>
+              <span id="minutesLabel">Minutes</span>
+            </div>
+            <div class="time-btn">:</div>
+            <div class="time">
+              <h1 id="sec">--</h1>
+              <span id="secondLabel">Seconds</span>
+            </div>
+          </div>
+        
+          <!-- Down Arrow Button -->
+          <div style="display: flex; width: 100%; justify-content: center; align-items: center;">
+            <a href="#about" class="about-btn scrollto">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
       </div>
-      
-      
-  
-      <!-- Countdown Timer -->
-      <div class="timer">
-        <div class="time">
-          <h1 id="days">--</h1>
-          <span>Days</span>
-        </div>
-        <div class="time-btn">:</div>
-        <div class="time">
-          <h1 id="hours">--</h1>
-          <span>Hours</span>
-        </div>
-        <div class="time-btn">:</div>
-        <div class="time">
-          <h1 id="min">--</h1>
-          <span>Minutes</span>
-        </div>
-        <div class="time-btn">:</div>
-        <div class="time">
-          <h1 id="sec">--</h1>
-          <span>Seconds</span>
-        </div>
-      </div>
-  
-      <!-- Down Arrow Button -->
-      <div style="display: flex; width: 100%; justify-content: center; align-items: center;">
-        <a href="#about" class="about-btn scrollto">
-          <i class="fa fa-chevron-down"></i>
-        </a>
-    </div>
-  </div>
-  </section>
+    </section>
   
 
    <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
@@ -280,8 +310,8 @@
         <p>where the best projects are
           showcased and celebrated.
         </p>
-        <div>
-          <img style="width: 50%; height: 50%; border-radius: 20px; margin-top: 25px;" src="assets/img/PYEXPO Invite poster.jpg" />
+        <div class="intro-banner">
+          <img class="intro-banner-img" style="width: 50%; height: 50%; border-radius: 20px; margin-top: 25px;" src="assets/img/PYEXPO Invite poster.jpg" />
         </div>
       </div>
       <ul>
@@ -434,7 +464,6 @@
 
     </div>
   </section>
- 
   
   <section id="contact-text">
     <div class="container">
