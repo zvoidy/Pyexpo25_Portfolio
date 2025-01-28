@@ -91,7 +91,6 @@
         <a href="#intro" class="scrollto">
           <img src="assets/img/logos/PYexpoTypoCropped.png" alt="Students collaborating during PYEXPO hackathon at KGISL." title="PYEXPO">
         </a>
-
       </div>
     
       <nav id="nav-menu-container">
@@ -146,54 +145,6 @@
     VanillaTilt.init(document.querySelectorAll('.cards'));
   </script>
 
-  <!-- Js for scroll -->
-  <script>
-    document.addEventListener("scroll", function () {
-      let introSection = document.getElementById("intro");
-      let aboutSection = document.getElementById("about");
-      let roadmapSection = document.getElementById("roadmap");
-      let domainSection = document.getElementById("domain");
-  
-      // Get the scroll position relative to the viewport height
-      let scrollPosition = window.scrollY;
-      let introHeight = introSection.offsetHeight;
-      let aboutHeight = aboutSection.offsetHeight;
-      let roadmapHeight = roadmapSection.offsetHeight;
-      let domainHeight = domainSection.offsetHeight;
-  
-      // Fade out the intro section when scrolled past a certain point
-      if (scrollPosition > window.innerHeight * 1.5) {
-        introSection.style.opacity = "0";  // Fade out the intro
-        introSection.style.visibility = "hidden";
-        introSection.style.pointerEvents = "none"; // Disable interactions after hiding
-      } else {
-        introSection.style.opacity = "1";  // Show the intro again if scrolling back up
-        introSection.style.visibility = "visible";
-        introSection.style.pointerEvents = "auto";
-      }
-  
-      // Apply sticky effect to About Section after Intro
-      if (scrollPosition >= introHeight && scrollPosition < introHeight + aboutHeight) {
-        aboutSection.classList.add("fixed");
-      } else {
-        aboutSection.classList.remove("fixed");
-      }
-  
-      // Apply sticky effect to Roadmap Section after About
-      if (scrollPosition >= introHeight + aboutHeight && scrollPosition < introHeight + aboutHeight + roadmapHeight) {
-        roadmapSection.classList.add("fixed");
-      } else {
-        roadmapSection.classList.remove("fixed");
-      }
-  
-      // Apply sticky effect to Domain Section after Roadmap
-      if (scrollPosition >= introHeight + aboutHeight + roadmapHeight) {
-        domainSection.classList.add("fixed");
-      } else {
-        domainSection.classList.remove("fixed");
-      }
-    });
-  </script>  
   
   <!-- Dynamic banner script-->
   <script>
@@ -215,14 +166,11 @@
     window.onresize = updateVideoSource;
   </script>
 
-  
-
-
   <!--==========================
     Intro Section
   ============================-->
   <section id="intro">
-    <div class="intro-container wow fadeIn" style="font-family:'Orbitron', sans-serif;">
+    <div class="intro-container" style="font-family:'Orbitron', sans-serif;">
       <div class="banner-container">
         <video id="bannerVideo" autoplay loop muted playsinline>
           <source src="assets/img/gif/Banner.mp4" type="video/mp4" id="videoSource">
