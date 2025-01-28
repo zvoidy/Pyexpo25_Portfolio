@@ -563,179 +563,70 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
-.image-stack {
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #000;
+  color: white;
+}
+
+#intro {
   position: relative;
   width: 100%;
-  max-width: 400px; /* Adjust size */
-  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;/* Adds spacing between sections */
 }
 
-.image-stack img {
-  position: absolute;
-  width: 100%;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-/* Stack effect with offsets */
-.image-stack img:nth-child(1) {
-  z-index: 3;
-  transform: translate(0, 0);
-}
-
-.image-stack img:nth-child(2) {
-  z-index: 2;
-  transform: translate(20px, 20px);
-}
-
-.image-stack img:nth-child(3) {
-  z-index: 1;
-  transform: translate(40px, 40px);
-}
-
-/* Hover effect */
-.image-stack:hover img:nth-child(1) {
-  transform: translate(-10px, -10px);
-  opacity: 1;
-}
-
-.image-stack:hover img:nth-child(2) {
-  transform: translate(0, 0);
-  opacity: 0.9;
-}
-
-.image-stack:hover img:nth-child(3) {
-  transform: translate(10px, 10px);
-  opacity: 0.8;
-}
-
-
-/* Banner Styling */
+/* Video Banner */
 .banner-container {
   width: 100%;
-  height: 100vh; /* Full viewport height for the banner */
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease-out; /* Optional smooth transition */
+  margin-top: 80px;
 }
 
 .banner-container video {
-  position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  border: none;
-  padding: 0;
-  margin: 0;
-  transition: transform 0.3s ease-out; /* Optional smooth transition */
+  object-fit: cover; /* Ensures the video fits nicely within its container */
 }
 
-
-/* Ensure the intro section covers the screen initially */
-#intro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  z-index: 0;
+/* Timer Styling */
+.timer {
+  margin: 30px auto;
+  width: 70%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: opacity 0.3s ease-out; /* Smooth fade-out */
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
 }
 
-/* To make sure the main content has a margin and no overlap */
-#about {
-  margin-top: 100vh; /* To ensure main starts after the intro */
-  z-index: 1;
-  max-height: 100vh; /* Maximum scrollable height */
-  overflow: hidden; /* Hide anything beyond the maximum height */
-}
-
-/* Regular sections styled normally */
-#roadmap {
-  background-color: white;
-  padding: 40px 20px;
-  max-height: 300vh; /* Maximum scrollable height */
-  overflow: hidden; /* Hide anything beyond the maximum height */
-}
-
-
-#intro .intro-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 90px;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-}
-
-#intro .intro-h1 {
+.timer h1 {
+  font-family: 'timer', sans-serif;
+  font-size: 4rem;
   color: #fff;
-  font-family: "Raleway", sans-serif;
-  font-size: 56px;
+}
+
+.timer .time span {
+  color: white;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
-#intro .intro-h1 .span1 {
-  color: var(--purple-color);
-}
-#intro .intro-h1 .span2 {
-  color: var(--red-color);
-}
-#intro .intro-h2 {
-  color: #fff;
- letter-spacing: 2px;
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-
-}
-
-#intro p {
-  color: #ebebeb;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
-/* Logo styling */
-#intro .intro-logo {
-  max-width: 220px; /* Adjust logo size */
-  margin-bottom: 20px; /* Spacing below the logo */
-}
-
-/* Center-align adjustments */
-#intro .intro-container {
-  align-items: center; /* Ensure vertical alignment with the logo */
-  text-align: center;
-}
-
-#intro .intro-h1,
-#intro .intro-h2,
-#intro p {
-  margin-top: 10px; /* Adjust spacing for neat alignment */
+.timer .time-btn {
+  font-size: 3rem;
+  color: white;
 }
 
 #about .play-btn {
+  margin-top: 2vh;
   width: 94px;
   height: 94px;
   background: radial-gradient(#f82249 50%, rgba(101, 111, 150, 0.15) 52%);
@@ -831,84 +722,32 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-@-webkit-keyframes pulsate-btn {
-  0% {
-    -webkit-transform: scale(0.6, 0.6);
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
-
-@keyframes pulsate-btn {
-  0% {
-    -webkit-transform: scale(0.6, 0.6);
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
-/* timer start */
-
-.countdown{
-  font-weight: 600;
-  font-size: 2rem;
-  color:white;
-  margin-top: 30px;
-}
-.timer{
-  width:70%;
-  height:auto;
-  backdrop-filter: blur(20px);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-}
-.timer h1{
-  font-family: timer !important;
-  font-size:5rem;
-  color: #ffffff ;
-}
-.timer .time span{
-  color:white;
-  font-weight:600;
-}
-.timer .time-btn{
-  font-size:3rem;
-  color:white;
-}
-
-/* media query for time start */
-@media (max-width:768px){
-  .timer{
-    width:100% !important;
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .timer {
+    width: 90%;
+    padding: 15px;
     gap: 10px;
-    font-size: 10px;
   }
-  .timer .time-btn{
-    font-size:2rem;
-  margin-bottom: 25px;
 
-  }
-  .timer .time h1{
+  .timer h1 {
     font-size: 2.5rem;
   }
-  .timer .time span{
-    font-weight: 400;
-    
+
+  .timer .time-btn {
+    font-size: 2rem;
+  }
+
+  .about-btn {
+    font-size: 12px;
+    padding: 10px 28px;
+  }
+
+  .banner-container {
+    height: 30vh; /* Reduce banner height on smaller screens */
   }
 }
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -918,12 +757,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* timer end */
 
 #about {
-  /* background: linear-gradient(135deg, #1d1f21 0%, #0f0f10 100%); */
+  /* background: linear-gradient(135deg, #1d1f21 0%, #0f0f10 100%);  */
   background: black;
-  padding: 50px 0;
   color: #fff;
-  position: relative;
-  min-height: 150vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1209,6 +1045,7 @@ Roadmap Section
   position: relative;
   padding-inline: 1.5rem;
   color: #000; /* Optional: Ensure text is readable on white background */
+  line-height: 1.5rem;
 }
 
 #roadmap ul li .title {

@@ -85,7 +85,7 @@
       <div id="logo" class="pull-left" itemprop="competition">
         <!-- New Logo next to PYEXPO Logo -->
         <a href="#intro" class="scrollto">
-          <img src="assets/img/logos/PyexpoNewLogo.png" alt="Your new logo" title="Your New Logo" class="new-logo">
+          <img src="assets/img/logos/PyExpoLogo.png" alt="Your new logo" title="Your New Logo" class="new-logo">
         </a>
         <!-- Current PYEXPO Logo -->
         <a href="#intro" class="scrollto">
@@ -151,34 +151,36 @@
     function updateVideoSource() {
       let videoElement = document.getElementById("bannerVideo");
       let sourceElement = document.getElementById("videoSource");
-
+  
       if (window.innerWidth <= 768) {
-        sourceElement.src = "assets/img/gif/Banner-mob-cropped.mp4";
+        sourceElement.src = "assets/img/gif/bannernewmov.mp4";
       } else {
-        sourceElement.src = "assets/img/gif/Banner.mp4";
+        sourceElement.src = "assets/img/gif/banernewpc.mp4";
       }
-
+  
       videoElement.load(); // Reload the video to apply the new source
     }
-
+  
     // Run function on page load and on window resize
     window.onload = updateVideoSource;
     window.onresize = updateVideoSource;
   </script>
+  
+  
 
   <!--==========================
     Intro Section
   ============================-->
   <section id="intro">
-    <div class="intro-container" style="font-family:'Orbitron', sans-serif;">
+    <div class="intro-container" style="font-family: 'Orbitron', sans-serif;">
+      <!-- Video Banner -->
       <div class="banner-container">
-        <video id="bannerVideo" autoplay loop muted playsinline>
+        <video id="bannerVideo" autoplay muted playsinline>
           <source src="assets/img/gif/Banner.mp4" type="video/mp4" id="videoSource">
           Your browser does not support the video tag.
         </video>
       </div>
-
-
+  
       <!-- Countdown Timer -->
       <div class="timer">
         <div class="time">
@@ -200,12 +202,17 @@
           <h1 id="sec">--</h1>
           <span>Seconds</span>
         </div>
-      </div> 
+      </div>
   
       <!-- Down Arrow Button -->
-      <a href="#about" class="about-btn scrollto"><i class="fa fa-chevron-down"></i></a>
+      <div style="display: flex; width: 100%; justify-content: center; align-items: center;">
+        <a href="#about" class="about-btn scrollto">
+          <i class="fa fa-chevron-down"></i>
+        </a>
     </div>
+  </div>
   </section>
+  
 
    <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a> -->
@@ -220,8 +227,8 @@
               style="color:var(--red-color)">EXPO</span></span> 25</h1>
                <!-- Logos Section -->
         <div class="logos-container">
-          <img src="assets/img/logos/KiTE-NewLogo.png" alt="PYEXPO/Logo 1" class="about-logo1">
-          <img src="assets/img/logos/ipsTechLogo.png" alt="PYEXPO/Logo 2" class="about-logo2">
+          <img src="assets/img/logos/KiTE-NewLogo.png" alt="Logo 1" class="about-logo1">
+          <img src="assets/img/logos/IPS WHITE batch.png" alt="Logo 2" class="about-logo2">
         </div>
         <div class="content">
           <div class="first-content slide-in-left">
@@ -258,14 +265,15 @@
       Roadmap Section
     ============================-->
     <section id="roadmap">
-      <div class="section-header roadmap-heading">
+      <div class="section-header roadmap-heading" style="margin-top: 5px;">
         Roadmap of
         <span style="color:var(--purple-color)">PY<span style="color:var(--red-color)">EXPO</span></span>'25
         <br>
-        <p style="padding-bottom:30px !important;">
-          Explore the roadmap of PyExpo'25, guiding participants through each phase,<br> where the best projects are
+        <br>
+        <p>
+          Explore the roadmap of PyExpo'25, guiding participants through each phase,</p>
+        <p>where the best projects are
           showcased and celebrated.
-
         </p>
       </div>
       <ul>
