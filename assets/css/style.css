@@ -576,11 +576,11 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;/* Adds spacing between sections */
+  margin-bottom: 20px;
 }
 
 /* Video Banner */
@@ -744,10 +744,16 @@ body {
   }
 
   .banner-container {
-    height: 30vh; /* Reduce banner height on smaller screens */
+    height: 70vh; /* Reduce banner height on smaller screens */
+    width: 100%;
   }
 }
 
+@media (min-width:400px){
+  #intro{
+    margin-bottom: 50px;
+  }
+}
 
 /*--------------------------------------------------------------
 # About Section
@@ -2503,6 +2509,7 @@ Domain section
 
   #intro .intro-container {
     top: 70px;
+    margin-bottom: 50px;
   }
 
   #intro .intro-h1 {

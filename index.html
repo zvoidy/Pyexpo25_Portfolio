@@ -14,7 +14,7 @@
 
 
   <!-- Favicons -->
-  <link href="assets/img/logos/PyexpoNewLogo.png" rel="icon">
+  <link href="assets/img/logos/PyExpoLogo.png" rel="icon">
 
   <!-- Google Fonts -->
   <!-- <link
@@ -89,7 +89,7 @@
         </a>
         <!-- Current PYEXPO Logo -->
         <a href="#intro" class="scrollto">
-          <img src="assets/img/logos/PYexpoTypoCropped.png" alt="Students collaborating during PYEXPO hackathon at KGISL." title="PYEXPO">
+          <img style="width: 30vw; height: 100%;" src="assets/img/gif/pyexpo.gif" alt="Students collaborating during PYEXPO hackathon at KGISL." title="PYEXPO">
         </a>
       </div>
     
@@ -149,24 +149,27 @@
   <!-- Dynamic banner script-->
   <script>
     function updateVideoSource() {
-      let videoElement = document.getElementById("bannerVideo");
-      let sourceElement = document.getElementById("videoSource");
+      const videoElement = document.getElementById("bannerVideo");
+      const sourceElement = document.getElementById("videoSource");
   
-      if (window.innerWidth <= 768) {
-        sourceElement.src = "assets/img/gif/bannernewmov.mp4";
-      } else {
-        sourceElement.src = "assets/img/gif/banernewpc.mp4";
+      // Define the video paths
+      const desktopVideo = "assets/img/gif/banernewpc.mp4";
+      const mobileVideo = "assets/img/gif/bannernewmob.mp4";
+  
+      // Determine which video to load based on screen width
+      const newSource = window.innerWidth <= 400 ? mobileVideo : desktopVideo;
+  
+      // Update the video source only if it changes
+      if (sourceElement.src !== newSource) {
+        sourceElement.src = newSource;
+        videoElement.load(); // Reload the video with the new source
       }
-  
-      videoElement.load(); // Reload the video to apply the new source
     }
   
-    // Run function on page load and on window resize
-    window.onload = updateVideoSource;
-    window.onresize = updateVideoSource;
+    // Run the function on page load and window resize
+    window.addEventListener("load", updateVideoSource);
+    window.addEventListener("resize", updateVideoSource);
   </script>
-  
-  
 
   <!--==========================
     Intro Section
@@ -176,10 +179,12 @@
       <!-- Video Banner -->
       <div class="banner-container">
         <video id="bannerVideo" autoplay muted playsinline>
-          <source src="assets/img/gif/Banner.mp4" type="video/mp4" id="videoSource">
+          <source id="videoSource" src="assets/img/gif/Banner.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
+      
+      
   
       <!-- Countdown Timer -->
       <div class="timer">
@@ -275,6 +280,9 @@
         <p>where the best projects are
           showcased and celebrated.
         </p>
+        <div>
+          <img style="width: 50%; height: 50%; border-radius: 20px; margin-top: 25px;" src="assets/img/PYEXPO Invite poster.jpg" />
+        </div>
       </div>
       <ul>
         <!-- Idea Review -->
