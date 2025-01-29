@@ -76,6 +76,23 @@
 
 <body>
 
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(() => {
+        document.getElementById("loader").style.opacity = "0";
+        setTimeout(() => {
+          document.getElementById("loader").style.display = "none";
+        }, 500); // Smooth fade-out effect
+      }, 1000); // Adjust timing as needed
+    });
+  </script>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+
   <!--==========================
     Header
   ============================-->
@@ -115,7 +132,7 @@
 
       const observerOptions = {
         root: null, // Use the viewport
-        threshold: 0.6, // 60% of the section must be visible
+        threshold: 0.3, // 60% of the section must be visible
       };
 
       const observerCallback = (entries) => {
