@@ -76,14 +76,22 @@
 
 <body>
 
+  <!-- Spinner script -->
   <script>
     window.addEventListener("load", function () {
       setTimeout(() => {
+        // Fade out the loader
         document.getElementById("loader").style.opacity = "0";
+        
+        // After loader is faded, hide it and play the video
         setTimeout(() => {
           document.getElementById("loader").style.display = "none";
-        }, 500); // Smooth fade-out effect
-      }, 1000); // Adjust timing as needed
+          
+          // Start the video after the loader disappears
+          const videoElement = document.getElementById("bannerVideo");
+          videoElement.play();  // Play the video
+        }, 500); // Wait for the fade-out to complete before hiding
+      }, 1000); // Loader stays for 1 second
     });
   </script>
 
@@ -188,36 +196,38 @@
     window.addEventListener("load", updateVideoSource);
     window.addEventListener("resize", updateVideoSource);
   </script>
-
-<script>
-  function updateTimerLabels() {
-    const isMobile = window.innerWidth <= 768; // Check if screen width is 768px or less
-
-    // Get label elements
-    const daysLabel = document.getElementById("daysLabel");
-    const hoursLabel = document.getElementById("hoursLabel");
-    const minutesLabel = document.getElementById("minutesLabel");
-    const secondsLabel = document.getElementById("secondLabel");
-
-    if (isMobile) {
-      // Set short forms for mobile
-      daysLabel.textContent = "Day";
-      hoursLabel.textContent = "Hrs";
-      minutesLabel.textContent = "Min";
-      secondsLabel.textContent = "Sec";
-    } else {
-      // Set full forms for larger screens
-      daysLabel.textContent = "Days";
-      hoursLabel.textContent = "Hours";
-      minutesLabel.textContent = "Minutes";
-      secondsLabel.textContent = "Seconds";
+  
+  <!-- Responsive Timer script -->
+  <script>
+    function updateTimerLabels() {
+      const isMobile = window.innerWidth <= 768; // Check if screen width is 768px or less
+  
+      // Get label elements
+      const daysLabel = document.getElementById("daysLabel");
+      const hoursLabel = document.getElementById("hoursLabel");
+      const minutesLabel = document.getElementById("minutesLabel");
+      const secondsLabel = document.getElementById("secondLabel");
+  
+      if (isMobile) {
+        // Set short forms for mobile
+        daysLabel.textContent = "Day";
+        hoursLabel.textContent = "Hrs";
+        minutesLabel.textContent = "Min";
+        secondsLabel.textContent = "Sec";
+      } else {
+        // Set full forms for larger screens
+        daysLabel.textContent = "Days";
+        hoursLabel.textContent = "Hours";
+        minutesLabel.textContent = "Minutes";
+        secondsLabel.textContent = "Seconds";
+      }
     }
-  }
-
-  // Run the function on page load and when the window is resized
-  window.onload = updateTimerLabels;
-  window.onresize = updateTimerLabels;
-</script>
+  
+    // Run the function on page load and when the window is resized
+    window.onload = updateTimerLabels;
+    window.onresize = updateTimerLabels;
+  </script>
+  
   <!--==========================
     Intro Section
   ============================-->
@@ -225,7 +235,7 @@
         <div class="intro-container" style="font-family: 'Orbitron', sans-serif;">
           <!-- Video Banner -->
           <div class="banner-container">
-            <video id="bannerVideo" autoplay muted playsinline>
+            <video id="bannerVideo" muted playsinline>
               <source id="videoSource" src="assets/img/gif/Banner.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
