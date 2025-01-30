@@ -745,6 +745,7 @@ body {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   border: 2px solid #f82249;
+  /* z-index: 1000; */
 }
 
 #intro .about-btn:hover {
@@ -781,11 +782,50 @@ body {
 
 @media (max-width: 1600px) and (max-height: 800px) {
   .banner-container {
+    margin-top: 20vh;
+  }
+  
+  .intro-container {
+    margin-top: 6vh;
+    padding-bottom: 10vh; 
+    padding-top: 8vh; 
+  }
+
+  .about-btn{
+    margin-bottom: 8vh;
+  }
+
+}
+
+@media (min-width:100px) and (min-height:150px){
+  #intro {
+    font-family: 'Montserrat', sans-serif !important;
+    background: radial-gradient(circle at top left, rgba(112, 51, 255, 0.85), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(255, 0, 68, 0.55), transparent 35%);
+    background-color: black !important; /* Fallback color */
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; /* Ensures full coverage */
+    width: 100%;
+    min-height: 100vh; /* Ensures it covers the full viewport */
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 800px) {
+  .banner-container {
     margin-top: 40vh;
   }
 
   .intro-container{
-    margin-bottom: 11vh;
+    margin-bottom: 38vh;
+  }
+}
+
+@media (min-width: 600px) and (min-height: 800px) and (max-width:1300) and (max-height:800) {
+
+  .intro-container{
+    margin-bottom: 38vh;
   }
 }
 
@@ -795,11 +835,7 @@ body {
   }
 }
 
-@media (min-width:400px){
-  #intro{
-    margin-bottom: 50px;
-  }
-}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1395,7 +1431,7 @@ Domain section
     height: 50% !important;
   }
   html{
-    width:110vw;
+    width:100vw;
   }
 }
 
@@ -2548,16 +2584,17 @@ Domain section
     display: inline;
   }
 
-  #intro{
+  #intro {
     font-family: 'Montserrat', sans-serif !important;
-    background: radial-gradient(circle at top left, #7033ffda, transparent 35%),
-        radial-gradient(circle at bottom right, #ff00448a, transparent 35%);
-    background-color: black!important;
-    /* Fallback color */
-    background-attachment: fixed!important;
-    background-repeat: no-repeat!important;
+    background: radial-gradient(circle at top left, rgba(112, 51, 255, 0.85), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(255, 0, 68, 0.55), transparent 35%);
+    background-color: black !important; /* Fallback color */
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; /* Ensures full coverage */
+    width: 100%;
+    min-height: 100vh; /* Ensures it covers the full viewport */
     box-sizing: border-box;
-
   }
 
   #intro .intro-h1 {
@@ -2594,6 +2631,11 @@ Domain section
   #faq #faq-list i {
     top: 13px;
   }
+
+
+
+
+
 }
 
 @media (max-width: 767px) {
