@@ -36,25 +36,7 @@
             margin: 10px 0;
             max-width: 80%;
         }
-        .timer {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-        .time-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            border-radius: 8px;
-            min-width: 65px;
-        }
-        .time-box span {
-            display: block;
-            font-size: 0.9rem;
-        }
+
         .contact-btn {
             margin-top: 15px;
             padding: 12px 20px;
@@ -87,6 +69,9 @@
             }
         }
     </style>
+
+<link href="css/add.css" rel="stylesheet">
+    
 </head>
 <body>
 
@@ -97,24 +82,24 @@
     <h1>We're Under Maintenance</h1>
     <p>We're working hard to bring something amazing. Stay tuned!</p>
     
-    <div class="timer">
+    <div id="countdown" class="timer">
         <div class="time-box">
-            <span id="days">00</span>
-            <span>Days</span>
+            <h1 style="font-family: 'timer', sans-serif; color: white;" id="days">00</h1>
+            <span style="color: white;">Days</span>
         </div>
         <div class="time-box">
-            <span id="hours">00</span>
-            <span>Hours</span>
+            <h1 style="font-family: 'timer', sans-serif; color: white;"  id="hours">00</h1>
+            <span style="color: white;">Hours</span>
         </div>
         <div class="time-box">
-            <span id="minutes">00</span>
-            <span>Minutes</span>
+            <h1 style="font-family: 'timer', sans-serif; color: white;"  id="minutes">00</h1>
+            <span style="color: white;">Minutes</span>
         </div>
         <div class="time-box">
-            <span id="seconds">00</span>
-            <span>Seconds</span>
+            <h1 style="font-family: 'timer', sans-serif; color: white;"  id="seconds">00</h1>
+            <span style="color: white;">Seconds</span>
         </div>
-    </div>
+    </div>  
 
     <a href="mailto:support@yourdomain.com?subject=Inquiry%20About%20Maintenance" class="contact-btn">Contact Us</a>
 
@@ -155,6 +140,9 @@
 
         startCountdown();
     </script>
+
+        <!-- add js -->
+        <script src="js/add.js"></script>
 
 </body>
 </html>
