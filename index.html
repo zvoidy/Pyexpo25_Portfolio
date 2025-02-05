@@ -36,7 +36,25 @@
             margin: 10px 0;
             max-width: 80%;
         }
-
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .time-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            min-width: 65px;
+        }
+        .time-box span {
+            display: block;
+            font-size: 0.9rem;
+        }
         .contact-btn {
             margin-top: 15px;
             padding: 12px 20px;
@@ -69,9 +87,6 @@
             }
         }
     </style>
-
-<link href="css/add.css" rel="stylesheet">
-    
 </head>
 <body>
 
@@ -82,67 +97,57 @@
     <h1>We're Under Maintenance</h1>
     <p>We're working hard to bring something amazing. Stay tuned!</p>
     
-    <div id="countdown" class="timer">
+    <div class="timer" id="countdown">
         <div class="time-box">
-            <h1 style="font-family: 'timer', sans-serif; color: white;" id="days">00</h1>
-            <span style="color: white;">Days</span>
+            <span id="days">00</span>
+            <span>Days</span>
         </div>
         <div class="time-box">
-            <h1 style="font-family: 'timer', sans-serif; color: white;"  id="hours">00</h1>
-            <span style="color: white;">Hours</span>
+            <span id="hours">00</span>
+            <span>Hours</span>
         </div>
         <div class="time-box">
-            <h1 style="font-family: 'timer', sans-serif; color: white;"  id="minutes">00</h1>
-            <span style="color: white;">Minutes</span>
+            <span id="minutes">00</span>
+            <span>Minutes</span>
         </div>
         <div class="time-box">
-            <h1 style="font-family: 'timer', sans-serif; color: white;"  id="seconds">00</h1>
-            <span style="color: white;">Seconds</span>
+            <span id="seconds">00</span>
+            <span>Seconds</span>
         </div>
-    </div>  
+    </div>
 
     <a href="mailto:support@yourdomain.com?subject=Inquiry%20About%20Maintenance" class="contact-btn">Contact Us</a>
 
-
     <script>
-        function startCountdown() {
-            let endTime = localStorage.getItem("endTime");
+        // Set the countdown target date (YYYY, MM (0-based), DD, HH, MM, SS)
+        const targetDate = new Date("2025-02-07T23:00:00").getTime();
 
-            if (!endTime || isNaN(parseInt(endTime))) {
-                let now = new Date();
-                now.setHours(now.getHours() + 48);
-                endTime = now.getTime();
-                localStorage.setItem("endTime", endTime.toString());
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = days;
+                document.getElementById("hours").textContent = hours;
+                document.getElementById("minutes").textContent = minutes;
+                document.getElementById("seconds").textContent = seconds;
             } else {
-                endTime = parseInt(endTime);
+                document.getElementById("countdown").innerHTML = "<h2>Time's up!</h2>";
+                clearInterval(interval);
             }
-
-            function updateTimer() {
-                const now = new Date().getTime();
-                const distance = endTime - now;
-
-                if (distance <= 0) {
-                    clearInterval(interval);
-                    document.querySelector(".timer").innerHTML = "<p>We'll be back soon!</p>";
-                    localStorage.removeItem("endTime");
-                    return;
-                }
-
-                document.getElementById("days").textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
-                document.getElementById("hours").textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                document.getElementById("minutes").textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                document.getElementById("seconds").textContent = Math.floor((distance % (1000 * 60)) / 1000);
-            }
-
-            updateTimer();
-            let interval = setInterval(updateTimer, 1000);
         }
 
-        startCountdown();
-    </script>
+        // Update the countdown every second
+        const interval = setInterval(updateCountdown, 1000);
 
-        <!-- add js -->
-        <script src="js/add.js"></script>
+        // Initial call to avoid 1-second delay
+        updateCountdown();
+    </script>
 
 </body>
 </html>
