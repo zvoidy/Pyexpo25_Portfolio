@@ -167,7 +167,22 @@
 }
 
 .about-page-header {
-  background: url(../assets/pyexpoimg.png) center center no-repeat;
+  background: url(../assets/sechead1.png) center center no-repeat;
+  background-size: cover;
+}
+
+.event-page-header {
+  background: url(../assets/sechead2.png) center center no-repeat;
+  background-size: cover;
+}
+
+.journey-page-header {
+  background: url(../assets/sechead3.png) center center no-repeat;
+  background-size: cover;
+}
+
+.student-page-header {
+  background: url(../assets/sechead4.png) center center no-repeat;
   background-size: cover;
 }
 
@@ -603,43 +618,58 @@ li:is(:hover, :focus-within) + li + li + li + li + li + li {
   text-decoration: none;
 }
 
-.nav-menu li.login a {
-  color: #fff;
-  background: #f82249;
-  padding: 7px 22px;
-  border-radius: 50px;
+/* Login Button Styling */
+.login-btn {
+  display: inline-block;
+  padding: 8px 8px;
+  background-color: #f82249; /* Button Color */
+  color: white !important;
+  font-weight: bold;
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.3s ease-in-out;
+  text-align: center;
   border: 2px solid #f82249;
-  transition: all ease-in-out 0.3s;
-  font-weight: 500;
-  margin-left: 8px;
-  margin-top: 2px;
-  line-height: 1;
-  font-size: 13px;
+}
+
+.login-btn:hover {
+  background-color: white;
+  color: #f82249 !important;
+  /* border: 2px solid #f82249; */
+}
+
+/* Ensure the carousel itself is responsive */
+#header-carousel {
+  width: 100%;
+}
+
+/* Make the video and images responsive */
+.mainbanner {
+  width: 100%;
+
+  object-fit: fit; /* Ensures proper aspect ratio */
+  margin-top: 0px;
+}
+
+/* Responsive controls for captions (if enabled) */
+@media (max-width: 992px) {
+  .carousel-caption {
+      font-size: 1.5rem; /* Reduce text size */
+      padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+      font-size: 1.2rem;
+      padding: 5px;
+  }
   
 }
 
-.nav-menu li.login a:hover {
-  background: none;
+@media (max-width: 576px) {
+  .carousel-caption {
+      font-size: 1rem;
+  }
+
 }
 
-.nav-menu li.login:hover a:before,
-.nav-menu li.login.menu-active a:before {
-  visibility: hidden;
-}
-
-.nav-menu li.login a.disabled {
-  color: #a5a5a5; /* Disabled color */
-  background: #e0e0e0; /* Grey background */
-  border-color: #e0e0e0; /* Border matches background */
-  cursor: not-allowed; /* Show 'not-allowed' cursor */
-}
-
-.nav-menu li.login a.disabled:hover {
-  background: #e0e0e0; /* Keep background same on hover */
-  color: #ccc; /* Prevent hover styles */
-}
-
-.nav-menu li.login a.disabled:before,
-.nav-menu li.login.menu-active a.disabled:before {
-  visibility: hidden; /* Hide any hover effects */
-}
