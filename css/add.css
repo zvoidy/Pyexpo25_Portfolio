@@ -673,3 +673,7 @@ li:is(:hover, :focus-within) + li + li + li + li + li + li {
 
 }
 
+@media (max-width: 375px) {
+  *{margin:0;
+  }
+}
