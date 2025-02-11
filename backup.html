@@ -33,6 +33,14 @@
 
     <!-- add css -->
      <link href="css/add.css" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax-video.min.js"></script>
+
+
+<!-- <link
+    href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Lugrasimo&family=Nova+Cut&family=Orbitron:wght@400..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"> -->
 </head>
 
 <body>
@@ -44,7 +52,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-0">
+    <div class="container-fluid px-0" style="background-color: #100f45;">
         <div class="row g-0 d-none d-lg-flex">
             <div class="col-lg-6 ps-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center text-light">
@@ -67,21 +75,22 @@
 
 <section id="home">
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5">
+    <nav class="navbar navbar-expand-lg sticky-top px-4 px-lg-5" style="background-color: #101522;">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
             <h1><img class="nav-logo" src="assets/PyExpoLogo.png" /></h1>
             <!-- <img src="assets/quote.gif" class="responsive-gif" /> -->
 
         </a>
         <button type="button" style="background-color: white;" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+            <i class='fas fa-angle-double-down'></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="#home" style="color:#f82249;" class="nav-item nav-link active">Home</a>
                 <a href="#about" style="color:white;" class="nav-item nav-link">About</a>
-                <a href="#event" style="color:white;" class="nav-item nav-link">Event</a>
                 <a href="#journey" style="color:white;" class="nav-item nav-link">Journey</a>
+                <a href="#event" style="color:white;" class="nav-item nav-link">Event</a>
+                
                 <a href="#faq" style="color:white;" class="nav-item nav-link">Student corner</a>
                 <a class="nav-item nav-link login-btn" href="https://portal.pyexpo.co">Login</a>
 
@@ -156,26 +165,33 @@
         </div>
 
     </div>
-    <div id="countdown" class="timer">
-        <div class="time-box">
-            <h1 style="font-family: 'timer', sans-serif;" id="days">00</h1>
-            <span>Days</span>
-        </div>
-        <div class="time-box">
-            <h1 style="font-family: 'timer', sans-serif;"  id="hours">00</h1>
-            <span>Hours</span>
-        </div>
-        <div class="time-box">
-            <h1 style="font-family: 'timer', sans-serif;"  id="minutes">00</h1>
-            <span>Minutes</span>
-        </div>
-        <div class="time-box">
-            <h1 style="font-family: 'timer', sans-serif;"  id="seconds">00</h1>
-            <span>Seconds</span>
-        </div>
-    </div>  
+    <!-- Countdown Timer -->
+    <div class="timer">
+      <div class="time">
+        <h1 id="days">--</h1>
+        <span id="daysLabel">Days</span>
+      </div>
+      <div class="time-btn">:</div>
+      <div class="time">
+        <h1 id="hours">--</h1>
+        <span id="hoursLabel">Hours</span>
+      </div>
+      <div class="time-btn">:</div>
+      <div class="time">
+        <h1 id="min">--</h1>
+        <span id="minutesLabel">Minutes</span>
+      </div>
+      <div class="time-btn">:</div>
+      <div class="time">
+        <h1 id="sec">--</h1>
+        <span id="secondLabel">Seconds</span>
+      </div>
+    </div> 
     <!-- Carousel End -->
 </section>
+
+<br>
+<hr class="style2">
 
 <section id="about">
     <!-- Page Header Start -->
@@ -222,8 +238,8 @@
                 <div class="col-lg-6">
                     <div class="row g-2">
                         <div class="col-6 position-relative wow fadeIn" data-wow-delay="0.7s">
-                            <div class="about-experience bg-secondary rounded">
-                                <h1 class="display-1 mb-0">25</h1>
+                            <div class="about-experience rounded" style="background-color: rgb(214, 194, 194);">
+                                <img src="assets/zero.png" />
                                 <small class="fs-5 fw-bold">PYEXPO</small>
                             </div>
                         </div>
@@ -330,7 +346,7 @@
 
 
     <!-- Banner Start -->
-    <div class="container-fluid banner my-5 py-5" data-parallax="scroll" data-image-src="assets/officialbanner.png">
+    <div class="jarallax" data-jarallax data-video-src="mp4:assets/pyexpocinematic.mp4" style="height: 80vh;">
         <div class="container py-5">
             <!-- <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
@@ -359,754 +375,913 @@
                 </div>
             </div> -->
 
-            <div class="row gx-4 gy-4 justify-content-center">
-                <!-- Top Row (1 Card) -->
-                <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="product-item">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/MD-KiTE.jpg" alt="">
-                            <div class="product-overlay">
-                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 blur">
-                            <h4 class="mb-2" style="color:white;">Dr. Ashok Bakthavathsalam</h4>
-                            <p class="mb-4" style="color:#E3B35A;">Managing Director <span class="mx-2">|</span> <a href="#!">KiTE</a></p>
-                        </div>
-                    </div>
-                </div>
             
-                <!-- Middle Row (4 Cards) -->
-                <div class="w-100"></div> <!-- Ensures a new row starts -->
-                <div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="product-item">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/CEO-KiTE.jpg" alt="">
-                            <div class="product-overlay">
-                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 blur">
-                            <h6 class="mb-2" style="color:white;font-size: large;">Mr. Aravind Kumar R</h6>
-                            <p class="mb-4" style="color:#E3B35A;">CEO - KGISL Educational Institutions <span class="mx-2">|</span>
-                                <a href="#!">KiTE</a></p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="product-item">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/DIRECTOR-KiTE.jpg" alt="">
-                            <div class="product-overlay">
-                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 blur">
-                            <h6 class="mb-2" style="color:white;font-size: large;">Dr. P. Shankar</h6>
-                            <p class="mb-4" style="color:#E3B35A;">Director - Academics & Administration<span class="mx-2">|</span>
-                                <a href="#!">KiTE</a></p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="product-item">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/SECRETARY-KiTE.jpg" alt="">
-                            <div class="product-overlay">
-                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 blur">
-                            <h6 class="mb-2" style="color:white;font-size: large;">Dr. N. Rajkumar</h6>
-                            <p class="mb-4" style="color:#E3B35A;">Secretary
-                                <br>
-                                <span class="mx-2">|</span> <a href="#!">KiTE</a></p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="product-item">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/PRINCIPAL-KITE.jpg" alt="">
-                            <div class="product-overlay">
-                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 blur">
-                            <h6 class="mb-2" style="color:white;font-size: large;">Dr. S. Suresh Kumar</h6>
-                            <p class="mb-4" style="color:#E3B35A;">Principal 
-                                <br>
-                                <span class="mx-2">|</span> <a href="#!">KiTE</a></p>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Bottom Row (1 Card) -->
-                <div class="w-100"></div> <!-- Ensures a new row starts -->
-                <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="product-item">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/prof_Sathish.jpg" alt="">
-                            <div class="product-overlay">
-                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 blur">
-                            <h4 class="mb-2" style="color:white;font-size: 26px;">Er. Sathish Ramanujam</h4>
-                            <p class="mb-4" style="color:#E3B35A;">Chief Organizer<span class="mx-2">|</span><a href="#!">#PyExpo Team</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
         </div>
     </div>
     <!-- Banner End -->
 </section>
 
-<section id="event">
-        <!-- Page Header Start -->
-        <div class="container-fluid event-page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container text-center py-5">
-                <br>
-                <br>
-                <br>
-                <!-- <h1 class="display-3 text-white mb-4 animated slideInDown">Services</h1>
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb justify-content-center mb-0">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Services</li>
-                    </ol>
-                </nav> -->
-            </div>
-        </div>
-        <!-- Page Header End -->
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;" class="section-title bg-white text-center text-primary px-3">Event Details</p>
-                <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Pyexpo'25 Poster</h1>
-                <div class="intro-poster" style="display: flex; justify-content: center; align-items: center; margin-top: 25px;">
-                    <img style="width: 150%; max-width: 5000px; height: auto; border-radius: 20px;" src="assets/PYEXPO Invite poster.jpg" />
-                </div>
-            </div>
-            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Pyexpo'25 Domains</h1>
-            </div>
-            <div class="row gy-5 gx-4">
-                <!-- First Row (3 items) -->
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="assets/AiMl.gif" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="assets/1.png" alt="">
-                            </div>
-                            <h5 class="mb-3">AI&ML</h5>
-                            <p class="mb-4">(Chatbot / Models)</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="assets/web_dev.gif" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="assets/2.png" alt=""/>
-                            </div>
-                            <h5 class="mb-3">Web Development</h5>
-                            <p class="mb-4">(Flask / Django)</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="assets/IOT.gif" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="assets/3.png" alt="">
-                            </div>
-                            <h5 class="mb-3">I.O.T</h5>
-                            <p class="mb-4">(Internet Of Things)</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Second Row (2 items) -->
-                <div class="col-lg-6 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="assets/student.gif" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="assets/4.png" alt=""/>
-                            </div>
-                            <h5 class="mb-3">Student Innovation</h5>
-                            <p class="mb-4">(Students Idea)</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="assets/pyGame.gif" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="assets/5.png" alt=""/>
-                            </div>
-                            <h5 class="mb-3">PyGames</h5>
-                            <p class="mb-4">(Game Development)</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-    <div class="video-banner">
-        <video autoplay loop muted playsinline class="bg-video">
-            <source src="assets/pyexpocinematic.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <!-- Schedule start -->
-    <div id="header-carousel-1" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="calendar-container">
-                    <h2>Event Calendar - February 2025</h2>
-                    <div class="calendar" id="calendar-feb"></div>
-                </div>
-                <div class="calendar-legend">
-                    <h3>Legend:</h3>
-                    <div><span class="legend-box" style="background: #ff0;"></span> Current Date</div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="calendar-container">
-                    <h2>Event Calendar - March 2025</h2>
-                    <div class="calendar" id="calendar-mar"></div>
-                </div>
-                <div class="calendar-legend">
-                    <h3>Legend:</h3>
-                    <div><span class="legend-box" style="background: #ff0;"></span> Current Date</div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel-1" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel-1" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- Schedule end -->
-
-
-    <!-- Features Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="align-items-center">
-                <!-- <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title bg-white text-start text-primary pe-3">Why Us!</p>
-                    <h1 class="mb-4">Few Reasons Why People Choosing Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    p><i class="fa fa-check text-primary me-3"></i>Justo magna erat amet</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Clita erat ipsum et lorem et sit</p>
-                    <div class="row g-5 pt-2 mb-5">
-                        <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/service.png" alt="">
-                            <h5 class="mb-3">Dedicated Services</h5>
-                            <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita</span>
-                        </div>
-                       <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/product.png" alt="">
-                            <h5 class="mb-3">Organic Products</h5>
-                            <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita</span>
-                        </div> 
-                    </div> 
-                  <a class="btn btn-secondary rounded-pill py-3 px-5 mt-3" href="">Explore More</a> 
-                </div> -->
-                <div>
-                    <div class="rounded overflow-hidden">
-                        <div class="row g-0">
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="text-center bg-primary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/experience.png" alt="">
-                                    <h1 class="display-6 text-white" data-toggle="counter-up">10</h1>
-                                    <span class="fs-5 fw-semi-bold text-secondary">Special prices</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="text-center bg-secondary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/award.png" alt="">
-                                    <h1 class="display-6" data-toggle="counter-up">3</h1>
-                                    <span class="fs-5 fw-semi-bold text-primary">Award Winning</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="text-center bg-secondary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/animal.png" alt="">
-                                    <h1 class="display-6 counter1" data-toggle="counter-up">100</h1>
-                                    <span class="fs-5 fw-semi-bold text-primary">Teams</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                                <div class="text-center bg-primary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/client.png" alt="">
-                                    <h1 class="display-6 counter2 text-white" data-toggle="counter-up">500</h1>
-                                    <span class="fs-5 fw-semi-bold text-secondary">Participants</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features End -->
-</section>
 
 <section id="journey">
-        <!-- Page Header Start -->
-        <div class="container-fluid journey-page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container text-center py-5">
-                <br>
-                <br>
-                <br>
-                <!-- <h1 class="display-3 text-white mb-4 animated slideInDown">Services</h1>
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb justify-content-center mb-0">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Services</li>
-                    </ol>
-                </nav> -->
-            </div>
-        </div>
-        <!-- Page Header End -->
-    <!-- Product Start -->
-     
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="section-title bg-white text-center text-primary px-3">memories</p>
-                <h1 class="mb-5">Instagram wall of #pyexpo</h1>
-            </div>
-            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-    
-                    <div class="carousel-item active">
-                        <div class="row gx-4">
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">jd___vfx</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-1.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>159 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        <strong>Team Exceptional errors</strong>
-                                    </div>
-                                    <div class="instagram-comments">
-                                        March 14, 2024
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">pyexpo</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-2.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>100 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        <strong>Hack2expo.</strong> where dreams become reality..
-                                    </div>
-                                    <div class="instagram-comments">
-                                        <a href="#">View 1 comment</a>
-                                    </div>
-                                    <div class="instagram-comments">
-                                        March 13, 2024
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">dragon_knights_</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-3.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>241 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        Senior mentor guiding our team.
-                                    </div>
-                                    <div class="instagram-comments">
-                                        <a href="#">View all 47 comments</a>
-                                    </div>
-                                    <div class="instagram-comments">
-                                        March 15, 2024
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">_code_crafters</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-4.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>77 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        <strong>#_code_crafters</strong>#pyexpo
-                                    </div>
-                                    <!-- <div class="instagram-comments">
-                                        <a href="#">View all 47 comments</a>
-                                    </div> -->
-                                    <div class="instagram-comments">
-                                        March 15, 2024
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row gx-4">
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">pyexpo</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-9.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>99 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        <strong>First round of evaluation</strong> is live at Hack2Expo!...
-                                    </div>
-                                    <div class="instagram-comments">
-                                        <a href="#">View all 3 comments</a>
-                                    </div>
-                                    <div class="instagram-comments">
-                                        March 14, 2024
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">jd___vfx</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-6.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>0 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        <strong>#T003</strong>Exceptionalerrors
-                                    </div>
-                                    <div class="instagram-comments">
-                                        <a href="#">View 1 comment</a>
-                                    </div>
-                                    <div class="instagram-comments">
-                                        March 14, 2024
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">pyexpo</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-7.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>173 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        <strong>Round one evaluation</strong> are in full swing at Hack2Expo!
-                                    </div>
-                                    <div class="instagram-comments">
-                                        <a href="#">View all 7 comments</a>
-                                    </div>
-                                    <div class="instagram-comments">
-                                        March 14, 2024
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">pyexpo</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-8.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>103 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        <strong>Let the games begin!</strong> The first round of evaluation is...
-                                    </div>
-                                    <div class="instagram-comments">
-                                        <a href="#">View all 2 comments</a>
-                                    </div>
-                                    <div class="instagram-comments">
-                                        March 14, 2024
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="carousel-item">
-                        <div class="row gx-4">
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="instagram-card">
-                                    <div class="instagram-header">
-                                        <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-                                        <span class="username">pyexpo</span>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
-                                    <div class="instagram-image">
-                                        <img src="assets/insta-5.jpg" alt="Instagram Post">
-                                    </div>
-                                    <div class="instagram-actions">
-                                        <i class="bi bi-heart-fill heart-icon"></i>
-                                        <i style="padding-left: 10px;" class="bi bi-chat"></i>
-                                        <i class="bi bi-send"></i>
-                                        <i class="bi bi-bookmark bookmark"></i>
-                                    </div>
-                                    <div class="instagram-likes">
-                                        <strong>94 likes</strong>
-                                    </div>
-                                    <div class="instagram-caption">
-                                        <strong>Hackshop2 Update</strong> Where passion meets innovation!
-                                    </div>
-                                    <div class="instagram-comments">
-                                        March 13, 2024
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- Closing carousel-inner -->
-    
-                <!-- Carousel Controls -->
-                <a class="carousel-control-prev" href="#productCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#productCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
-    
-            </div> <!-- Closing carousel -->
-        </div> <!-- Closing container -->
-    </div> <!-- Closing container-xxl -->
-    
-    <!-- Product End -->
-
-    <!-- Gallery Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="section-title bg-white text-center text-primary px-3">Gallery</p>
-                <h1 class="mb-5">Photo Gallery</h1>
-            </div>
-            <div class="row g-0">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <a class="d-block" href="assets/gal-1.jpg" data-lightbox="gallery">
-                                <img class="img-fluid" src="assets/gal-1.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="col-12">
-                            <a class="d-block" href="assets/gal-2.jpg" data-lightbox="gallery">
-                                <img class="img-fluid" src="assets/gal-2.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <a class="d-block" href="assets/gal-3.jpg" data-lightbox="gallery">
-                                <img class="img-fluid" src="assets/gal-3.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="col-12">
-                            <a class="d-block" href="assets/gal-4.jpg" data-lightbox="gallery">
-                                <img class="img-fluid" src="assets/gal-4.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <a class="d-block" href="assets/gal-5.jpg" data-lightbox="gallery">
-                                <img class="img-fluid" src="assets/gal-5.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="col-12">
-                            <a class="d-block" href="assets/gal-6.jpg" data-lightbox="gallery">
-                                <img class="img-fluid" src="assets/gal-6.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <a class="d-block" href="assets/gal-7.jpg" data-lightbox="gallery">
-                                <img class="img-fluid" src="assets/gal-7.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="col-12">
-                            <a class="d-block" href="assets/gal-8.jpg" data-lightbox="gallery">
-                                <img class="img-fluid" src="assets/gal-8.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Page Header Start -->
+    <div class="container-fluid journey-page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <br>
+            <br>
+            <br>
+            <!-- <h1 class="display-3 text-white mb-4 animated slideInDown">Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                </ol>
+            </nav> -->
         </div>
     </div>
-    <!-- Gallery End -->
-    
-    <!-- My gallery 1 -->
-    <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-        <h1 class="mb-5">Click below to take a look!</h1>
-    </div>
-    <div class="gallery">
-        <input type="checkbox" >
-        <img src="assets/checkgal-2.jpg" alt="a forest after an apocalypse">
-        <img src="assets/checkgal-1.jpg" alt="a waterfall and many rocks">
-        <img src="assets/checkgal-3.jpg" alt="a house on a mountain">
-        <img src="assets/checkgal-4.jpg" alt="sime pink flowers">
-        <img src="assets/checkgal-5.jpg" alt="big rocks with some trees">
-        <img src="assets/checkgal-6.jpg" alt="a waterfall, a lot of tree and a great view from the sky">
-        <img src="assets/checkgal-7.jpg" alt="a cool landscape">
-        <img src="assets/checkgal-8.jpg" alt="inside a town between two big buildings">
-        <img src="assets/checkgal-9.jpg" alt="a great view of the sea above the mountain">
+    <!-- Page Header End -->
+<!-- Product Start -->
+
+
+  <!-- Marquee Container -->
+    <div class="instagram-marquee">
+      <div class="instagram-cards">
+        <!-- First Set of 9 Instagram Cards -->
+        <!-- Card 1 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">jd___vfx</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-1.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>159 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Team Exceptional errors</strong>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-2.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>100 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Hack2expo.</strong> where dreams become reality..
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View 1 comment</a>
+          </div>
+          <div class="instagram-comments">
+            March 13, 2024
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">dragon_knights_</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-3.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>241 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            Senior mentor guiding our team.
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 47 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 15, 2024
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">_code_crafters</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-4.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>77 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>#_code_crafters</strong> #pyexpo
+          </div>
+          <div class="instagram-comments">
+            March 15, 2024
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-9.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>99 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>First round of evaluation</strong> is live at Hack2Expo!...
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 3 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">jd___vfx</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-6.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>17 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>#T003</strong> Exceptional errors
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View 1 comment</a>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-7.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>173 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Round one evaluation</strong> are in full swing at Hack2Expo!
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 7 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-8.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>103 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Let the games begin!</strong> The first round of evaluation is...
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 2 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-5.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>94 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Hackshop2 Update</strong> Where passion meets innovation!
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 3 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 13, 2024
+          </div>
+        </div>
+        
+        <!-- Duplicate Set of 9 Instagram Cards for Seamless Loop -->
+        <!-- Card 1 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">jd___vfx</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-1.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>159 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Team Exceptional errors</strong>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 2 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-2.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>100 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Hack2expo.</strong> where dreams become reality..
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View 1 comment</a>
+          </div>
+          <div class="instagram-comments">
+            March 13, 2024
+          </div>
+        </div>
+        <!-- Card 3 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">dragon_knights_</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-3.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>241 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            Senior mentor guiding our team.
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 47 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 15, 2024
+          </div>
+        </div>
+        <!-- Card 4 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">_code_crafters</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-4.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>77 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>#_code_crafters</strong> #pyexpo
+          </div>
+          <div class="instagram-comments">
+            March 15, 2024
+          </div>
+        </div>
+        <!-- Card 5 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-9.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>99 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>First round of evaluation</strong> is live at Hack2Expo!...
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 3 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 6 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">jd___vfx</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-6.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>17 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>#T003</strong> Exceptional errors
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View 1 comment</a>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 7 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-7.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>173 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Round one evaluation</strong> are in full swing at Hack2Expo!
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 7 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 8 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-8.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>103 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Let the games begin!</strong> The first round of evaluation is...
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 2 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 14, 2024
+          </div>
+        </div>
+        <!-- Card 9 Duplicate -->
+        <div class="instagram-card">
+          <div class="instagram-header">
+            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">pyexpo</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="instagram-image">
+            <img src="assets/insta-5.jpg" alt="Instagram Post">
+          </div>
+          <div class="instagram-actions">
+            <i class="bi bi-heart-fill heart-icon"></i>
+            <i class="bi bi-chat" style="padding-left: 10px;"></i>
+            <i class="bi bi-send"></i>
+            <i class="bi bi-bookmark bookmark"></i>
+          </div>
+          <div class="instagram-likes">
+            <strong>94 likes</strong>
+          </div>
+          <div class="instagram-caption">
+            <strong>Hackshop2 Update</strong> Where passion meets innovation!
+          </div>
+          <div class="instagram-comments">
+            <a href="#">View all 3 comments</a>
+          </div>
+          <div class="instagram-comments">
+            March 13, 2024
+          </div>
+        </div>
       </div>
-     <!-- My gallery 1 end -->
-    
-     <div>‎ </div>
-     <div>‎ </div>
-     <div>‎ </div>
+    </div>
+  
+<!-- Product End -->
+
+<!-- Gallery Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="section-title bg-white text-center text-primary px-3">Gallery</p>
+            <h1 class="mb-5">Photo Gallery</h1>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <a class="d-block" href="assets/gal-1.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="assets/gal-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="d-block" href="assets/gal-2.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="assets/gal-2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <a class="d-block" href="assets/gal-3.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="assets/gal-3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="d-block" href="assets/gal-4.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="assets/gal-4.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <a class="d-block" href="assets/gal-5.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="assets/gal-5.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="d-block" href="assets/gal-6.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="assets/gal-6.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <a class="d-block" href="assets/gal-7.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="assets/gal-7.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="d-block" href="assets/gal-8.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="assets/gal-8.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Gallery End -->
+
+<!-- My gallery 1 -->
+<div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+    <h1 class="mb-5">Click below to take a look!</h1>
+</div>
+<div>‎ </div>
+<div>‎ </div>
+<div>‎ </div>
+<div class="gallery">
+    <input type="checkbox" >
+    <img src="assets/checkgal-2.jpg" alt="a forest after an apocalypse">
+    <img src="assets/checkgal-1.jpg" alt="a waterfall and many rocks">
+    <img src="assets/checkgal-3.jpg" alt="a house on a mountain">
+    <img src="assets/checkgal-4.jpg" alt="sime pink flowers">
+    <img src="assets/checkgal-5.jpg" alt="big rocks with some trees">
+    <img src="assets/checkgal-6.jpg" alt="a waterfall, a lot of tree and a great view from the sky">
+    <img src="assets/checkgal-7.jpg" alt="a cool landscape">
+    <img src="assets/checkgal-8.jpg" alt="inside a town between two big buildings">
+    <img src="assets/checkgal-9.jpg" alt="a great view of the sea above the mountain">
+</div>
+ <!-- My gallery 1 end -->
+
+ <div>‎ </div>
+ <div>‎ </div>
+ <div>‎ </div>
 </section>
+
+<br>
+<hr class="style2">
+
+<section id="event">
+    <!-- Page Header Start -->
+    <div class="container-fluid event-page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="height: 10vh;">
+      <div class="container text-center py-5" style="height: 10vh;">
+        <br><br><br>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+      <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Pyexpo'25 Poster</h1>
+      <div class="intro-poster" style="display: flex; justify-content: center; align-items: center; margin-top: 25px;">
+        <img style="width: 120%; max-width: 500%; height: auto; border-radius: 20px;" src="assets/PYEXPO Invite poster.jpg" />
+      </div>
+    </div>
+  </section>
+  <!-- End of Event Section -->
+
+
+  <!-- Schedule Section -->
+  <section id="schedule">
+    <div class="container-fluid my-5">
+      <div class="row">
+        <!-- First Calendar Column -->
+        <div class="col-md-6 col-12">
+          <div class="calendar-container">
+            <h2>Event Calendar - February 2025</h2>
+            <div class="calendar" id="calendar-feb">
+              <!-- Weekday headers and day cells will be populated here -->
+            </div>
+          </div>
+          <div class="calendar-legend">
+            <h3>Legend:</h3>
+            <div>
+              <span class="legend-box" style="background: #ff0;"></span> Current Date
+            </div>
+          </div>
+        </div>
+        <!-- Second Calendar Column -->
+        <div class="col-md-6 col-12">
+          <div class="calendar-container">
+            <h2>Event Calendar - March 2025</h2>
+            <div class="calendar" id="calendar-mar">
+              <!-- Weekday headers and day cells will be populated here -->
+            </div>
+          </div>
+          <div class="calendar-legend">
+            <h3>Legend:</h3>
+            <div>
+              <span class="legend-box" style="background: #ff0;"></span> Current Date
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Schedule Section -->
+
+  <!-- Roadmap Section -->
+  <section id="roadmap">
+    <div class="section-header roadmap-heading" style="margin-top: 5px; letter-spacing: 5px; color: black;">
+      Roadmap of <span style="color:var(--purple-color);">PY<span style="color:var(--red-color);">EXPO</span></span>'25
+    </div>
+    <ul>
+      <li style="--accent-color:#6b48cf">
+        <div class="date" itemprop="evaluation">IDEA EVALUATION</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Dec 19-20, 2024</div>
+        <div class="descr">
+          Experience the exciting journey of PyExpo'25 as we guide participants from preparation and idea development to the grand finale, showcasing innovation and talent at every step.
+        </div>
+      </li>
+      <li style="--accent-color:#4624A7">
+        <div class="date">IDEA2EXPO</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Feb 17-18, 2025</div>
+        <div class="descr">Faculty mentors evaluate the practical feasibility and trends of ideas. The top 100 teams proceed to the next stage.</div>
+      </li>
+      <li style="--accent-color:#3278a7">
+        <div class="date">HACKSHOPS2EXPO</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Feb 19-20, 2025</div>
+        <div class="descr">
+          A two-day intensive workshop for selected teams to refine their ideas and enhance their skills.
+        </div>
+      </li>
+      <li style="--accent-color:#004877">
+        <div class="date">HACKATHON2EXPO</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Feb 21-22, 2025</div>
+        <div class="descr">
+          A 30-hour hackathon where teams develop and execute their ideas in a competitive environment.
+        </div>
+      </li>
+      <li style="--accent-color:#E24A68">
+        <div class="date">PITCH2EXPO</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Feb 28, 2025</div>
+        <div class="descr">
+          The remaining 50 teams present their projects to a panel of judges, including participants from KGCAS, KiTE, and IIM.
+        </div>
+      </li>
+      <li style="--accent-color:#FF0044">
+        <div class="date">PYEXPO'25 - The Grand Finale</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Mar 1, 2025</div>
+        <div class="descr">
+          The top projects are showcased to industry evaluators, who choose the best three teams. Winners are awarded and celebrated.
+        </div>
+      </li>
+    </ul>
+  </section>
+  <!-- End of Roadmap Section -->
+
+
+  <!-- Domain Section -->
+  <section id="domain">
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Pyexpo'25 Domains</h1>
+        </div>
+        <div class="row gy-5 gx-4">
+          <!-- First Row (3 items) -->
+          <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/AiMl.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/1.png" alt="">
+                </div>
+                <h5 class="mb-3">AI&ML</h5>
+                <p class="mb-4">(Chatbot / Models)</p>
+                <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/web_dev.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/2.png" alt=""/>
+                </div>
+                <h5 class="mb-3">Web Development</h5>
+                <p class="mb-4">(Flask / Django)</p>
+                <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/IOT.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/3.png" alt="">
+                </div>
+                <h5 class="mb-3">I.O.T</h5>
+                <p class="mb-4">(Internet Of Things)</p>
+                <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Second Row (2 items) -->
+          <div class="col-lg-6 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/student.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/4.png" alt=""/>
+                </div>
+                <h5 class="mb-3">Student Innovation</h5>
+                <p class="mb-4">(Students Idea)</p>
+                <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/pyGame.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/5.png" alt=""/>
+                </div>
+                <h5 class="mb-3">PyGames</h5>
+                <p class="mb-4">(Game Development)</p>
+                <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Domain Section -->
+
+
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="align-items-center">
+          <div class="rounded overflow-hidden">
+            <div class="row g-0">
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="text-center bg-primary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/experience.png" alt="">
+                  <h1 class="display-6 text-white" data-toggle="counter-up">10</h1>
+                  <span class="fs-5 fw-semi-bold text-secondary">Special prices</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="text-center bg-secondary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/award.png" alt="">
+                  <h1 class="display-6" data-toggle="counter-up">3</h1>
+                  <span class="fs-5 fw-semi-bold text-primary">Award Winning</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="text-center bg-secondary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/animal.png" alt="">
+                  <h1 class="display-6 counter1" data-toggle="counter-up">100</h1>
+                  <span class="fs-5 fw-semi-bold text-primary">Teams</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                <div class="text-center bg-primary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/client.png" alt="">
+                  <h1 class="display-6 counter2 text-white" data-toggle="counter-up">500</h1>
+                  <span class="fs-5 fw-semi-bold text-secondary">Participants</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Features Section -->
+
+
+  <!-- Branding Section -->
+  <section id="brand-collection" class="padding-small border-top border-bottom overflow-hidden margin-large mb-0">
+    <div class="container">
+      <div class="brand-collection-inner d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="brand-text">Kgis</p>
+        <p class="brand-text">Kgisl</p>
+        <p class="brand-text">Kghospital</p>
+        <p class="brand-text">Code Buffin</p>
+        <p class="brand-text">Pineshpere</p>
+        <p class="brand-text">Smart Side</p>
+      </div>            
+    </div>
+  </section>
+
 
     <!-- About Start -->
     <!-- <div class="container-xxl py-5">
@@ -1535,7 +1710,7 @@
         </div>
     </div> -->
     <!-- Team End -->
-<br>
+
 
     <!-- FAQ Section Start -->
 <section id="faq" class="intro section-padding">
@@ -1620,6 +1795,8 @@
   </section>
   <!-- FAQ Section End -->
 
+
+
 <section id="feedback">
     <!-- Testimonial Start -->
     <div class="container-xxl py-5">
@@ -1631,7 +1808,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="testimonial-img">
-                        <img class="img-fluid animated pulse infinite" src="assets/samuel.png" alt="">
+                        <img class="img-fluid animated pulse infinite" src="assets/samuel.jpg" alt="">
                         <img class="img-fluid animated pulse infinite" src="assets/vidya.png" alt="">
                         <img class="img-fluid animated pulse infinite" src="assets/shreya.png" alt="">
                         <img class="img-fluid animated pulse infinite" src="assets/thejas.png" alt="">
@@ -1689,21 +1866,6 @@
     <!-- Testimonial End -->
 </section>
 
-
-    <!-- Branding content start -->
-    <section id="brand-collection" class="padding-small border-top border-bottom overflow-hidden margin-large mb-0">
-        <div class="container">
-            <div class="brand-collection-inner d-flex flex-wrap justify-content-between align-items-center gap-3">
-                <p href="#" class="brand-text">Kgis</p>
-                <p href="#" class="brand-text">Kgisl</p>
-                <p href="#" class="brand-text">Kghospital</p>
-                <p href="#" class="brand-text">Code Buffin</p>
-                <p href="#" class="brand-text">Pineshpere</p>
-                <p href="#" class="brand-text">Smart Side</p>
-            </div>            
-        </div>
-    </section>
-    <!-- Branding content end -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -1827,7 +1989,68 @@
 
      <!-- Schedule script -->
     <script>
-        // Events for February and March (Grouped by Category)
+       // Function to Create Calendar with Events
+        function createCalendar(containerId, month, year, events) {
+            const calendar = document.getElementById(containerId);
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const currentDate = new Date();
+            const currentDay = currentDate.getDate();
+            const currentMonth = currentDate.getMonth();
+            const currentYear = currentDate.getFullYear();
+        
+            // Weekday Headers
+            const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            weekdays.forEach(day => {
+                const dayHeader = document.createElement("div");
+                dayHeader.classList.add("day", "weekday");
+                dayHeader.textContent = day;
+                calendar.appendChild(dayHeader);
+            });
+        
+            // Add Empty Spaces Before 1st Day
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDiv = document.createElement("div");
+                emptyDiv.classList.add("empty");
+                calendar.appendChild(emptyDiv);
+            }
+        
+            // Generate Calendar Days
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateDiv = document.createElement("div");
+                dateDiv.classList.add("day");
+                dateDiv.textContent = day;
+            
+                // Check if this date has an event
+                if (events[day]) {
+                    dateDiv.classList.add("event-day");
+                    dateDiv.style.backgroundColor = events[day].color;
+                    dateDiv.setAttribute("data-event", events[day].name);
+                    dateDiv.addEventListener("click", function () {
+                        // Instead of an alert, update the legend box content
+                        // Find the closest calendar container and then the next sibling (the legend)
+                        const legend = dateDiv.closest('.calendar-container').nextElementSibling;
+                        legend.innerHTML = `
+                            <h3>Event Details:</h3>
+                            <div>
+                                <span class="legend-box" style="background: ${events[day].color};"></span> ${events[day].name} on ${day} ${["January","February","March","April","May","June","July","August","September","October","November","December"][month]} ${year}
+                            </div>
+                        `;
+                    });
+                }
+            
+                // Highlight Current Day (if this calendar is for the current month/year)
+                if (year === currentYear && month === currentMonth && day === currentDay) {
+                    dateDiv.style.backgroundColor = "#ff0"; // Yellow highlight
+                    dateDiv.style.color = "#000"; // Ensure text is readable
+                    dateDiv.style.fontWeight = "bold";
+                }
+            
+                calendar.appendChild(dateDiv);
+            }
+        }
+
+        // Example Events Data
         const eventsFeb = {
             17: { name: "Ideathon2Expo - Day Begins", color: "#3095d2" },
             18: { name: "Ideathon2Expo - Day Ends", color: "#3095d2" },
@@ -1840,67 +2063,15 @@
             27: { name: "Orientation for Pitch2Expo", color: "#1ebe6c" },
             28: { name: "Pitch2Expo", color: "#4CAF50" }
         };
-    
+
         const eventsMar = {
             1: { name: "PyExpo Grand Finale", color: "#ff0000" }
         };
-    
-        // Function to Create Calendar with Events
-        function createCalendar(containerId, month, year, events) {
-            const calendar = document.getElementById(containerId);
-            const firstDay = new Date(year, month, 1).getDay();
-            const daysInMonth = new Date(year, month + 1, 0).getDate();
-            const currentDate = new Date();
-            const currentDay = currentDate.getDate();
-            const currentMonth = currentDate.getMonth();
-            const currentYear = currentDate.getFullYear();
-    
-            // Weekday Headers
-            const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-            weekdays.forEach(day => {
-                const dayHeader = document.createElement("div");
-                dayHeader.classList.add("day", "weekday");
-                dayHeader.textContent = day;
-                calendar.appendChild(dayHeader);
-            });
-    
-            // Add Empty Spaces Before 1st Day
-            for (let i = 0; i < firstDay; i++) {
-                const emptyDiv = document.createElement("div");
-                emptyDiv.classList.add("empty");
-                calendar.appendChild(emptyDiv);
-            }
-    
-            // Generate Calendar Days
-            for (let day = 1; day <= daysInMonth; day++) {
-                const dateDiv = document.createElement("div");
-                dateDiv.classList.add("day");
-                dateDiv.textContent = day;
-    
-                // Check if this date has an event
-                if (events[day]) {
-                    dateDiv.classList.add("event-day");
-                    dateDiv.style.backgroundColor = events[day].color;
-                    dateDiv.setAttribute("data-event", events[day].name);
-                    dateDiv.addEventListener("click", function () {
-                        alert(`Event on ${day}: ${events[day].name}`);
-                    });
-                }
-    
-                // Highlight Current Day in Yellow (if today is an event)
-                if (year === currentYear && month === currentMonth && day === currentDay) {
-                    dateDiv.style.backgroundColor = "#ff0"; // Yellow highlight
-                    dateDiv.style.color = "#000"; // Ensure text is readable
-                    dateDiv.style.fontWeight = "bold";
-                }
-    
-                calendar.appendChild(dateDiv);
-            }
-        }
-    
+
         // Create Calendars for February & March
         createCalendar("calendar-feb", 1, 2025, eventsFeb);
         createCalendar("calendar-mar", 2, 2025, eventsMar);
+
     </script>
     
     <!-- For navbar -->
