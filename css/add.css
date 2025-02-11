@@ -686,6 +686,11 @@ transform: scale(1.1); /* Slight zoom effect on hover */
   flex-shrink: 0;
 }
 
+.instagram-cards:hover {
+  animation-play-state: paused;
+}
+
+
 /* Additional styling for inner elements */
 .instagram-header {
   display: flex;
