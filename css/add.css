@@ -43,7 +43,6 @@
 .home-h2 {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  padding-top: 10px;
   font-size: 30px;
   margin-bottom: 0 !important; 
 }
@@ -101,6 +100,7 @@
     width: 100%;
     justify-content: space-evenly;
     gap: 0;
+    padding-top: 10vh;
   }
 
 
@@ -834,6 +834,7 @@ z-index: 1;
   /* Remove margins for seamless connection */
   margin: 0;
   flex-shrink: 0;
+  height: 50vh;
 }
 
 .instagram-cards:hover {
@@ -941,11 +942,11 @@ z-index: 1;
 .mainbanner {
   width: 100%;
   height: 30%;
-  /* object-fit: cover; */
+  object-fit: contain; 
   /* Ensures proper aspect ratio */
-  margin-top: 0px;
+  /* margin-top: 0px; */
+  background-color: black;
 }
-
 /* Responsive controls for captions (if enabled) */
 @media (max-width: 992px) {
   .carousel-caption {
@@ -961,6 +962,13 @@ z-index: 1;
     padding: 5px;
   }
 
+  #home{
+    height: 100vh;
+  }
+
+  .mainbanner{
+    height: 20vh;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1199,5 +1207,428 @@ Roadmap Section
 
   #roadmap .roadmap-heading {
     font-size: 2rem;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+/* Mobile Banner: Centered container */
+.mobile-banner {
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;  /* Stack image and text vertically */
+  align-items: center;
+  display: none;
+}
+
+/* Banner image styling with curved borders */
+.mobile-banner img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+}
+/* Banner text styling: single line with reduced font size */
+.banner-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section-header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5rem; /* Reduced font size */
+  color: #333;
+}
+
+.section-header-new {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5rem; /* Reduced font size */
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif !important;
+  text-align: center;
+}
+
+/* Hide the mobile banner on screens 990px and wider */
+@media (max-width: 768px) {
+  .mobile-banner {
+    display: block;
+  }
+}
+
+/* Custom styling for carousel indicators (optional) */
+.carousel-indicators {
+  bottom: 20px; /* Adjust vertical position as needed */
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+  opacity: 0.7;
+  margin: 0 5px;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.carousel-indicators button.active,
+.carousel-indicators button:hover {
+  background-color: #f82249; /* Active color */
+  opacity: 1;
+}
+
+
+.ready-to-play {
+  height: 460px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.ready-to-play:before {
+  content: '';
+  background-image: linear-gradient(0deg, #2a1c7a 0, #3fa3c2 100%);
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.ready-to-play video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%; /* Full width by default */
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.stop {
+  opacity: 1;
+}
+
+.stopfade .ready-to-play:before {
+  opacity: 1;
+}
+
+.video-text {
+  background-size: cover;
+  background-position: center top;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  color: #fff;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .ready-to-play {
+    min-height: 200px; /* Set a minimum height for the container */
+    height: auto; /* Allow the container to adjust its height based on the video */
+  }
+
+  .ready-to-play video {
+    width: 100%; /* Ensure the video fills the container */
+    height: 80%; /* Allow the video to adjust its height based on the width */
+  }
+}
+
+/* Admin Area */
+section #admin {
+  background: #000;
+  padding: auto;
+}
+
+.custom-container {
+  max-width: 250px; /* Adjust as needed */
+  margin: 0 auto; /* Centers the containers horizontally */
+}
+
+
+.custom-container1 img {
+  border-radius: 50%; /* Make images rounded */
+}
+
+/* Flexbox layout for horizontal display */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Distribute space between elements */
+  gap: 20px; /* Even gap between elements */
+}
+
+.custom-container1 {
+  background-color: #031C2F; /* Background color */
+  padding: 15px; /* Adjust padding */
+  border-radius: 8px; /* Adjust border radius */
+  width: calc(33.33% - 30px); /* Adjust width to fit three items per row with the specified gap */
+  max-width: 350px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+/* Adjust the layout for small screens */
+@media (max-width: 768px) {
+  .flex-container {
+    justify-content: center; /* Center elements */
+  }
+
+  .custom-container1 {
+    width: 100%; /* Display each container as one item per row */
+    max-width: 100%; /* Ensure containers don't exceed full width */
+  }
+}
+
+
+/* Mentor area */
+#mentors {
+  min-height: 100vh;
+  background: #031C2F;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 10px 15px;
+  margin: 0 auto;
+}
+
+h2 {
+  /* font-size: 32px; */
+  margin-bottom: 1em;
+}
+
+
+
+.cards {
+  display: flex;
+  padding: 25px 30px 25px 2px  ;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin: 0 25px;
+  gap: 10px;
+  height: 100%;
+
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  min-width: auto;
+  padding: 20px;
+  color: var(--white);
+  background:  linear-gradient(0deg, #000 0, #000c44 100%);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s ease;
+}
+
+.card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card:hover {
+  color: var(--black);
+  background: var(--white);
+}
+
+.card .card-title {
+  font-size: 20px;
+  color: var(--black);
+}
+
+.card .card-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+
+.card .card-link-wrapper {
+  margin-top: auto;
+}
+
+.card .card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: var(--b);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.card:hover .card-link {
+  background: var(--darkred);
+}
+
+.cards::-webkit-scrollbar {
+  height: 12px;
+}
+
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  width: 10%;
+  border: 2px solid #000;
+}
+
+.cards::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(100% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  min-width: auto;
+  padding: 20px;
+  color: var(--black);
+  background:  var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s ease;
+}
+
+.card1:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card1:hover {
+  color: var(--black);
+  background:linear-gradient(0deg, #000 0, #000c44 100%);;
+}
+
+.card1 .card1-title {
+  font-size: 20px;
+  color: var(--black);
+}
+
+.card1 .card1-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+
+.card1 .card1-link-wrapper {
+  margin-top: auto;
+}
+
+.card1 .card1-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: var(--b);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.card1:hover .card1-link {
+  background: var(--darkred);
+}
+
+.card1s::-webkit-scrollbar {
+  height: 12px;
+}
+
+.card1s::-webkit-scrollbar-thumb,
+.card1s::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.card1s::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  width: 10%;
+  border: 2px solid #000;
+}
+
+.card1s::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .card1 {
+    flex-basis: calc(100% - 10px);
+  }
+
+  .card1:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card1 {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .card1:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card1 {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .card1:not(:last-child) {
+    margin-right: 40px;
   }
 }

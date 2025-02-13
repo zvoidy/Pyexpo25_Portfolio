@@ -6112,6 +6112,13 @@ fieldset:disabled .btn {
 .h-50 {
   height: 50% !important;
 }
+
+@media (max-width:768px){
+  .h-50{
+    height: 40% !important;
+  }
+}
+
 .h-75 {
   height: 75% !important;
 }

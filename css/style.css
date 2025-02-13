@@ -511,14 +511,14 @@
 @media (max-width: 768px) {
     #header-carousel .carousel-item {
         position: relative;
-        min-height: 50vh;
+        min-height: 25vh;
     }
     
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
-        height: 100%;
-        object-fit:fill;
+        /* height: 100%; */
+        object-fit: contain;
     }
 }
 
@@ -546,7 +546,7 @@
     font-weight: 600;
 }
 
-.section-title::before {
+/* .section-title::before {
     position: absolute;
     content: "";
     width: calc(100% + 80px);
@@ -555,7 +555,7 @@
     left: -40px;
     background: var(--primary);
     z-index: -1;
-}
+} */
 
 .section-title::after {
     /* position: absolute; */
@@ -904,36 +904,53 @@ h1 {
 /***** Layout & Section Title *****/
 /**********************************/
 .new-container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  height: 90vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+/* Set max-width for various breakpoints */
 @media (min-width: 576px) {
-    .new-container {
-        max-width: 540px;
-    }
+  .new-container {
+      max-width: 540px;
+  }
 }
 
 @media (min-width: 768px) {
-    .new-container {
-        max-width: 720px;
-    }
+  .new-container {
+      max-width: 720px;
+  }
 }
 
 @media (min-width: 992px) {
-    .new-container {
-        max-width: 960px;
-    }
+  .new-container {
+      max-width: 960px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .new-container {
-        max-width: 1140px;
-    }
+  .new-container {
+      max-width: 1540px;
+      height: 40vh;
+  }
 }
+
+@media (min-width: 1400px) {
+  .new-container {
+      height: 45vh;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .new-container {
+      height: 180vh;
+  }
+}
+
 
 .new-row {
     display: -ms-flexbox;
@@ -1018,244 +1035,347 @@ h1 {
 /**********************************/
 /********** Team #1 Style *********/
 /**********************************/
+/* Grid container for new-team-1 cards */
+.new-team-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px; /* Adjust gap between cards as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .new-team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .new-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----------------------------------------------------------------- */
+/* new-team-1 Styles */
+/* ----------------------------------------------------------------- */
 .new-team-1 {
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .new-team-1 .new-team-img {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .new-team-1 .new-team-img img {
-    width: 100%;
-    height: auto;
-    transition: all .3s;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
 }
 
 .new-team-1:hover .new-team-img img {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .new-team-1 .new-team-content {
-    padding: 20px;
+  padding: 20px;
 }
 
 .new-team-1 .new-team-content h2 {
-    font-size: 25px;
-    font-weight: 400;
-    letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .new-team-1 .new-team-content h3 {
-    font-size: 16px;
-    font-weight: 300;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .new-team-1 .new-team-content h4 {
-    font-size: 16px;
-    font-weight: 300;
-    font-style: italic;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
 .new-team-1 .new-team-content p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .new-team-1 .new-team-social {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0;
 }
 
 .new-team-1 .new-team-social a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
-    padding: 11px 0 10px 0;
-    font-size: 16px;
-    line-height: 16px;
-    text-align: center;
-    color: #ffffff;
-    transition: all .3s;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  padding: 11px 0 10px 0;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  transition: all 0.3s;
 }
 
 .new-team-1 .new-team-social a.new-social-tw {
-    background: #00acee;
+  background: #00acee;
 }
 
 .new-team-1 .new-team-social a.new-social-fb {
-    background: #3b5998;
+  background: #3b5998;
 }
 
 .new-team-1 .new-team-social a.new-social-li {
-    background: #0e76a8;
+  background: #0e76a8;
 }
 
 .new-team-1 .new-team-social a.new-social-in {
-    background: #3f729b;
+  background: #3f729b;
 }
 
 .new-team-1 .new-team-social a.new-social-yt {
-    background: #c4302b;
+  background: #c4302b;
 }
 
 .new-team-1 .new-team-social a:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .new-team-1 .new-team-social a:hover {
-    background: #222222;
+  background: #222222;
 }
+
 
 /**********************************/
 /********* Team #3 Style **********/
 /**********************************/
+/* Grid Container for new-team-3 Cards */
+.new-team-3-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px; /* Adjust spacing between cards as needed */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1200px) {
+    .new-team-3-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .new-team-3-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* ----------------------------------------------------------------- */
+  /* Existing .new-team-3 Styles */
+  /* ----------------------------------------------------------------- */
+/* Grid Container for .new-team-3 Cards */
+.new-team-3-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px; /* Adjust gap between cards as needed */
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .new-team-3-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .new-team-3-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----------------------------------------------------------------- */
+/* Reduced .new-team-3 Card Styles */
+/* ----------------------------------------------------------------- */
 .new-team-3 {
-    margin-bottom: 30px;
+  margin-bottom: 20px;
+  max-width: 150px;  /* Constrain card width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .new-team-3 .new-team-img {
-    position: relative;
-    font-size: 0;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: relative;
+  font-size: 0;
+  /* Use a polygon clip to create a custom shape */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 100px;  /* Fixed height for image container */
 }
 
 .new-team-3 .new-team-img img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .new-team-3 .new-team-social {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.5);
-    transition: all 0.3s;
-    font-size: 0;
-    z-index: 1;
-    opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+  font-size: 0;
+  z-index: 1;
+  opacity: 0;
 }
 
 .new-team-3:hover .new-team-social {
-    opacity: 1;
+  opacity: 1;
 }
 
 .new-team-3 .new-team-social a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
-    padding: 11px 0 10px 0;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 16px;
-    text-align: center;
-    color: #ffffff;
-    transition: all 0.3s;
-    margin-top: 50px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: inline-block;
+  width: 40px;       /* Reduced size */
+  height: 30px;
+  margin-right: 3px;
+  padding: 5px 0;
+  font-size: 12px;   /* Reduced font size for icons */
+  font-weight: 300;
+  line-height: 12px;
+  text-align: center;
+  color: #ffffff;
+  transition: all 0.3s;
+  margin-top: 30px;  /* Reduced margin-top */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .new-team-3 .new-team-social a.new-social-tw {
-    background: #00acee;
+  background: #00acee;
 }
 
 .new-team-3 .new-team-social a.new-social-fb {
-    background: #3b5998;
+  background: #3b5998;
 }
 
 .new-team-3 .new-team-social a.new-social-li {
-    background: #0e76a8;
+  background: #0e76a8;
 }
 
 .new-team-3 .new-team-social a.new-social-in {
-    background: #3f729b;
+  background: #3f729b;
 }
 
 .new-team-3 .new-team-social a.new-social-yt {
-    background: #c4302b;
+  background: #c4302b;
 }
 
 .new-team-3 .new-team-social a:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .new-team-3:hover .new-team-social a {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .new-team-3 .new-team-social a:hover {
-    color: #222222;
-    background: #ffffff;
+  color: #222222;
+  background: #ffffff;
 }
 
 .new-team-3 .new-team-content {
-    padding: 70px 20px 20px 20px;
-    margin-top: -50px;
-    text-align: center;
-    background: #f3f4fa;
-    transition: all 0.5s;
+  padding: 30px 10px 10px 10px; /* Reduced padding */
+  margin-top: -30px;             /* Reduced overlap */
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 12px;               /* Reduced overall font size */
 }
 
 .new-team-3:hover .new-team-content {
-    background: #222222;
+  background: #222222;
 }
 
 .new-team-3:hover .new-team-content h2,
 .new-team-3:hover .new-team-content h3,
 .new-team-3:hover .new-team-content h4,
 .new-team-3:hover .new-team-content p {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .new-team-3 .new-team-content h2 {
-    font-size: 25px;
-    font-weight: 400;
-    letter-spacing: 2px;
+  font-size: 18px;    /* Reduced font size */
+  font-weight: 400;
+  letter-spacing: 1px; /* Reduced letter spacing */
 }
 
 .new-team-3 .new-team-content h3 {
-    font-size: 16px;
-    font-weight: 300;
+  font-size: 14px;    /* Reduced font size */
+  font-weight: 300;
 }
 
 .new-team-3 .new-team-content h4 {
-    font-size: 16px;
-    font-weight: 300;
-    font-style: italic;
-    letter-spacing: 1px;
-    margin-bottom: 0;
+  font-size: 14px;    /* Reduced font size */
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
 }
 
 .new-team-3 .new-team-content p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
+  font-size: 14px;    /* Reduced font size */
+  font-weight: 400;
+  line-height: 18px;
 }
 
-
+  
 /**********************************/
 /********* Team #4 Style **********/
 /**********************************/
+/* Grid Container for new-team-4 Cards */
+.new-team-4-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px; /* Adjust spacing between cards as needed */
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .new-team-4-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .new-team-4-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* new-team-4 Styles */  
 .new-team-4 {
-    margin-bottom: 30px;
-    background: #ffffff;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  background: #ffffff;
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); */
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .new-team-4:hover {
@@ -1278,6 +1398,7 @@ h1 {
 .new-team-4 .new-team-img img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .new-team-4 .new-team-img .new-team-content {
@@ -1295,31 +1416,24 @@ h1 {
     opacity: 0;
 }
 
-.new-team-4 .new-team-img .new-team-content p {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 22px;
-    margin: 0;
-}
-
 .new-team-4:hover .new-team-img .new-team-content {
     opacity: 1;
 }
 
 .new-team-4 .new-team-content {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
 .new-team-4 .new-team-content h2 {
-    font-size: 25px;
+    font-size: 18px; /* reduced font size */
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 .new-team-4 .new-team-content h3 {
-    font-size: 16px;
+    font-size: 14px; /* reduced font size */
     font-weight: 300;
     margin-bottom: 0;
 }
@@ -1329,19 +1443,20 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 0;
 }
 
 .new-team-4 .new-team-social a {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 30px; /* reduced icon container size */
+    height: 30px;
     margin-right: 5px;
-    padding: 11px 0 10px 0;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 16px;
+    padding: 8px 0 7px 0;
+    font-size: 14px;
+    line-height: 14px;
     text-align: center;
     color: #ffffff;
+    border-radius: 5px;
     transition: all 0.3s;
 }
 
@@ -1374,100 +1489,162 @@ h1 {
     background: #222222;
 }
 
+
 /**********************************/
 /********* Team #6 Style **********/
 /**********************************/
-.new-team-6 {
-    margin-bottom: 30px;
-}
-
-.new-team-6 .new-team-img {
+/* Grid Container for new-team-6 Cards */
+.new-team-6-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px; /* Adjust gap between cards as needed */
+  }
+  
+  /* Responsive Adjustments for the Grid */
+  @media (max-width: 1200px) {
+    .new-team-6-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .new-team-6-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .new-team-6-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* ----------------------------------------------------------------- */
+  /* Existing .new-team-6 Styles (You can reduce padding/margin for a smaller card if desired) */
+  /* ----------------------------------------------------------------- */
+/* Grid Container for .new-team-6 Cards */
+.new-team-6-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5%; /* reduced gap between cards */
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1200px) {
+    .new-team-6-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .new-team-6-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .new-team-6-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* ----------------------------------------------------------------- */
+  /* Existing .new-team-6 Styles (Reduced Size Version) */
+  /* ----------------------------------------------------------------- */
+  .new-team-6 {
+    margin-bottom: 20px;          /* reduced bottom margin */
+    max-width: 180px;             /* constrain card width */
+  }
+  
+  .new-team-6 .new-team-img {
     position: relative;
     font-size: 0;
     text-align: center;
     border-radius: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;          /* reduced margin */
     overflow: hidden;
-}
-
-.new-team-6 .new-team-img img {
+  }
+  
+  .new-team-6 .new-team-img img {
     width: 100%;
     height: auto;
     border-radius: 100%;
-    border: 15px solid #f3f4fa;
-    transition: all .3s;
-}
-
-.new-team-6:hover .new-team-img img {
+    border: 10px solid #f3f4fa;   /* reduced border width */
+    transition: all 0.3s;
+  }
+  
+  .new-team-6:hover .new-team-img img {
     border: 0px solid #f3f4fa;
-}
-
-.new-team-6 .new-team-content {
+  }
+  
+  .new-team-6 .new-team-content {
     text-align: center;
-}
-
-.new-team-6 .new-team-content h2 {
-    font-size: 25px;
+  }
+  
+  .new-team-6 .new-team-content h2 {
+    font-size: 18px;            /* reduced font size */
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;        /* reduced letter spacing */
     margin-bottom: 5px;
-}
-
-.new-team-6 .new-team-content h3 {
-    font-size: 16px;
+  }
+  
+  .new-team-6 .new-team-content h3 {
+    font-size: 14px;            /* reduced font size */
     font-weight: 300;
-    margin-bottom: 30px;
-}
-
-.new-team-6 .new-team-social {
+    margin-bottom: 15px;        /* reduced margin */
+  }
+  
+  .new-team-6 .new-team-social {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0;
-}
-
-.new-team-6 .new-team-social a {
+  }
+  
+  .new-team-6 .new-team-social a {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
-    padding: 12px 0 10px 0;
-    font-size: 16px;
-    line-height: 16px;
+    width: 30px;                /* reduced icon container size */
+    height: 30px;
+    margin-right: 3px;          /* reduced margin */
+    padding: 8px 0 7px 0;       /* adjusted padding */
+    font-size: 14px;            /* reduced font size for icons */
+    line-height: 14px;
     text-align: center;
     color: #ffffff;
     border-radius: 100%;
-    transition: all .3s;
-}
-
-.new-team-6 .new-team-social a.new-social-tw {
+    transition: all 0.3s;
+  }
+  
+  .new-team-6 .new-team-social a.new-social-tw {
     background: #00acee;
-}
-
-.new-team-6 .new-team-social a.new-social-fb {
+  }
+  
+  .new-team-6 .new-team-social a.new-social-fb {
     background: #3b5998;
-}
-
-.new-team-6 .new-team-social a.new-social-li {
+  }
+  
+  .new-team-6 .new-team-social a.new-social-li {
     background: #0e76a8;
-}
-
-.new-team-6 .new-team-social a.new-social-in {
+  }
+  
+  .new-team-6 .new-team-social a.new-social-in {
     background: #3f729b;
-}
-
-.new-team-6 .new-team-social a.new-social-yt {
+  }
+  
+  .new-team-6 .new-team-social a.new-social-yt {
     background: #c4302b;
-}
-
-.new-team-6 .new-team-social a:last-child {
+  }
+  
+  .new-team-6 .new-team-social a:last-child {
     margin-right: 0;
-}
-
-.new-team-6 .new-team-social a:hover {
+  }
+  
+  .new-team-6 .new-team-social a:hover {
     background: #222222;
-}
-
+  }
+  
 /**********************************/
 /********* Team #9 Style **********/
 /**********************************/
@@ -1709,70 +1886,72 @@ h1 {
     background: #222222;
 }
 
-    /* Container with fixed size */
-    .journey-container {
-        width: 1080px;
-        height: 600px;
-        margin: 50px auto; /* centers the container with some vertical margin */
-        display: flex;
-        border: 1px solid #ccc; /* optional border for visualization */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        overflow: hidden;
-      }
-  
-      /* Left side: Photo Collage */
-      .journey-left {
-        flex: 1;
-        padding: 10px;
-        /* Use CSS Grid to create a 2x2 collage */
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 10px;
-      }
-  
-      .journey-left img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures images fill the grid cell */
-        border-radius: 5px;
-      }
-  
-      /* Right side: Text content */
-      .journey-right {
-        flex: 1;
-        background: #f9f9f9;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-      }
-  
-      .journey-right h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        color: #333;
-      }
-  
-      .journey-right p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #555;
-      }
-  
-      /* Responsive adjustments: if the screen is smaller than 1080px, allow the container to scale down */
-      @media (max-width: 1100px) {
-        .journey-container {
-          width: 90%;
-          height: auto;
-          flex-direction: column;
-        }
-        .journey-left, .journey-right {
-          flex: none;
-          width: 100%;
-        }
-        .journey-right {
-          padding: 20px;
-        }
-      }
+ /* Journey Container with fixed dimensions */
+.journey-container {
+  width: 1080px;
+  height: 600px;
+  margin: 50px auto; /* Centers the container vertically with margin */
+  display: flex;
+  border: 1px solid #ccc; /* Optional border for visualization */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Left side: Single Photo */
+.journey-left {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.journey-left img {
+  /* Set the size similar to one cell of a 2x2 grid */
+  width: 100%;  /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Right side: Text Content */
+.journey-right {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.journey-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.journey-right p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive Adjustments: Stack vertically on smaller screens */
+@media (max-width: 1100px) {
+  .journey-container {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+  .journey-left, .journey-right {
+    flex: none;
+    width: 100%;
+  }
+  .journey-left {
+    margin-bottom: 20px;
+  }
+  .journey-right {
+    padding: 20px;
+  }
+}
