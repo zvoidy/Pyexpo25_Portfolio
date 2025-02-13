@@ -1683,6 +1683,7 @@ h2 {
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   #faq {margin-top: 25vh;}
 }
+

@@ -19,3 +19,4 @@ function updateCountDown(){
   seconds.innerHTML = s < 10 ? '0'+ s : s;
 }
 setInterval(updateCountDown,1000)
+
