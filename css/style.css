@@ -933,21 +933,21 @@ h1 {
 
 @media (min-width: 1200px) {
   .new-container {
-      max-width: 1540px;
-      height: 40vh;
-  }
+    max-width: 1540px;
+    height: 70vh;
+    margin-bottom: 5vh;
 }
 
-@media (min-width: 1400px) {
-  .new-container {
-      height: 45vh;
-  }
+.new-container-last{
+  height: 50vh;
 }
+}
+
 
 /* For mobile devices */
 @media (max-width: 768px) {
   .new-container {
-      height: 180vh;
+      height: 130vh;
   }
 }
 
@@ -1158,30 +1158,9 @@ h1 {
 /**********************************/
 /********* Team #3 Style **********/
 /**********************************/
-/* Grid Container for new-team-3 Cards */
-.new-team-3-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px; /* Adjust spacing between cards as needed */
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 1200px) {
-    .new-team-3-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .new-team-3-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  /* ----------------------------------------------------------------- */
-  /* Existing .new-team-3 Styles */
-  /* ----------------------------------------------------------------- */
-/* Grid Container for .new-team-3 Cards */
+/* ===================================================== */
+/* Grid Container for .new-team-3 Cards                */
+/* ===================================================== */
 .new-team-3-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -1190,7 +1169,7 @@ h1 {
   margin: 0 auto;
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for .new-team-3-grid */
 @media (max-width: 1200px) {
   .new-team-3-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1203,9 +1182,9 @@ h1 {
   }
 }
 
-/* ----------------------------------------------------------------- */
-/* Reduced .new-team-3 Card Styles */
-/* ----------------------------------------------------------------- */
+/* ===================================================== */
+/* Base Styles for .new-team-3 Card                     */
+/* ===================================================== */
 .new-team-3 {
   margin-bottom: 20px;
   max-width: 150px;  /* Constrain card width */
@@ -1216,10 +1195,10 @@ h1 {
 .new-team-3 .new-team-img {
   position: relative;
   font-size: 0;
-  /* Use a polygon clip to create a custom shape */
+  /* Hexagon shape */
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  height: 100px;  /* Fixed height for image container */
+  height: 150px;  /* Increased height for a larger hexagon */
 }
 
 .new-team-3 .new-team-img img {
@@ -1228,28 +1207,148 @@ h1 {
   object-fit: cover;
 }
 
-.new-team-3 .new-team-social {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  top: 0;
-  left: 0;
+.new-team-6 .new-team-social {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.5);
-  transition: all 0.3s;
   font-size: 0;
-  z-index: 1;
-  opacity: 0;
 }
 
-.new-team-3:hover .new-team-social {
-  opacity: 1;
+.new-team-6 .new-team-social a {
+  display: inline-block;
+  width: 30px;                /* reduced icon container size */
+  height: 30px;
+  margin-right: 3px;          /* reduced margin */
+  padding: 8px 0 7px 0;       /* adjusted padding */
+  font-size: 14px;            /* reduced font size for icons */
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 100%;
+  transition: all 0.3s;
 }
 
-.new-team-3 .new-team-social a {
+.new-team-6 .new-team-social a.new-social-tw {
+  background: #00acee;
+}
+
+.new-team-6 .new-team-social a.new-social-fb {
+  background: #3b5998;
+}
+
+.new-team-6 .new-team-social a.new-social-li {
+  background: #0e76a8;
+}
+
+.new-team-6 .new-team-social a.new-social-in {
+  background: #3f729b;
+}
+
+.new-team-6 .new-team-social a.new-social-yt {
+  background: #c4302b;
+}
+
+.new-team-6 .new-team-social a:last-child {
+  margin-right: 0;
+}
+
+.new-team-6 .new-team-social a:hover {
+  background: #222222;
+}
+/* ===================================================== */
+/* Updated Content Design for .new-team-3 (Match Team #6)  */
+/* ===================================================== */
+.new-team-3 .new-team-content {
+  text-align: center;
+  padding: 10px;            /* Reduced padding */
+  transition: background 0.5s;
+  font-size: 14px;          /* Overall font size */
+}
+
+.new-team-3 .new-team-content h2 {
+  font-size: 16px;          /* Slightly reduced font size */
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.new-team-3 .new-team-content h3 {
+  font-size: 14px;          /* Slightly reduced font size */
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* Optionally hide the paragraph (if not needed) */
+.new-team-3 .new-team-content p {
+  display: none;
+}
+
+
+
+
+
+
+
+
+/* ===================================================== */
+/* Grid Container for .first-team-3 Cards (4 per row)    */
+/* ===================================================== */
+.first-team-3-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* Adjust gap between cards as needed */
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments for .first-team-3-grid */
+@media (max-width: 1200px) {
+  .first-team-3-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .first-team-3-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================================================== */
+/* Base Styles for .first-team-3 Card (Reduced Version)  */
+/* ===================================================== */
+.first-team-3 {
+  margin-bottom: 20px;
+  max-width: 150px;  /* Constrain card width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.first-team-3 .first-team-img {
+  position: relative;
+  font-size: 0;
+  /* Hexagon shape */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 150px;  /* Increased height for a larger hexagon */
+}
+
+.first-team-3 .first-team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------------------------------------------------- */
+/* Social Overlay (Content Area Version) – Simplified    */
+/* ----------------------------------------------------- */
+.first-team-3 .first-team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+.first-team-3 .first-team-social a {
   display: inline-block;
   width: 40px;       /* Reduced size */
   height: 30px;
@@ -1259,89 +1358,215 @@ h1 {
   font-weight: 300;
   line-height: 12px;
   text-align: center;
-  color: #ffffff;
-  transition: all 0.3s;
-  margin-top: 30px;  /* Reduced margin-top */
+  /* color: #ffffff; */
+  transition: background 0.3s;
+  margin-top: 30px;  /* Static margin */
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-.new-team-3 .new-team-social a.new-social-tw {
-  background: #00acee;
-}
 
-.new-team-3 .new-team-social a.new-social-fb {
-  background: #3b5998;
-}
-
-.new-team-3 .new-team-social a.new-social-li {
-  background: #0e76a8;
-}
-
-.new-team-3 .new-team-social a.new-social-in {
-  background: #3f729b;
-}
-
-.new-team-3 .new-team-social a.new-social-yt {
-  background: #c4302b;
-}
-
-.new-team-3 .new-team-social a:last-child {
-  margin-right: 0;
-}
-
-.new-team-3:hover .new-team-social a {
-  margin-top: 0;
-}
-
-.new-team-3 .new-team-social a:hover {
-  color: #222222;
-  background: #ffffff;
-}
-
-.new-team-3 .new-team-content {
-  padding: 30px 10px 10px 10px; /* Reduced padding */
-  margin-top: -30px;             /* Reduced overlap */
-  text-align: center;
-  transition: all 0.5s;
-  font-size: 12px;               /* Reduced overall font size */
-}
-
-.new-team-3:hover .new-team-content {
+.first-team-3 .first-team-social a:hover {
   background: #222222;
 }
 
-.new-team-3:hover .new-team-content h2,
-.new-team-3:hover .new-team-content h3,
-.new-team-3:hover .new-team-content h4,
-.new-team-3:hover .new-team-content p {
+/* ===================================================== */
+/* Updated Content Design for .first-team-3             */
+/* (Simplified content similar to Team #6 style)         */
+/* ===================================================== */
+.first-team-3 .first-team-content {
+  text-align: center;
+  padding: 10px;            /* Reduced padding */
+  /* background: #f9f9f9; */      /* Light background */
+  transition: background 0.5s;
+  font-size: 14px;          /* Overall font size */
+}
+
+.first-team-3 .first-team-content h2 {
+  font-size: 16px;          /* Slightly reduced font size */
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.first-team-3 .first-team-content h3 {
+  font-size: 14px;          /* Slightly reduced font size */
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* Optionally hide the paragraph for a simplified design */
+.first-team-3 .first-team-content p {
+  display: none;
+}
+
+/* Ensure the LinkedIn icon is placed below the text */
+.first-team-3 .first-team-content .first-team-social {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.first-team-3 .first-team-content .first-team-social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  /* color: #ffffff; */
+  /* background: #0e76a8; */  /* LinkedIn blue */
+  border-radius: 50%;
+  transition: background 0.3s;
+  margin-right: 3px;
+}
+
+.first-team-3 .first-team-content .first-team-social a:hover {
+  background: #222222;
+}
+
+
+
+
+
+/* ===================================================== */
+/* Grid Container for .second-team-3 Cards (3 per row)   */
+/* ===================================================== */
+.second-team-3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Adjust gap between cards as needed */
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments for .second-team-3-grid */
+@media (max-width: 1200px) {
+  .second-team-3-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .second-team-3-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ===================================================== */
+/* Base Styles for .second-team-3 Card (Reduced Version) */
+/* ===================================================== */
+.second-team-3 {
+  margin-bottom: 20px;
+  max-width: 150px;  /* Constrain card width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.second-team-3 .second-team-img {
+  position: relative;
+  font-size: 0;
+  /* Hexagon shape */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 150px;  /* Height for a larger hexagon */
+}
+
+.second-team-3 .second-team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------------------------------------------------- */
+/* Social Overlay – Simplified (Content Area Version)    */
+/* ----------------------------------------------------- */
+.second-team-3 .second-team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+.second-team-3 .second-team-social a {
+  display: inline-block;
+  width: 40px;       /* Icon container size */
+  height: 30px;
+  margin-right: 3px;
+  padding: 5px 0;
+  font-size: 12px;   /* Font size for icons */
+  font-weight: 300;
+  line-height: 12px;
+  text-align: center;
+  transition: background 0.3s;
+  margin-top: 30px;  /* Static margin */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.second-team-3 .second-team-social a.second-social-li {
+  background: #0e76a8;
+}
+
+.second-team-3 .second-team-social a:hover {
+  background: #222222;
+}
+
+/* ===================================================== */
+/* Updated Content Design for .second-team-3             */
+/* (Simplified content similar to Team #6 style)         */
+/* ===================================================== */
+.second-team-3 .second-team-content {
+  text-align: center;
+  padding: 10px;            /* Reduced padding */
+  background: #f9f9f9;      /* Light background */
+  transition: background 0.5s;
+  font-size: 14px;          /* Overall font size */
+}
+
+.second-team-3 .second-team-content h2 {
+  font-size: 16px;          /* Slightly reduced font size */
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.second-team-3 .second-team-content h3 {
+  font-size: 14px;          /* Slightly reduced font size */
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* Optionally hide the paragraph for a simplified design */
+.second-team-3 .second-team-content p {
+  display: none;
+}
+
+/* Ensure the LinkedIn icon is placed below the text */
+.second-team-3 .second-team-content .second-team-social {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.second-team-3 .second-team-content .second-team-social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
   color: #ffffff;
+  background: #0e76a8;  /* LinkedIn blue */
+  border-radius: 50%;
+  transition: background 0.3s;
+  margin-right: 3px;
 }
 
-.new-team-3 .new-team-content h2 {
-  font-size: 18px;    /* Reduced font size */
-  font-weight: 400;
-  letter-spacing: 1px; /* Reduced letter spacing */
+.second-team-3 .second-team-content .second-team-social a:hover {
+  background: #222222;
 }
 
-.new-team-3 .new-team-content h3 {
-  font-size: 14px;    /* Reduced font size */
-  font-weight: 300;
-}
 
-.new-team-3 .new-team-content h4 {
-  font-size: 14px;    /* Reduced font size */
-  font-weight: 300;
-  font-style: italic;
-  letter-spacing: 0.5px;
-  margin-bottom: 0;
-}
 
-.new-team-3 .new-team-content p {
-  font-size: 14px;    /* Reduced font size */
-  font-weight: 400;
-  line-height: 18px;
-}
 
   
 /**********************************/
@@ -1350,9 +1575,9 @@ h1 {
 /* Grid Container for new-team-4 Cards */
 .new-team-4-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px; /* Adjust spacing between cards as needed */
-  max-width: 1080px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; /* Adjust spacing between cards as needed */
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -1378,9 +1603,7 @@ h1 {
   overflow: hidden;
 }
 
-.new-team-4:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-}
+
 
 .new-team-4 .new-team-img {
     position: relative;
@@ -1493,157 +1716,266 @@ h1 {
 /**********************************/
 /********* Team #6 Style **********/
 /**********************************/
-/* Grid Container for new-team-6 Cards */
+/* ----------------------------------------------------- */
+/* Grid Container for .new-team-6 Cards                */
+/* ----------------------------------------------------- */
+/* ===================================================== */
+/* First Row Grid Container for .new-team-6 Cards        */
+/* (Existing code – unchanged if needed)                 */
+/* ===================================================== */
 .new-team-6-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px; /* Adjust gap between cards as needed */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments for First Row */
+@media (max-width: 1200px) {
+  .new-team-6-grid {
+    grid-template-columns: repeat(5, 1fr);
   }
-  
-  /* Responsive Adjustments for the Grid */
-  @media (max-width: 1200px) {
-    .new-team-6-grid {
-      grid-template-columns: repeat(5, 1fr);
-    }
+}
+
+@media (max-width: 992px) {
+  .new-team-6-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  @media (max-width: 992px) {
-    .new-team-6-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+}
+
+@media (max-width: 768px) {
+  .new-team-6-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media (max-width: 768px) {
-    .new-team-6-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
+
+/* ===================================================== */
+/* Second Row Grid Container for .second-team-6 Cards    */
+/* ===================================================== */
+.second-team-6-grid {
+  display: grid;
+  /* For second row, we want 5 cards per row */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5%;
+  max-width: 1080px;
+  margin: 0 auto;
+  justify-content: center; /* Center grid items if row is incomplete */
+}
+
+/* Responsive Adjustments for Second Row */
+@media (max-width: 1200px) {
+  .second-team-6-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  /* ----------------------------------------------------------------- */
-  /* Existing .new-team-6 Styles (You can reduce padding/margin for a smaller card if desired) */
-  /* ----------------------------------------------------------------- */
-/* Grid Container for .new-team-6 Cards */
-.new-team-6-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 5%; /* reduced gap between cards */
-    max-width: 1080px;
-    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .second-team-6-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 1200px) {
-    .new-team-6-grid {
-      grid-template-columns: repeat(5, 1fr);
-    }
+}
+
+@media (max-width: 768px) {
+  .second-team-6-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media (max-width: 992px) {
-    .new-team-6-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .new-team-6-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  /* ----------------------------------------------------------------- */
-  /* Existing .new-team-6 Styles (Reduced Size Version) */
-  /* ----------------------------------------------------------------- */
-  .new-team-6 {
-    margin-bottom: 20px;          /* reduced bottom margin */
-    max-width: 180px;             /* constrain card width */
-  }
-  
-  .new-team-6 .new-team-img {
-    position: relative;
-    font-size: 0;
-    text-align: center;
-    border-radius: 100%;
-    margin-bottom: 20px;          /* reduced margin */
-    overflow: hidden;
-  }
-  
-  .new-team-6 .new-team-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 100%;
-    border: 10px solid #f3f4fa;   /* reduced border width */
-    transition: all 0.3s;
-  }
-  
-  .new-team-6:hover .new-team-img img {
-    border: 0px solid #f3f4fa;
-  }
-  
-  .new-team-6 .new-team-content {
-    text-align: center;
-  }
-  
-  .new-team-6 .new-team-content h2 {
-    font-size: 18px;            /* reduced font size */
-    font-weight: 700;
-    letter-spacing: 1px;        /* reduced letter spacing */
-    margin-bottom: 5px;
-  }
-  
-  .new-team-6 .new-team-content h3 {
-    font-size: 14px;            /* reduced font size */
-    font-weight: 300;
-    margin-bottom: 15px;        /* reduced margin */
-  }
-  
-  .new-team-6 .new-team-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0;
-  }
-  
-  .new-team-6 .new-team-social a {
-    display: inline-block;
-    width: 30px;                /* reduced icon container size */
-    height: 30px;
-    margin-right: 3px;          /* reduced margin */
-    padding: 8px 0 7px 0;       /* adjusted padding */
-    font-size: 14px;            /* reduced font size for icons */
-    line-height: 14px;
-    text-align: center;
-    color: #ffffff;
-    border-radius: 100%;
-    transition: all 0.3s;
-  }
-  
-  .new-team-6 .new-team-social a.new-social-tw {
-    background: #00acee;
-  }
-  
-  .new-team-6 .new-team-social a.new-social-fb {
-    background: #3b5998;
-  }
-  
-  .new-team-6 .new-team-social a.new-social-li {
-    background: #0e76a8;
-  }
-  
-  .new-team-6 .new-team-social a.new-social-in {
-    background: #3f729b;
-  }
-  
-  .new-team-6 .new-team-social a.new-social-yt {
-    background: #c4302b;
-  }
-  
-  .new-team-6 .new-team-social a:last-child {
-    margin-right: 0;
-  }
-  
-  .new-team-6 .new-team-social a:hover {
-    background: #222222;
-  }
+}
+
+/* ===================================================== */
+/* Existing .new-team-6 Card Styles (for first row)      */
+/* ===================================================== */
+.new-team-6 {
+  margin-bottom: 20px;
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-team-6 .new-team-img {
+  position: relative;
+  font-size: 0;
+  text-align: center;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.new-team-6 .new-team-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  border: 10px solid #f3f4fa;
+  transition: all 0.3s;
+}
+
+.new-team-6:hover .new-team-img img {
+  border: 0px solid #f3f4fa;
+}
+
+.new-team-6 .new-team-content {
+  text-align: center;
+}
+
+.new-team-6 .new-team-content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.new-team-6 .new-team-content h3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.new-team-6 .new-team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+.new-team-6 .new-team-social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+  padding: 8px 0 7px 0;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.new-team-6 .new-team-social a.new-social-tw {
+  background: #00acee;
+}
+
+.new-team-6 .new-team-social a.new-social-fb {
+  background: #3b5998;
+}
+
+.new-team-6 .new-team-social a.new-social-li {
+  background: #0e76a8;
+}
+
+.new-team-6 .new-team-social a.new-social-in {
+  background: #3f729b;
+}
+
+.new-team-6 .new-team-social a.new-social-yt {
+  background: #c4302b;
+}
+
+.new-team-6 .new-team-social a:last-child {
+  margin-right: 0;
+}
+
+.new-team-6 .new-team-social a:hover {
+  background: #222222;
+}
+
+/* ===================================================== */
+/* Second Row Card Styles (Same as .new-team-6, but with "second-" prefix) */
+/* ===================================================== */
+.second-team-6 {
+  margin-bottom: 20px;
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.second-team-6 .second-team-img {
+  position: relative;
+  font-size: 0;
+  text-align: center;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.second-team-6 .second-team-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  border: 10px solid #f3f4fa;
+  transition: all 0.3s;
+}
+
+.second-team-6:hover .second-team-img img {
+  border: 0px solid #f3f4fa;
+}
+
+.second-team-6 .second-team-content {
+  text-align: center;
+}
+
+.second-team-6 .second-team-content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.second-team-6 .second-team-content h3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.second-team-6 .second-team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+.second-team-6 .second-team-social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+  padding: 8px 0 7px 0;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.second-team-6 .second-team-social a.second-social-tw {
+  background: #00acee;
+}
+
+.second-team-6 .second-team-social a.second-social-fb {
+  background: #3b5998;
+}
+
+.second-team-6 .second-team-social a.second-social-li {
+  background: #0e76a8;
+}
+
+.second-team-6 .second-team-social a.second-social-in {
+  background: #3f729b;
+}
+
+.second-team-6 .second-team-social a.second-social-yt {
+  background: #c4302b;
+}
+
+.second-team-6 .second-team-social a:last-child {
+  margin-right: 0;
+}
+
+.second-team-6 .second-team-social a:hover {
+  background: #222222;
+}
+
   
 /**********************************/
 /********* Team #9 Style **********/

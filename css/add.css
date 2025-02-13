@@ -1632,3 +1632,16 @@ h2 {
     margin-right: 40px;
   }
 }
+
+#about,
+#journey,
+#events,
+#domains,
+#faq {
+  scroll-margin-top: 80px;
+}
+
+
+#crew{
+  scroll-margin-top: 110px;
+}
