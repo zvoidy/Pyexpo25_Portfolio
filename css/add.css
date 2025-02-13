@@ -1677,11 +1677,7 @@ h2 {
   scroll-margin-top: 110px;
 }
 
-@media (max-width:768px){
-  #faq{
-    margin-top: 10vh;
-  }
-}
+
 
 @media (min-width: 768px) and (max-width: 1200px) {
   #faq {margin-top: 25vh;}
