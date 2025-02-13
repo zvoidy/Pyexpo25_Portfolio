@@ -111,8 +111,10 @@
         <ul class="nav-menu">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#journey">Journey</a></li>
+          <!-- <li><a href="#journey">Journey</a></li> -->
           <li><a href="#events">Events</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#domains">PyDomain</a></li>
           <li><a href="#crew">Pycrew</a></li>
           <li><a href="#faq">SC</a></li>
           <!-- <li><a href="#speakers">Speakers</a></li>
@@ -135,7 +137,7 @@
 
         const observerOptions = {
           root: null, // Use the viewport
-          threshold: 0.6, // 60% of the section must be visible
+          threshold: 0.1, // 60% of the section must be visible
         };
 
         const observerCallback = (entries) => {
@@ -170,8 +172,6 @@
           });
         }
       });
-
-
     </script>
   </nav>
   <!-- Navbar End -->
@@ -332,19 +332,6 @@
               while being guided and mentored by seniors and experienced faculty members.
             </p>
 
-            <!-- <div class="row g-5 pt-2 mb-5">
-                        <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/service.png" alt="">
-                            <h5 class="mb-3">Dedicated Services</h5>
-                            <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita</span>
-                        </div>
-                        <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/product.png" alt="">
-                            <h5 class="mb-3">Organic Products</h5>
-                            <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita</span>
-                        </div>
-                    </div> 
-                    <a class="btn btn-secondary rounded-pill py-3 px-5" href="">Explore More</a> -->
             <div class="row g-4 align-items-center">
               <div class="col-sm-4">
                 <a href="https://youtu.be/CCljjhGUaFc" data-bs-target="#videoModal" data-bs-toggle="modal"
@@ -411,705 +398,10 @@
       <video id="bgvid" class="stop" loop autoplay muted playsinline>
         <source src="assets/pyexpocinematic.mp4" type="video/mp4">
       </video>
-      <!-- <div id="polina" class="video-text">
-        <div class="tb-t">
-          <div class="tb-c">
-            <div class="polina"><button id="playButton"><i class='lni-play'></i></button></div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </section>
 
 
-  <section id="journey">
-    <!-- Page Header Start -->
-    <div class="container-fluid  py-5 wow fadeIn" data-wow-delay="0.1s">
-      <div class="text-center mx-auto wow fadeInUp " data-wow-delay="0.1s" style="max-width: 500px; font-size: 10rem;">
-        <h1 class=" section-header" style="font-size: 3rem;">JOURNEY</h1>
-      </div>
-    </div>
-
-    <div id="journey-header-carousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="journey-container">
-            <!-- Left Side: Single Photo -->
-            <div class="journey-left">
-              <img src="img/team-1.png" alt="Single Photo">
-            </div>
-            <!-- Right Side: Text Content -->
-            <div class="journey-right">
-              <h1>Your Heading Here</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ligula ut libero consequat, in condimentum nunc ullamcorper. Mauris pharetra massa a nisi commodo, ut hendrerit lorem sagittis.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="journey-container">
-            <!-- Left Side: Single Photo -->
-            <div class="journey-left">
-              <img src="img/team-1.png" alt="Single Photo">
-            </div>
-            <!-- Right Side: Text Content -->
-            <div class="journey-right">
-              <h1>Your Heading Here</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ligula ut libero consequat, in condimentum nunc ullamcorper. Mauris pharetra massa a nisi commodo, ut hendrerit lorem sagittis.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="journey-container">
-            <!-- Left Side: Single Photo -->
-            <div class="journey-left">
-              <img src="img/team-2.png" alt="Single Photo">
-            </div>
-            <!-- Right Side: Text Content -->
-            <div class="journey-right">
-              <h1>Your Heading Here</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum ligula ut libero consequat, in condimentum nunc ullamcorper. Mauris pharetra massa a nisi commodo, ut hendrerit lorem sagittis.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#journey-header-carousel"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#journey-header-carousel"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-    
-    <!-- Marquee Container -->
-    <div class="instagram-marquee">
-      <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-        <h1 class="mb-5">Instagram wall</h1>
-      </div>
-  
-      <div class="instagram-cards">
-        <!-- First Set of 9 Instagram Cards -->
-        <!-- Card 1 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">jd___vfx</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-1.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>159 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Team Exceptional errors</strong>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-2.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>100 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Hack2expo.</strong> where dreams become reality..
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View 1 comment</a>
-          </div>
-          <div class="instagram-comments">
-            March 13, 2024
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">dragon_knights_</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-3.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>241 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            Senior mentor guiding our team.
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 47 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 15, 2024
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">_code_crafters</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-4.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>77 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>#_code_crafters</strong> #pyexpo
-          </div>
-          <div class="instagram-comments">
-            March 15, 2024
-          </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-9.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>99 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>First round of evaluation</strong> is live at Hack2Expo!...
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 3 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">jd___vfx</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-6.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>17 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>#T003</strong> Exceptional errors
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View 1 comment</a>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 7 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-7.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>173 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Round one evaluation</strong> are in full swing at Hack2Expo!
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 7 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 8 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-8.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>103 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Let the games begin!</strong> The first round of evaluation is...
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 2 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 9 -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-5.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>94 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Hackshop2 Update</strong> Where passion meets innovation!
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 3 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 13, 2024
-          </div>
-        </div>
-
-        <!-- Duplicate Set of 9 Instagram Cards for Seamless Loop -->
-        <!-- Card 1 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">jd___vfx</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-1.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>159 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Team Exceptional errors</strong>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 2 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-2.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>100 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Hack2expo.</strong> where dreams become reality..
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View 1 comment</a>
-          </div>
-          <div class="instagram-comments">
-            March 13, 2024
-          </div>
-        </div>
-        <!-- Card 3 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">dragon_knights_</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-3.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>241 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            Senior mentor guiding our team.
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 47 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 15, 2024
-          </div>
-        </div>
-        <!-- Card 4 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">_code_crafters</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-4.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>77 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>#_code_crafters</strong> #pyexpo
-          </div>
-          <div class="instagram-comments">
-            March 15, 2024
-          </div>
-        </div>
-        <!-- Card 5 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-9.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>99 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>First round of evaluation</strong> is live at Hack2Expo!...
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 3 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 6 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-1-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">jd___vfx</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-6.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>17 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>#T003</strong> Exceptional errors
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View 1 comment</a>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 7 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-7.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>173 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Round one evaluation</strong> are in full swing at Hack2Expo!
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 7 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 8 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-8.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>103 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Let the games begin!</strong> The first round of evaluation is...
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 2 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 14, 2024
-          </div>
-        </div>
-        <!-- Card 9 Duplicate -->
-        <div class="instagram-card">
-          <div class="instagram-header">
-            <img src="assets/insta-2-profile.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="username">pyexpo</span>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="instagram-image">
-            <img src="assets/insta-5.jpg" alt="Instagram Post">
-          </div>
-          <div class="instagram-actions">
-            <i class="bi bi-heart-fill heart-icon"></i>
-            <i class="bi bi-chat" style="padding-left: 10px;"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-bookmark bookmark"></i>
-          </div>
-          <div class="instagram-likes">
-            <strong>94 likes</strong>
-          </div>
-          <div class="instagram-caption">
-            <strong>Hackshop2 Update</strong> Where passion meets innovation!
-          </div>
-          <div class="instagram-comments">
-            <a href="#">View all 3 comments</a>
-          </div>
-          <div class="instagram-comments">
-            March 13, 2024
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Product End -->
-
-    <!-- Gallery Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-          <p class="section-title bg-white text-center text-primary px-3">Gallery</p>
-          <h1 class="mb-5">Photo Gallery</h1>
-        </div>
-        <div class="row g-0">
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row g-0">
-              <div class="col-12">
-                <a class="d-block" href="assets/gal-1.jpg" data-lightbox="gallery">
-                  <img class="img-fluid" src="assets/gal-1.jpg" alt="">
-                </a>
-              </div>
-              <div class="col-12">
-                <a class="d-block" href="assets/gal-2.jpg" data-lightbox="gallery">
-                  <img class="img-fluid" src="assets/gal-2.jpg" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="row g-0">
-              <div class="col-12">
-                <a class="d-block" href="assets/gal-3.jpg" data-lightbox="gallery">
-                  <img class="img-fluid" src="assets/gal-3.jpg" alt="">
-                </a>
-              </div>
-              <div class="col-12">
-                <a class="d-block" href="assets/gal-4.jpg" data-lightbox="gallery">
-                  <img class="img-fluid" src="assets/gal-4.jpg" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row g-0">
-              <div class="col-12">
-                <a class="d-block" href="assets/gal-5.jpg" data-lightbox="gallery">
-                  <img class="img-fluid" src="assets/gal-5.jpg" alt="">
-                </a>
-              </div>
-              <div class="col-12">
-                <a class="d-block" href="assets/gal-6.jpg" data-lightbox="gallery">
-                  <img class="img-fluid" src="assets/gal-6.jpg" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="row g-0">
-              <div class="col-12">
-                <a class="d-block" href="assets/gal-7.jpg" data-lightbox="gallery">
-                  <img class="img-fluid" src="assets/gal-7.jpg" alt="">
-                </a>
-              </div>
-              <div class="col-12">
-                <a class="d-block" href="assets/gal-8.jpg" data-lightbox="gallery">
-                  <img class="img-fluid" src="assets/gal-8.jpg" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Gallery End -->
-
-    <!-- My gallery 1 -->
-    <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-      <h1 class="mb-5">Click below to take a look!</h1>
-    </div>
-    <div>‎ </div>
-    <div>‎ </div>
-    <div>‎ </div>
-    <div class="gallery">
-      <input type="checkbox">
-      <img src="assets/checkgal-2.jpg" alt="a forest after an apocalypse">
-      <img src="assets/checkgal-1.jpg" alt="a waterfall and many rocks">
-      <img src="assets/checkgal-3.jpg" alt="a house on a mountain">
-      <img src="assets/checkgal-4.jpg" alt="sime pink flowers">
-      <img src="assets/checkgal-5.jpg" alt="big rocks with some trees">
-      <img src="assets/checkgal-6.jpg" alt="a waterfall, a lot of tree and a great view from the sky">
-      <img src="assets/checkgal-7.jpg" alt="a cool landscape">
-      <img src="assets/checkgal-8.jpg" alt="inside a town between two big buildings">
-      <img src="assets/checkgal-9.jpg" alt="a great view of the sea above the mountain">
-    </div>
-    <!-- My gallery 1 end -->
-
-    <div>‎ </div>
-    <div>‎ </div>
-    <div>‎ </div>
-  </section>
 
   <br>
   <hr class="style2">
@@ -1129,11 +421,11 @@
           src="assets/PYEXPO Invite poster.jpg" />
       </div>
     </div>
-  </section>
+  
   <!-- End of Event Section -->
 
   <!-- Schedule Section -->
-  <section id="schedule">
+  <!-- <section id="schedule"> -->
     <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px; margin-top: 5px; margin-bottom: 0px;">
       <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Event Calendar</h1>
     </div>
@@ -1171,8 +463,9 @@
         </div>
       </div>
     </div>
-  </section>
+  <!-- </section> -->
   <!-- End of Schedule Section -->
+  </section>
 
   <!-- Roadmap Section -->
   <section id="roadmap">
@@ -1351,7 +644,7 @@
               <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
                 <div class="text-center bg-primary py-5 px-4">
                   <img class="img-fluid mb-4" src="img/client.png" alt="">
-                  <h1 class="display-6 counter2 text-white" data-toggle="counter-up">500</h1>
+                  <h1 class="display-6 counter2 text-white" data-toggle="counter-up">650</h1>
                   <span class="fs-5 fw-semi-bold text-secondary">Participants</span>
                 </div>
               </div>
@@ -1365,7 +658,8 @@
 
 
   <br>
-  <div id="crew" class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+  <section id="crew">
+  <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
     <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Pyexpo Crew</h1>
   </div>
   <br>
@@ -1708,6 +1002,241 @@
   </div>
   <!-- Team #3 End -->
 
+  
+    <!-- Team #6 Start -->
+    <div class="tech-container">
+      <div class="section-title-header text-center">
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Technical Team</h2>
+      </div>
+      <div class="tech-team-6-grid">
+        <div class="tech-team-6">
+          <!-- Card 1 -->
+          <div class="tech-team-img">
+            <img src="img/team-1-1.jpg" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Josh Dunn</h2>
+            <h3>CEO &amp; Founder</h3>
+            <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="tech-team-6">
+          <!-- Card 2 -->
+          <div class="tech-team-img">
+            <img src="img/team-1-2.jpg" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Mollie Ross</h2>
+            <h3>Art Director</h3>
+            <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="tech-team-6">
+          <!-- Card 3 -->
+          <div class="tech-team-img">
+            <img src="img/team-1-3.jpg" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Dylan Adams</h2>
+            <h3>Developer</h3>
+            <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="tech-team-6">
+          <!-- Card 4 -->
+          <div class="tech-team-img">
+            <img src="img/team-1-4.jpg" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Jennifer Page</h2>
+            <h3>Designer</h3>
+            <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="tech-team-6">
+          <!-- Card 5 -->
+          <div class="tech-team-img">
+            <img src="img/team-1-1.jpg" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Alex Doe</h2>
+            <h3>Engineer</h3>
+            <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Add additional cards as needed -->
+      </div>
+    </div>
+
+  <div class="sec-tec-container">
+    <div class="sec-tec-first-grid">
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/team-1-1.jpg" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Josh Dunn</h2>
+          <h3>CEO &amp; Founder</h3>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat 5 more cards for first row -->
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/team-1-2.jpg" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Mollie Ross</h2>
+          <h3>Art Director</h3>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/team-1-3.jpg" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Dylan Adams</h2>
+          <h3>Developer</h3>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/team-1-4.jpg" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Jennifer Page</h2>
+          <h3>Designer</h3>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/team-1-1.jpg" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Alex Doe</h2>
+          <h3>Engineer</h3>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/team-1-2.jpg" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Maria Smith</h2>
+          <h3>Manager</h3>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
+
+    <!-- Team #4 Start -->
+    <div class="new-container-last">
+      <div class="section-title-header text-center">
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">SOC</h2>
+        <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
+          hackathon!</p> -->
+      </div>
+      <div class="new-team-4-grid">
+        <!-- Card 1 -->
+        <div class="new-team-4">
+          <div class="new-team-content">
+            <h2>Josh Dunn</h2>
+            <h3>CEO &amp; Founder</h3>
+          </div>
+          <div class="new-team-img">
+            <img src="img/team-1-1.jpg" alt="Team Image">
+            <div class="new-team-content">
+              <p>Some text goes here that describes about team member</p>
+            </div>
+          </div>
+          <div class="new-team-content">
+            <div class="sec-tec-team-social">
+              <a class="sec-tec-social-li" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="new-team-4">
+          <div class="new-team-content">
+            <h2>Mollie Ross</h2>
+            <h3>Art Director</h3>
+          </div>
+          <div class="new-team-img">
+            <img src="img/team-1-2.jpg" alt="Team Image">
+            <div class="new-team-content">
+              <p>Some text goes here that describes about team member</p>
+            </div>
+          </div>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="new-team-4">
+          <div class="new-team-content">
+            <h2>Dylan Adams</h2>
+            <h3>Developer</h3>
+          </div>
+          <div class="new-team-img">
+            <img src="img/team-1-3.jpg" alt="Team Image">
+            <div class="new-team-content">
+              <p>Some text goes here that describes about team member</p>
+            </div>
+          </div>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team #4 End -->
+
+
   <!-- Team #3 Start -->
   <div class="new-container">
     <div class="section-title-header text-center">
@@ -1724,9 +1253,8 @@
         <div class="first-team-content">
           <h2>Josh Dunn</h2>
           <h3>CEO &amp; Founder</h3>
-          <p>Some text goes here that describes about team member</p>
-          <div class="first-team-social">
-            <a class="first-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -1740,9 +1268,8 @@
         <div class="first-team-content">
           <h2>Mollie Ross</h2>
           <h3>Art Director</h3>
-          <p>Some text goes here that describes about team member</p>
-          <div class="first-team-social">
-            <a class="first-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -1756,9 +1283,8 @@
         <div class="first-team-content">
           <h2>Mollie Ross</h2>
           <h3>Art Director</h3>
-          <p>Some text goes here that describes about team member</p>
-          <div class="first-team-social">
-            <a class="first-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -1772,9 +1298,8 @@
         <div class="first-team-content">
           <h2>Mollie Ross</h2>
           <h3>Art Director</h3>
-          <p>Some text goes here that describes about team member</p>
-          <div class="first-team-social">
-            <a class="first-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -1792,9 +1317,8 @@
         <div class="second-team-content">
           <h2>Josh Dunn</h2>
           <h3>CEO &amp; Founder</h3>
-          <p>Some text goes here that describes about team member</p>
-          <div class="second-team-social">
-            <a class="second-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -1809,9 +1333,8 @@
         <div class="second-team-content">
           <h2>Mollie Ross</h2>
           <h3>Art Director</h3>
-          <p>Some text goes here that describes about team member</p>
-          <div class="second-team-social">
-            <a class="second-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -1825,9 +1348,8 @@
         <div class="second-team-content">
           <h2>Mollie Ross</h2>
           <h3>Art Director</h3>
-          <p>Some text goes here that describes about team member</p>
-          <div class="second-team-social">
-            <a class="second-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -1836,228 +1358,7 @@
   </div>
   <!-- Team #3 End -->
 
-
-
-  <!-- Team #6 Start -->
-  <div class="new-container">
-    <div class="new-section-title text-center">
-      <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Technical Team</h2>
-    </div>
-    <div class="new-team-6-grid">
-      <div class="new-team-6">
-        <!-- Card 1 content -->
-        <div class="new-team-img">
-          <img src="img/team-1-1.jpg" alt="Team Image">
-        </div>
-        <div class="new-team-content">
-          <h2>Josh Dunn</h2>
-          <h3>CEO &amp; Founder</h3>
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="new-team-6">
-        <!-- Card 2 content -->
-        <div class="new-team-img">
-          <img src="img/team-1-1.jpg" alt="Team Image">
-        </div>
-        <div class="new-team-content">
-          <h2>Josh Dunn</h2>
-          <h3>CEO &amp; Founder</h3>
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="new-team-6">
-        <!-- Card 3 content -->
-        <div class="new-team-img">
-          <img src="img/team-1-1.jpg" alt="Team Image">
-        </div>
-        <div class="new-team-content">
-          <h2>Josh Dunn</h2>
-          <h3>CEO &amp; Founder</h3>
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="new-team-6">
-        <!-- Card 4 content -->
-        <div class="new-team-img">
-          <img src="img/team-1-1.jpg" alt="Team Image">
-        </div>
-        <div class="new-team-content">
-          <h2>Josh Dunn</h2>
-          <h3>CEO &amp; Founder</h3>
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="new-team-6">
-        <!-- Card 5 content -->
-        <div class="new-team-img">
-          <img src="img/team-1-1.jpg" alt="Team Image">
-        </div>
-        <div class="new-team-content">
-          <h2>Josh Dunn</h2>
-          <h3>CEO &amp; Founder</h3>
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="new-team-6">
-        <!-- Card 6 content -->
-        <div class="new-team-img">
-          <img src="img/team-1-1.jpg" alt="Team Image">
-        </div>
-        <div class="new-team-content">
-          <h2>Josh Dunn</h2>
-          <h3>CEO &amp; Founder</h3>
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- Now, if you add more items, the first row will contain 6 cards and the second row 5 cards.
-           The pseudo-element (::after) will ensure that if the second row is incomplete, it is centered. -->
-           <div class="new-team-6">
-            <!-- Card 6 content -->
-            <div class="new-team-img">
-              <img src="img/team-1-1.jpg" alt="Team Image">
-            </div>
-            <div class="new-team-content">
-              <h2>Josh Dunn</h2>
-              <h3>CEO &amp; Founder</h3>
-              <div class="new-team-social">
-                <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="new-team-6">
-            <!-- Card 6 content -->
-            <div class="new-team-img">
-              <img src="img/team-1-1.jpg" alt="Team Image">
-            </div>
-            <div class="new-team-content">
-              <h2>Josh Dunn</h2>
-              <h3>CEO &amp; Founder</h3>
-              <div class="new-team-social">
-                <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="new-team-6">
-            <!-- Card 6 content -->
-            <div class="new-team-img">
-              <img src="img/team-1-1.jpg" alt="Team Image">
-            </div>
-            <div class="new-team-content">
-              <h2>Josh Dunn</h2>
-              <h3>CEO &amp; Founder</h3>
-              <div class="new-team-social">
-                <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="new-team-6">
-            <!-- Card 6 content -->
-            <div class="new-team-img">
-              <img src="img/team-1-1.jpg" alt="Team Image">
-            </div>
-            <div class="new-team-content">
-              <h2>Josh Dunn</h2>
-              <h3>CEO &amp; Founder</h3>
-              <div class="new-team-social">
-                <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="new-team-6">
-            <!-- Card 6 content -->
-            <div class="new-team-img">
-              <img src="img/team-1-1.jpg" alt="Team Image">
-            </div>
-            <div class="new-team-content">
-              <h2>Josh Dunn</h2>
-              <h3>CEO &amp; Founder</h3>
-              <div class="new-team-social">
-                <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-    </div>
-  </div>
-  
-  <!-- Team #4 Start -->
-  <div class="new-container-last">
-    <div class="section-title-header text-center">
-      <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">SOC</h2>
-      <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
-        hackathon!</p> -->
-    </div>
-    <div class="new-team-4-grid">
-      <!-- Card 1 -->
-      <div class="new-team-4">
-        <div class="new-team-content">
-          <h2>Josh Dunn</h2>
-          <h3>CEO &amp; Founder</h3>
-        </div>
-        <div class="new-team-img">
-          <img src="img/team-1-1.jpg" alt="Team Image">
-          <div class="new-team-content">
-            <p>Some text goes here that describes about team member</p>
-          </div>
-        </div>
-        <div class="new-team-content">
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="new-team-4">
-        <div class="new-team-content">
-          <h2>Mollie Ross</h2>
-          <h3>Art Director</h3>
-        </div>
-        <div class="new-team-img">
-          <img src="img/team-1-2.jpg" alt="Team Image">
-          <div class="new-team-content">
-            <p>Some text goes here that describes about team member</p>
-          </div>
-        </div>
-        <div class="new-team-content">
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="new-team-4">
-        <div class="new-team-content">
-          <h2>Dylan Adams</h2>
-          <h3>Developer</h3>
-        </div>
-        <div class="new-team-img">
-          <img src="img/team-1-3.jpg" alt="Team Image">
-          <div class="new-team-content">
-            <p>Some text goes here that describes about team member</p>
-          </div>
-        </div>
-        <div class="new-team-content">
-          <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Team #4 End -->
-
+</section>
 
   <!-- FAQ Section Start -->
   <section id="faq" class="intro section-padding">

@@ -394,6 +394,37 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 992px) {
+  .calendar {
+    gap: 5px;
+    padding: 5px;
+  }
+  .weekday {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+  .day {
+    padding: 10px;  /* Reduced from 15px */
+    font-size: 0.9rem;  /* Slightly smaller text */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .calendar {
+    gap: 4px;
+    padding: 4px;
+  }
+  .weekday {
+    padding: 4px;
+    font-size: 0.75rem;
+  }
+  .day {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+
 /* Additional Adjustments for Small Devices (max-width: 425px) */
 @media (max-width: 425px) {
 
@@ -1354,7 +1385,7 @@ Roadmap Section
 
 /* Admin Area */
 section #admin {
-  background: #000;
+  /* background: #000; */
   padding: auto;
 }
 
@@ -1642,6 +1673,16 @@ h2 {
 }
 
 
-#crew{
+#crew, #roadmap{
   scroll-margin-top: 110px;
+}
+
+@media (max-width:768px){
+  #faq{
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  #faq {margin-top: 25vh;}
 }

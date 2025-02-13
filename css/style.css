@@ -1003,12 +1003,12 @@ h1 {
 }
 
 .new-section-title::after {
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 5px;
-    left: calc(50% - 25px);
-    background: #353535;
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 5px;
+  left: calc(50% - 25px);
+  /* background: #353535; */
 }
 
 .new-section-title h1 {
@@ -1353,7 +1353,7 @@ h1 {
   width: 40px;       /* Reduced size */
   height: 30px;
   margin-right: 3px;
-  padding: 5px 0;
+  /* padding: 5px 0; */
   font-size: 12px;   /* Reduced font size for icons */
   font-weight: 300;
   line-height: 12px;
@@ -1401,16 +1401,17 @@ h1 {
 
 /* Ensure the LinkedIn icon is placed below the text */
 .first-team-3 .first-team-content .first-team-social {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   display: flex;
   justify-content: center;
+  height: 2px;
 }
 
 .first-team-3 .first-team-content .first-team-social a {
   display: inline-block;
   width: 30px;
-  height: 30px;
-  line-height: 30px;
+  /* height: 30px; */
+  /* line-height: 30px; */
   font-size: 14px;
   text-align: center;
   /* color: #ffffff; */
@@ -1420,9 +1421,6 @@ h1 {
   margin-right: 3px;
 }
 
-.first-team-3 .first-team-content .first-team-social a:hover {
-  background: #222222;
-}
 
 
 
@@ -1434,9 +1432,10 @@ h1 {
 .second-team-3-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* Adjust gap between cards as needed */
-  max-width: 1080px;
+  /* gap: -0px; */ /* Adjust gap between cards as needed */
+  max-width: 900px;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 /* Responsive Adjustments for .second-team-3-grid */
@@ -1481,7 +1480,7 @@ h1 {
 /* Social Overlay – Simplified (Content Area Version)    */
 /* ----------------------------------------------------- */
 .second-team-3 .second-team-social {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   font-size: 0;
@@ -1503,9 +1502,6 @@ h1 {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-.second-team-3 .second-team-social a.second-social-li {
-  background: #0e76a8;
-}
 
 .second-team-3 .second-team-social a:hover {
   background: #222222;
@@ -1518,7 +1514,7 @@ h1 {
 .second-team-3 .second-team-content {
   text-align: center;
   padding: 10px;            /* Reduced padding */
-  background: #f9f9f9;      /* Light background */
+  /* background: #f9f9f9; */      /* Light background */
   transition: background 0.5s;
   font-size: 14px;          /* Overall font size */
 }
@@ -1542,9 +1538,10 @@ h1 {
 
 /* Ensure the LinkedIn icon is placed below the text */
 .second-team-3 .second-team-content .second-team-social {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   display: flex;
   justify-content: center;
+  height: 2px;
 }
 
 .second-team-3 .second-team-content .second-team-social a {
@@ -1554,8 +1551,8 @@ h1 {
   line-height: 30px;
   font-size: 14px;
   text-align: center;
-  color: #ffffff;
-  background: #0e76a8;  /* LinkedIn blue */
+  /* color: #ffffff; */
+  /* background: #0e76a8; */  /* LinkedIn blue */
   border-radius: 50%;
   transition: background 0.3s;
   margin-right: 3px;
@@ -1723,121 +1720,269 @@ h1 {
 /* First Row Grid Container for .new-team-6 Cards        */
 /* (Existing code – unchanged if needed)                 */
 /* ===================================================== */
-.new-team-6-grid {
+/* =============================== */
+/* Overall Container              */
+/* =============================== */
+.tech-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width:768px){
+  .tech-container{
+    margin-top: 50vh;
+  }
+}
+
+/* =============================== */
+/* Grid Container for Technical Team Cards (5 per row) */
+/* =============================== */
+.tech-team-6-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 5%;
+  grid-template-columns: repeat(5, 180px);
+  gap: 10px;
   max-width: 1080px;
   margin: 0 auto;
+  justify-content: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .tech-team-6-grid {
+    grid-template-columns: repeat(3, 180px);
+  }
+}
+@media (max-width: 768px) {
+  .tech-team-6-grid {
+    grid-template-columns: repeat(2, 180px);
+    /* margin-top: 50vh; */
+  }
+}
+/* =============================== */
+/* Base Card Styles                */
+/* =============================== */
+.tech-team-6 {
+  margin-bottom: 20px;
+  width: 180px;  /* Fixed card width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------------------------- */
+/* New Image Container Shape       */
+/* (Skewed rectangle shape)        */
+/* ------------------------------- */
+.tech-team-6 .tech-team-img {
+  position: relative;
+  font-size: 0;
+  text-align: center;
+  /* New clip-path shape: top edge slightly slanted upward, bottom edge slightly slanted upward */
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+  width: 180px;
+  height: 150px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.tech-team-6 .tech-team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+  /* Optional: add a subtle border if desired */
+  border: 5px solid #f3f4fa;
+}
+
+.tech-team-6:hover .tech-team-img img {
+  border-color: transparent;
+}
+
+/* ------------------------------- */
+/* Content Area                    */
+/* ------------------------------- */
+.tech-team-6 .tech-team-content {
+  text-align: center;
+  padding: 10px;
+}
+
+.tech-team-6 .tech-team-content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.tech-team-6 .tech-team-content h3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+/* ------------------------------- */
+/* Social Icons (Content Area)     */
+/* ------------------------------- */
+.tech-team-6 .tech-team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+.tech-team-6 .tech-team-social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+  padding: 8px 0 7px 0;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.tech-team-6 .tech-team-social a.tech-social-li {
+  background: #0e76a8;
+}
+
+.tech-team-6 .tech-team-social a:hover {
+  background: #222222;
+}
+
+
+
+/* =============================== */
+/* Overall Container              */
+/* =============================== */
+.sec-tec-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* =============================== */
+/* Grid Container for First Row   */
+/* (6 cards per row on large screens) */
+/* =============================== */
+.sec-tec-first-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 180px);
+  gap: 10px;
+  max-width: 1130px; /* 6*180 + 5*10 = 1080+50 */
+  margin: 0 auto;
+  justify-content: center;
 }
 
 /* Responsive Adjustments for First Row */
 @media (max-width: 1200px) {
-  .new-team-6-grid {
-    grid-template-columns: repeat(5, 1fr);
+  .sec-tec-first-grid {
+    grid-template-columns: repeat(4, 180px);
   }
 }
-
-@media (max-width: 992px) {
-  .new-team-6-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
-  .new-team-6-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .sec-tec-first-grid {
+    grid-template-columns: repeat(2, 180px);
   }
 }
 
-/* ===================================================== */
-/* Second Row Grid Container for .second-team-6 Cards    */
-/* ===================================================== */
-.second-team-6-grid {
+/* =============================== */
+/* Grid Container for Second Row  */
+/* (5 cards per row on large screens) */
+/* =============================== */
+.sec-tec-second-grid {
   display: grid;
-  /* For second row, we want 5 cards per row */
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5%;
+  grid-template-columns: repeat(5, 180px);
+  gap: 10px;
   max-width: 1080px;
-  margin: 0 auto;
-  justify-content: center; /* Center grid items if row is incomplete */
+  margin: 20px auto 0 auto;
+  justify-content: center;
 }
 
 /* Responsive Adjustments for Second Row */
 @media (max-width: 1200px) {
-  .second-team-6-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .sec-tec-second-grid {
+    grid-template-columns: repeat(3, 180px);
   }
 }
-
-@media (max-width: 992px) {
-  .second-team-6-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
-  .second-team-6-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .sec-tec-second-grid {
+    grid-template-columns: repeat(2, 180px);
   }
 }
 
-/* ===================================================== */
-/* Existing .new-team-6 Card Styles (for first row)      */
-/* ===================================================== */
-.new-team-6 {
+/* =============================== */
+/* Base Card Styles (common)      */
+/* =============================== */
+.sec-tec-team-card {
   margin-bottom: 20px;
-  max-width: 180px;
+  width: 180px; /* Fixed card width */
   margin-left: auto;
   margin-right: auto;
 }
 
-.new-team-6 .new-team-img {
+/* ------------------------------- */
+/* Image Container (Skewed Shape)  */
+/* ------------------------------- */
+.sec-tec-team-card .sec-tec-team-img {
   position: relative;
   font-size: 0;
   text-align: center;
-  border-radius: 100%;
+  /* Skewed rectangle shape */
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+  width: 180px;
+  height: 150px;
   margin-bottom: 20px;
   overflow: hidden;
 }
 
-.new-team-6 .new-team-img img {
+.sec-tec-team-card .sec-tec-team-img img {
   width: 100%;
-  height: auto;
-  border-radius: 100%;
-  border: 10px solid #f3f4fa;
+  height: 100%;
+  object-fit: cover;
   transition: all 0.3s;
+  border: 5px solid #f3f4fa;
 }
 
-.new-team-6:hover .new-team-img img {
-  border: 0px solid #f3f4fa;
+.sec-tec-team-card:hover .sec-tec-team-img img {
+  border-color: transparent;
 }
 
-.new-team-6 .new-team-content {
+/* ------------------------------- */
+/* Content Area                  */
+/* ------------------------------- */
+.sec-tec-team-card .sec-tec-team-content {
   text-align: center;
+  padding: 10px;
 }
 
-.new-team-6 .new-team-content h2 {
+.sec-tec-team-card .sec-tec-team-content h2 {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 5px;
 }
 
-.new-team-6 .new-team-content h3 {
+.sec-tec-team-card .sec-tec-team-content h3 {
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 15px;
 }
 
-.new-team-6 .new-team-social {
+/* ------------------------------- */
+/* Social Icons in Content Area  */
+/* ------------------------------- */
+.sec-tec-team-card .sec-tec-team-social {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0;
 }
 
-.new-team-6 .new-team-social a {
+.sec-tec-team-card .sec-tec-team-social a {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -1847,136 +1992,20 @@ h1 {
   line-height: 14px;
   text-align: center;
   color: #ffffff;
-  border-radius: 100%;
-  transition: all 0.3s;
+  border-radius: 50%;
+  transition: background 0.3s;
 }
 
-.new-team-6 .new-team-social a.new-social-tw {
-  background: #00acee;
-}
-
-.new-team-6 .new-team-social a.new-social-fb {
-  background: #3b5998;
-}
-
-.new-team-6 .new-team-social a.new-social-li {
+.sec-tec-team-card .sec-tec-team-social a.sec-tec-social-li {
   background: #0e76a8;
 }
 
-.new-team-6 .new-team-social a.new-social-in {
-  background: #3f729b;
-}
-
-.new-team-6 .new-team-social a.new-social-yt {
-  background: #c4302b;
-}
-
-.new-team-6 .new-team-social a:last-child {
-  margin-right: 0;
-}
-
-.new-team-6 .new-team-social a:hover {
+.sec-tec-team-card .sec-tec-team-social a:hover {
   background: #222222;
 }
 
-/* ===================================================== */
-/* Second Row Card Styles (Same as .new-team-6, but with "second-" prefix) */
-/* ===================================================== */
-.second-team-6 {
-  margin-bottom: 20px;
-  max-width: 180px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.second-team-6 .second-team-img {
-  position: relative;
-  font-size: 0;
-  text-align: center;
-  border-radius: 100%;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
 
-.second-team-6 .second-team-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 100%;
-  border: 10px solid #f3f4fa;
-  transition: all 0.3s;
-}
-
-.second-team-6:hover .second-team-img img {
-  border: 0px solid #f3f4fa;
-}
-
-.second-team-6 .second-team-content {
-  text-align: center;
-}
-
-.second-team-6 .second-team-content h2 {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-}
-
-.second-team-6 .second-team-content h3 {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 15px;
-}
-
-.second-team-6 .second-team-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0;
-}
-
-.second-team-6 .second-team-social a {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-right: 3px;
-  padding: 8px 0 7px 0;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  color: #ffffff;
-  border-radius: 100%;
-  transition: all 0.3s;
-}
-
-.second-team-6 .second-team-social a.second-social-tw {
-  background: #00acee;
-}
-
-.second-team-6 .second-team-social a.second-social-fb {
-  background: #3b5998;
-}
-
-.second-team-6 .second-team-social a.second-social-li {
-  background: #0e76a8;
-}
-
-.second-team-6 .second-team-social a.second-social-in {
-  background: #3f729b;
-}
-
-.second-team-6 .second-team-social a.second-social-yt {
-  background: #c4302b;
-}
-
-.second-team-6 .second-team-social a:last-child {
-  margin-right: 0;
-}
-
-.second-team-6 .second-team-social a:hover {
-  background: #222222;
-}
-
-  
 /**********************************/
 /********* Team #9 Style **********/
 /**********************************/
