@@ -1,157 +1,1949 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>PYEXPO'25</title>
+  <meta charset="utf-8">
+  <title>PYEXPO'25</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="https://pyexpo.netlify.app/assets/img/background/PyExpoLogo.png" rel="icon">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background: #0a0a0a;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-        .gif-container img {
-            width: 60%;
-            max-width: 300px;
-            height: auto;
-        }
-        h1 {
-            font-size: 2rem;
-            margin-top: 15px;
-        }
-        p {
-            font-size: 1rem;
-            margin: 10px 0;
-            max-width: 80%;
-        }
-        .timer {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-        .time-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            border-radius: 8px;
-            min-width: 65px;
-        }
-        .time-box span {
-            display: block;
-            font-size: 0.9rem;
-        }
-        .contact-btn {
-            margin-top: 15px;
-            padding: 12px 20px;
-            font-size: 1rem;
-            background: #f82249;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .contact-btn:hover {
-            background: #c7193c;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            .timer {
-                font-size: 1.2rem;
-            }
-            .time-box {
-                min-width: 50px;
-                padding: 8px;
-            }
-            .contact-btn {
-                font-size: 0.9rem;
-                padding: 10px 16px;
-            }
-        }
-    </style>
+  <!-- Favicon -->
+  <link href="https://pyexpo.netlify.app/assets/img/background/PyExpoLogo.png" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- add css -->
+  <link href="css/add.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax-video.min.js"></script>
+
+  <!-- Google Fonts -->
+  <!-- <link
+    href="assets/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Lugrasimo&family=Nova+Cut&family=Orbitron:wght@400..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+  <!-- <link
+    href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Lugrasimo&family=Nova+Cut&family=Orbitron:wght@400..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"> -->
 </head>
+
 <body>
+  <!-- Spinner Start -->
+  
+<!-- Loader / Spinner Start -->
 
-    <div class="gif-container">
-        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3FpbWJndzJtcmZud3BqdGp2c3BocXk0amt0eHdyenkzc3QxeXdnNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vR1dPIYzQmkRzLZk2w/giphy.gif" alt="Under Maintenance GIF">
+<!-- Loader / Spinner End -->
+
+<!-- Rest of your page content goes here -->
+
+  <!-- Spinner End -->
+
+
+  <!-- Topbar Start -->
+  <div class="container-fluid px-0" style="background-color: #100f45;">
+    <div class="row g-0 d-none d-lg-flex">
+      <!-- Left section: Social media links -->
+      <div class="col-lg-6 ps-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center text-light">
+          <span>Follow IPS Tech Community:</span>
+          <a class="btn btn-link text-light" href="https://www.linkedin.com/in/ips-tech-community-9aa024297/"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-link text-light" href="https://www.instagram.com/ips_tech.community?igsh=MXA4dWJhaXFyaHljcg=="><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Right section: Slogan -->
+      <div class="col-lg-6 pe-5 text-end ">
+        <div class="h-100 text-light d-inline-flex align-items-center">
+          <span>Genius Innovation Creates a Lasting Legacy</span> <!-- Your Slogan Here -->
+        </div>
+      </div>
     </div>
-    
-    <h1>Website not website-ing . Let em cook!!!</h1>
-    <p>We're working hard to bring something amazing. Stay tuned!</p>
-    
-    <div class="timer" id="countdown">
-        <div class="time-box">
-            <span id="days">00</span>
-            <span>Days</span>
-        </div>
-        <div class="time-box">
-            <span id="hours">00</span>
-            <span>Hours</span>
-        </div>
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <span>Minutes</span>
-        </div>
-        <div class="time-box">
-            <span id="seconds">00</span>
-            <span>Seconds</span>
-        </div>
+</div>
+
+  <!-- Topbar End -->
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg sticky-top px-4 px-lg-5" style="background-color: #101522;">
+    <div class="container">
+      <button id="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="assets/PyExpoLogo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#prizes">Prizes</a></li>
+          <!-- <li><a href="#journey">Journey</a></li> -->
+          <li><a href="#events">Events</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#domains">Domains</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#crew">Pycrew</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <!-- <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#supporters">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li> -->
+          <!-- <li class="login"><a class="disabled" href="javascript:void(0);">Login</a></li> -->
+          <li class="login"><a href="https://portal.pyexpo.co">Login</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
     </div>
-
-    <a href="mailto:pyexpo@kgkite.ac.in?subject=Inquiry%20About%20Maintenance" class="contact-btn">Contact Us</a>
-
+    </header><!-- #header -->
     <script>
-        // Set the countdown target date (YYYY, MM (0-based), DD, HH, MM, SS)
-        const targetDate = new Date("2025-02-14T12:00:00").getTime();
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-menu a");
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeLeft = targetDate - now;
+        const observerOptions = {
+          root: null, // Use the viewport
+          threshold: 0.1, // 60% of the section must be visible
+        };
 
-            if (timeLeft > 0) {
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        const observerCallback = (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Remove active class from all links
+              navLinks.forEach((link) => link.parentElement.classList.remove("menu-active"));
 
-                document.getElementById("days").textContent = days;
-                document.getElementById("hours").textContent = hours;
-                document.getElementById("minutes").textContent = minutes;
-                document.getElementById("seconds").textContent = seconds;
-            } else {
-                document.getElementById("countdown").innerHTML = "<h2>Time's up!</h2>";
-                clearInterval(interval);
+              // Add active class to the current section's link
+              const activeLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
+              if (activeLink) {
+                activeLink.parentElement.classList.add("menu-active");
+              }
             }
+          });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // Observe each section
+        sections.forEach((section) => observer.observe(section));
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+        const navMenuContainer = document.getElementById("nav-menu-container");
+
+        if (mobileNavToggle && navMenuContainer) {
+          mobileNavToggle.addEventListener("click", () => {
+            navMenuContainer.classList.toggle("mobile-active");
+            mobileNavToggle.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+  </nav>
+  <!-- Navbar End -->
+
+  <section id="home">
+    <script>
+      function updateVideoSource() {
+        var video = document.querySelector('.mainbanner');
+        if (!video) return;
+        var source = video.querySelector('source');
+        // Adjust source paths as needed for mobile vs desktop:
+        if (window.innerWidth < 768) {
+          source.src = "assets/pyexpopcbanner.mp4"; // Mobile version
+        } else {
+          source.src = "assets/pyexpopcbanner.mp4"; // Desktop version
+        }
+        video.load();
+      }
+      document.addEventListener("DOMContentLoaded", updateVideoSource);
+      window.addEventListener("resize", updateVideoSource);
+    </script>
+    
+    <!-- Carousel Start -->
+    <div class="container-fluid h-30 px-0">
+      <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators (Dots) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video class="mainbanner" autoplay muted playsinline>
+              <source src="assets/pyexpopcbanner.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="carousel-item">
+            <img class="mainbanner" style="object-fit: fit;" src="assets/pyexpo YT BANNER cropped.png" alt="Image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Mobile Banner Element -->
+    <div class="mobile-banner">
+      <img src="assets/newmobbanner.png" alt="Mobile Banner">
+      <div class="banner-text">
+        <h1 class="section-header-new" style="font-size: 0.6rem;">GENIUS INNOVATION CREATES A LASTING LEGACY</h1>
+      </div>
+    </div>  
+
+    <!-- Countdown Timer -->
+    
+
+    <div class="timer">
+      <div class="time">
+        <h1 id="days">--</h1>
+        <span id="daysLabel">Days</span>
+      </div>
+      <div class="time-btn">:</div>
+      <div class="time">
+        <h1 id="hours">--</h1>
+        <span id="hoursLabel">Hours</span>
+      </div>
+      <div class="time-btn">:</div>
+      <div class="time">
+        <h1 id="min">--</h1>
+        <span id="minutesLabel">Minutes</span>
+      </div>
+      <div class="time-btn">:</div>
+      <div class="time" >
+        <h1 id="sec" style="color: #f82249 !important;" >--</h1>
+        <span id="secondLabel" style="color: #f82249 !important;">Seconds</span>
+      </div>
+    </div>
+    <!-- Carousel End -->
+    <h2 class="home-h2">
+      Countdown for PyExpo week</h2>
+  </section>
+
+  <br>
+  <hr class="style2">
+
+  <section id="about">
+    <!-- Page Header Start -->
+    <div class="container-fluid  py-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="text-center mx-auto wow fadeInUp " data-wow-delay="0.1s" style="max-width: 500px;">
+        <h1 class=" section-header">ABOUT</h1>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5 align-items-end">
+          <div class="col-lg-6">
+            <div class="row g-2">
+              <div class="col-6 position-relative wow fadeIn" data-wow-delay="0.7s">
+                <div class="about-experience rounded" style="background-color: rgb(245, 241, 241);">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="assets/zero-2.png">
+                    <img src="assets/zero-2.png" alt="Experience Image">
+                  </picture>
+                  <!-- <small class="fs-5 fw-bold">PYEXPO</small> -->
+                </div>
+                
+              </div>
+              <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+                <img class="img-fluid rounded" src="assets/One.png">
+              </div>
+              <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+                <img class="img-fluid rounded" src="assets/Three.png">
+              </div>
+              <div class="col-6 wow fadeIn" data-wow-delay="0.5s">
+                <img class="img-fluid rounded" src="assets/Two.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <p class="section-title bg-white text-start text-primary pe-3"
+              style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">
+              About PyExpo 25
+            </p>
+
+            <!-- <h1 class="mb-4">Know About Our Dairy Farm & Our History</h1> -->
+            <p class="mb-4"> <strong style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">PYEXPO</strong>,
+              an exclusive hackathon event conducted at
+              <a href="https://www.kgkite.ac.in/" target="_blank">KGISL Institute of Technology</a>. Organized by the <a
+                href="https://www.linkedin.com/in/ips-tech-community-9aa024297/" target="_blank">IPS
+                Tech Community</a>, this event provides first-year students with an exciting opportunity to explore the
+              world
+              of hackathons, an experience that many have never encountered before. The IPS Tech Community is committed
+              to empowering students by fostering innovation, collaboration, and technical growth.
+            </p>
+            <p>
+              <strong
+                style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color: var(--purple-color);text-transform: uppercase;">Purpose
+                of PyExpo 25</strong><br>
+              The primary goal of PyExpo 25 is to introduce first-year students to the collaborative, problem-solving
+              nature
+              of hackathons. It offers them a platform to nurture their technical skills, promote innovative thinking,
+              and
+              encourage teamwork. By participating in PyExpo 25, students gain hands-on experience in real-world
+              problem-solving
+              while being guided and mentored by seniors and experienced faculty members.
+            </p>
+
+            <div class="row g-4 align-items-center">
+              <div class="col-sm-4">
+                <a href="https://youtu.be/CCljjhGUaFc" data-bs-target="#videoModal" data-bs-toggle="modal"
+                  class="glightbox_video">
+                  <svg width="131" height="131" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="inner-circle"
+                      d="M65 21C40.1488 21 20 41.1488 20 66C20 90.8512 40.1488 111 65 111C89.8512 111 110 90.8512 110 66C110 41.1488 89.8512 21 65 21Z"
+                      fill="black"></path>
+                    <circle class="outer_circle" cx="65.5" cy="65.5" r="64" stroke="black"></circle>
+                    <path class="play" fill-rule="evenodd" clip-rule="evenodd" d="M60 76V57L77 66.7774L60 76Z"
+                      fill="#BF2428"></path>
+                  </svg>
+                </a>
+              </div>
+              <!-- Model for video -->
+              <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- YouTube Video Embed -->
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="videoIframe" width="100%" height="315" src="" frameborder="0"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Script for video -->
+              <script>
+                // When the modal is shown, set the iframe src to the YouTube video URL
+                var videoModal = document.getElementById('videoModal');
+                videoModal.addEventListener('show.bs.modal', function (event) {
+                  var button = event.relatedTarget; // Button that triggered the modal
+                  var videoUrl = "https://www.youtube.com/embed/CCljjhGUaFc"; // Video URL
+                  var iframe = document.getElementById('videoIframe');
+                  iframe.src = videoUrl;
+                });
+
+                // When the modal is hidden, stop the video (remove the src)
+                videoModal.addEventListener('hidden.bs.modal', function () {
+                  var iframe = document.getElementById('videoIframe');
+                  iframe.src = ""; // Stop the video when modal is closed
+                });
+              </script>
+              <div class="col-sm-8">
+                <h3>Experience the Excitement of PyExpo'24</h3>
+                <h4> Hit Play and Dive In !</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+
+    <div class="ready-to-play">
+      <video id="bgvid" class="stop" loop autoplay muted playsinline>
+        <source src="assets/pyexpocinematic.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <section id="prizes" class="section-padding-prize">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title-header text-center">
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+              <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Prizes & Awards</h1>
+            </div>
+            <p class="wow fadeInDown" data-wow-delay="0.2s">🏆Exciting Deliverables will be announced shortly.
+              Stay tuned !!!</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cash.png" alt="cash">
+            <div class="overlay-text">
+              <div class="content">
+                <h3 style="color: #E3B35A;">Cash Prizes</h3>
+                <h3 style="text-transform: capitalize; font-size: 14px; line-height: 20px; color: white;">1st Place: INR 30,000<br>
+                  2nd Place: INR 15,000<br>
+                  3rd Place: INR 10,000<br>
+                </h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/more.png" alt="more">
+            <div class="overlay-text">
+              <div class="content">
+                <h3 style="color: #E3B35A;">More Prizes for Students</h3>
+                <h3 style="text-transform: capitalize; font-size: 14px; line-height: 20px; color: white;"><b
+                    style="color: #2b72ad;">MOMENTO FOR</b><br>
+                  - Best innovative ideas <br>
+                  - Active Leaners<br>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/vouchers.png" alt="vouchers">
+            <div class="overlay-text">
+              <div class="content">
+                <h3 style="color: #E3B35A;">Goodies for All</h3>
+                <h3 style="text-transform: capitalize; font-size: 14px; line-height: 20px; color: white;">- Participants will be
+                  provided with exciting goodies.<br>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/internship.png" alt="Incubation">
+            <div class="overlay-text">
+              <div class="content">
+                <h3 style="color: #E3B35A;">Internship Opportunity</h3>
+                <h3
+                  style="text-transform: capitalize; font-size: 14px; line-height: 20px; text-align: center; padding: 5px; color: white;">
+                  - Best performing students will get an internship opportunity</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="Certificate">
+            <div class="overlay-text">
+              <div class="content">
+                <h3 style="color: #E3B35A;">Certificates</h3>
+                <h3
+                  style="text-transform: capitalize; font-size: 14px; line-height: 20px; text-align: center; padding: 5px; color: white;">
+                  - Certificate for Winners.<br>
+                  - All participants will receive Certificate of Participation.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+  <br>
+  <hr class="style2">
+
+  <section id="events">
+    <!-- Page Header Start -->
+    <div class="container-fluid  py-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="text-center mx-auto wow fadeInUp " data-wow-delay="0.1s" style="max-width: 500px;">
+        <h1 class=" section-header">EVENT</h1>
+      </div>
+    </div>
+
+    <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+      <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Pyexpo'25 Poster</h1>
+      <div class="intro-poster" style="display: flex; justify-content: center; align-items: center; margin-top: 25px;">
+        <img style="width: 120%; max-width: 500%; height: auto; border-radius: 20px;"
+          src="assets/PYEXPO Invite poster.jpg" />
+      </div>
+    </div>
+  
+  <!-- End of Event Section -->
+
+  <!-- Schedule Section -->
+  <!-- <section id="schedule"> -->
+    <!-- <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px; margin-top: 5px; margin-bottom: 0px;">
+      <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Event Calendar</h1>
+    </div>
+    <div class="container-fluid my-5">
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <div class="calendar-container">
+            <h2>February 2025</h2>
+            <div class="calendar" id="calendar-feb">
+            </div>
+          </div>
+          <div class="calendar-legend">
+            <h3>Legend:</h3>
+            <div>
+              <span class="legend-box" style="background: #ff0;"></span> Current Date
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="calendar-container">
+            <h2>March 2025</h2>
+            <div class="calendar" id="calendar-mar">
+            </div>
+          </div>
+          <div class="calendar-legend">
+            <h3>Legend:</h3>
+            <div>
+              <span class="legend-box" style="background: #ff0;"></span> Current Date
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <!-- </section> -->
+  <!-- End of Schedule Section -->
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap">
+    <div class="section-header roadmap-heading" style="margin-top: 5px; letter-spacing: 5px; color: black;">
+      Roadmap of <span style="color:var(--purple-color);">PY<span style="color:var(--red-color);">EXPO</span></span>'25
+    </div>
+    <ul>
+      <li style="--accent-color:#6b48cf">
+        <div class="date" itemprop="evaluation">IDEA EVALUATION</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Dec 19-20, 2024</div>
+        <div class="descr">
+          Experience the exciting journey of PyExpo'25 as we guide participants from preparation and idea development to
+          the grand finale, showcasing innovation and talent at every step.
+        </div>
+      </li>
+      <li style="--accent-color:#4624A7">
+        <div class="date">IDEA2EXPO</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Feb 17-18, 2025</div>
+        <div class="descr">Faculty mentors evaluate the practical feasibility and trends of ideas. The top 70+ teams
+          proceed to the next stage.</div>
+      </li>
+      <li style="--accent-color:#3278a7">
+        <div class="date">HACKSHOPS2EXPO</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Feb 19-20 & 24-27, 2025</div>
+        <div class="descr">
+          Days of intensive workshops for selected teams to refine their ideas and enhance their skills.
+        </div>
+      </li>
+      <li style="--accent-color:#004877">
+        <div class="date">HACKATHON2EXPO</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Feb 21-22, 2025</div>
+        <div class="descr">
+          A 30-hour hackathon where teams develop and execute their ideas in a competitive environment.
+        </div>
+      </li>
+      <li style="--accent-color:#E24A68">
+        <div class="date">PITCH2EXPO</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Feb 28, 2025</div>
+        <div class="descr">
+          The remaining 30+ teams present their projects to a panel of judges, including visitors from KGCAS, KiTE,
+          and IIM.
+        </div>
+      </li>
+      <li style="--accent-color:#FF0044">
+        <div class="date">🏆 PYEXPO'25 - The Grand Finale</div>
+        <div class="title"><span style="font-weight: bold;">Date : </span> Mar 1, 2025</div>
+        <div class="descr">
+          The top projects are showcased to industry evaluators, who choose the best three teams. Winners are awarded
+          and celebrated.
+        </div>
+      </li>
+    </ul>
+  </section>
+  <!-- End of Roadmap Section -->
+
+
+  <!-- Domain Section -->
+  <section id="domains">
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Python Domains</h1>
+        </div>
+        <div class="row gy-5 gx-4">
+          <!-- First Row (3 items) -->
+          <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/AiMl.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/1.png" alt="">
+                </div>
+                <h5 class="mb-3">Artificial Intelligence & Machine Learning</h5>
+                <p class="mb-4">(Chatbot / Models)</p>
+                <a class="btn btn-square rounded-circle" href="https://portal.pyexpo.co/problem_statements/"><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/web_dev.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/2.png" alt="" />
+                </div>
+                <h5 class="mb-3">Web Development</h5>
+                <p class="mb-4">(Flask / Django)</p>
+                <a class="btn btn-square rounded-circle" href="https://portal.pyexpo.co/problem_statements/"><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/IOT.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/3.png" alt="">
+                </div>
+                <h5 class="mb-3">I.O.T</h5>
+                <p class="mb-4">(Internet Of Things)</p>
+                <a class="btn btn-square rounded-circle" href="https://portal.pyexpo.co/problem_statements/"><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Second Row (2 items) -->
+          <div class="col-lg-6 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/student.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/4.png" alt="" />
+                </div>
+                <h5 class="mb-3">Student Innovation</h5>
+                <p class="mb-4">(Students Idea)</p>
+                <a class="btn btn-square rounded-circle" href="https://portal.pyexpo.co/problem_statements/"><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item d-flex h-100">
+              <div class="service-img">
+                <img class="img-fluid" src="assets/pyGame.gif" alt="">
+              </div>
+              <div class="service-text p-5 pt-0">
+                <div class="service-icon">
+                  <img class="img-fluid rounded-circle" src="assets/5.png" alt="" />
+                </div>
+                <h5 class="mb-3">PyGames</h5>
+                <p class="mb-4">(Game Development)</p>
+                <a class="btn btn-square rounded-circle" href="https://portal.pyexpo.co/problem_statements/"><i class="bi bi-chevron-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Domain Section -->
+
+  <section id="sponsors" class="section-padding">
+    <div class="overlay"></div>
+    <div class="container">
+      <!-- Technical Partners Section -->
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title-header text-center">
+            <h2 id="sponsor-heading" class="section-title wow fadeInUp" data-wow-delay="0.2s" style="font-family: 'Orbitron', sans-serif;">Sponsors</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-30 text-center sponsors-row wow fadeInDown" data-wow-delay="0.3s">
+        <!-- Change each col-lg-4 to col-lg-3 for 4 columns per row -->
+        <div class="col-lg-3 col-md-6">
+          <div class="sponsors-logo devfolio">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/sponsors/2 221x.png" style="height:auto;width: 200px;" alt="Nunnari LOGO">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="sponsor-divider"></div>
+          <div class="sponsors-logo polygon">
+            <a href="/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/sponsors/IPS WHITE batch 11x.png" style="height:auto;width: 250px;" alt="KG hospital LOGO">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="sponsor-divider"></div>
+          <div class="sponsors-logo polygon">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/sponsors/Python 6x4 11x.png" style="height:auto;width: 250px;" alt="Pinesphere LOGO">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="sponsor-divider"></div>
+          <div class="sponsors-logo polygon">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img class="issue-1" src="assets/img/sponsors/Python 6x4 21x.png" style="height:auto;width: 250px;" alt="Interview Buddy LOGO">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sponsors Section -->
+      <div class="row">
+      </div>
+      <div class="row mb-30 text-center sponsors-row wow fadeInDown" data-wow-delay="0.3s">
+        <div class="col-lg-3 col-md-6">
+          <div class="sponsors-logo devfolio">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/sponsors/Python 6x4 31x.png" alt="DEVFOLIO LOGO">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="sponsor-divider"></div>
+          <div class="sponsors-logo polygon">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img style="height: 50px;" src="assets/img/sponsors/Standy 21x.png" alt="POLYGON LOGO">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="sponsor-divider"></div>
+          <div class="sponsors-logo ethindia">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/sponsors/Standy 31x.png" alt="ETHINDIA LOGO">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="sponsor-divider"></div>
+          <!-- Add an additional sponsor logo here -->
+          <div class="sponsors-logo polygon">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img class="issue-2" src="assets/img/sponsors/Standy 41x.png" alt="Example Sponsor LOGO">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </section>
+  
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="align-items-center">
+          <div class="rounded overflow-hidden">
+            <div class="row g-0">
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="text-center bg-primary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/experience.png" alt="">
+                  <h1 class="display-6 text-white" data-toggle="counter-up">10</h1>
+                  <span class="fs-5 fw-semi-bold text-secondary">Special prices</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="text-center bg-secondary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/award.png" alt="">
+                  <h1 class="display-6" data-toggle="counter-up">3</h1>
+                  <span class="fs-5 fw-semi-bold text-primary">Award Winning</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="text-center bg-secondary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/animal.png" alt="">
+                  <h1 class="display-6 counter1" data-toggle="counter-up">100</h1>
+                  <span class="fs-5 fw-semi-bold text-primary">Teams</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                <div class="text-center bg-primary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/client.png" alt="">
+                  <h1 class="display-6 counter2 text-white" data-toggle="counter-up">650</h1>
+                  <span class="fs-5 fw-semi-bold text-secondary">Participants</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Features Section -->
+
+
+  <br>
+  <section id="crew">
+  <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+    <h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">Pyexpo Crew</h1>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <section id="admin" class="section-padding">
+    <!-- prime mover part -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title-header text-center">
+            <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Prime Mover</h2>
+            <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
+              hackathon!</p> -->
+          </div>
+        </div>
+      </div>
+      <!-- prime mover -->
+      <div class="container py-2 ">
+        <div class="row d-flex justify-content-center align-items-center h-5">
+          <div class="card-body text-center">
+            <div class="mt-3 mb-4">
+              <img loading="lazy" src="assets\img\admin\MD-KiTE.jpg" class="rounded-circle img-fluid" style="width: 250px;" />
+            </div>
+            <h4 class="mb-2" style="color:black;">Dr. Ashok Bakthavathsalam</h4>
+            <p class="mb-4" style="color:#101522  ;">Managing Director <span class="mx-2">|</span> <a href="#!">KiTE</a>
+            </p>
+
+            <div class="d-flex justify-content-between text-center mt-5 mb-2">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--management part-->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Administration</h2>
+              <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
+                hackathon!</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="container py-2">
+          <div class="row flex-container">
+            <!-- Container 1 -->
+            <div class="col-md-4 mb-4 custom-container">
+              <div class="card-body text-center">
+                <div class="mt-3 mb-4">
+                  <img loading="lazy" src="assets\img\admin\CEO-KiTE.jpg" class="rounded-circle img-fluid" style="width: 150px;" />
+                </div>
+                <h6 class="mb-2" style="color:black;font-size: large;">Mr. Aravind Kumar R</h6>
+                <p class="mb-4" style="color:#101522;">CEO - KGISL Educational Institutions <span class="mx-2">|</span>
+                  <a href="#!">KiTE</a>
+                </p>
+              </div>
+            </div>
+            <!-- Container 2 -->
+            <!-- Duplicate of Container 1 -->
+            <!-- Add your content here -->
+            <div class="col-md-4 mb-4 custom-container">
+              <div class="card-body text-center">
+                <div class="mt-3 mb-4">
+                  <img loading="lazy" src="assets\img\admin\DIRECTOR-KiTE.jpg" class="rounded-circle img-fluid"
+                    style="width: 150px;" />
+                </div>
+                <h6 class="mb-2" style="color:black;font-size: large;">Dr.P.Shankar</h6>
+                <p class="mb-4" style="color:#101522;">Director - Academics & Administration<span class="mx-2">|</span>
+                  <a href="#!">KiTE</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Container 3 -->
+            <!-- Duplicate of Container 1 -->
+            <!-- Add your content here -->
+            <div class="col-md-4 mb-4 custom-container">
+              <div class="card-body text-center">
+                <div class="mt-3 mb-4">
+                  <img loading="lazy" src="assets\img\admin\SECRETARY-KiTE.jpg" class="rounded-circle img-fluid"
+                    style="width: 150px;" />
+                </div>
+                <h6 class="mb-2" style="color:black;font-size: large;">Dr.N.Rajkumar</h6>
+                <p class="mb-4" style="color:#101522;">Secretary <span class="mx-2">|</span> <a href="#!">KiTE</a></p>
+              </div>
+            </div>
+            <!-- Container 4 -->
+            <!-- Duplicate of Container 1 -->
+            <!-- Add your content here -->
+            <div class="col-md-4 mb-4 custom-container">
+              <div class="card-body text-center">
+                <div class="mt-3 mb-4">
+                  <img loading="lazy" src="assets\img\admin\Principal-KiTE.jpeg" class="rounded-circle img-fluid"
+                    style="width: 150px;" />
+                </div>
+                <h6 class="mb-2" style="color:black;font-size: large;">Dr.S.Suresh Kumar</h6>
+                <p class="mb-4" style="color:#101522;">Principal <span class="mx-2">|</span> <a href="#!">KiTE</a></p>
+              </div>
+            </div>
+            <!-- Container 5 -->
+            <!-- Duplicate of Container 1 -->
+            <!-- Add your content here -->
+            <div class="col-md-4 mb-4 custom-container">
+              <div class="card-body text-center">
+                <div class="mt-3 mb-4">
+                  <img loading="lazy" src="assets\img\admin\Dean-KiTE.png" class="rounded-circle img-fluid" style="width: 150px;" />
+                </div>
+                <h6 class="mb-2" style="color:black;font-size: large;">Dr.Kathiravan N</h6>
+                <p class="mb-4" style="color:#101522;">Dean & HoD(S&H)<span class="mx-2">|</span> <a href="#!">KiTE</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chief organizer -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Chief Organizer</h2>
+              <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
+                hackathon!</p> -->
+            </div>
+          </div>
+        </div>
+        <!-- prime mover -->
+        <div class="container py-2 ">
+          <div class="row d-flex justify-content-center align-items-center h-5">
+            <div class="card-body text-center">
+              <div class="mt-3 mb-4">
+                <img loading="lazy" src="assets\img\Staffs\prof_Sathish_.jpg" class="rounded-circle img-fluid"
+                  style="width: 180px;" />
+              </div>
+              <h4 class="mb-2" style="color:black;font-size: 26px;">Er. Sathish Ramanujam</h4>
+              <p class="mb-4" style="color:#101522;">Chief Organizer<span class="mx-2">|</span><a href="#!">#PyExpo Team
+                </a> </p>
+
+              <div class="d-flex justify-content-between text-center mt-5 mb-2">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="section-title-header text-center">
+    <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Industry mentors / Evaluators</h2>
+    <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
+      hackathon!</p> -->
+      <p class="mb-4" style="color:#101522;">To Be Announced</p>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="section-title-header text-center">
+    <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Faculty support</h2>
+    <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
+      hackathon!</p> -->
+      <p class="mb-4" style="color:#101522;">To Be Announced</p>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Team #3 Start -->
+  <div class="new-container">
+  <div class="section-title-header text-center">
+    <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Media & Support</h2>
+    <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
+      hackathon!</p> -->
+  </div>
+    <div class="new-team-3-grid">
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Chandru Raja.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Chandru Raja</h2>
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <!-- Repeat new-team-3 cards for additional team members -->
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Gopi Krishna.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Gopi Krishna</h2>
+          <!-- <h3>Art Director</h3> -->
+
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Hari Prasath.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Hari Prasath</h2>
+           <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Harishwa.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Harishwa</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Harshavardhan.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Harshavardhan</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Jayakarthi.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Jayakarthi</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Joe Vincent.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Joe Vincent</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Moulidharan.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Moulidharan</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Naren Karthik.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Naren Karthik</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Praveen Raj.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Praveen Raj</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Rishvanth.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Rishvanth</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="new-team-3">
+        <div class="new-team-img">
+          <img src="img/M&S/Yoga Lakshmi.jpg" alt="Team Image">
+        </div>
+        <div class="new-team-content">
+          <h2>Yoga Lakshmi</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Team #3 End -->
+
+  
+    <!-- Team #6 Start -->
+    <div class="tech-container">
+      <div class="section-title-header text-center">
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Technical Team</h2>
+      </div>
+      <div class="tech-team-6-grid">
+        <div class="tech-team-6">
+          <!-- Card 1 -->
+          <div class="tech-team-img">
+            <img src="img/Tech/Adithya.png" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Adithya</h2>
+            <!-- <h3>CEO &amp; Founder</h3> -->
+            <!-- <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+        <div class="tech-team-6">
+          <!-- Card 2 -->
+          <div class="tech-team-img">
+            <img src="img/Tech/Gokulram.png" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Gokulramm</h2>
+            <!-- <h3>Art Director</h3> -->
+            <!-- <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+        <div class="tech-team-6">
+          <!-- Card 3 -->
+          <div class="tech-team-img">
+            <img src="img/Tech/Jai Srinivasan.png" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Jai Srinivasan</h2>
+            <!-- <h3>Developer</h3> -->
+            <!-- <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+        <div class="tech-team-6">
+          <!-- Card 4 -->
+          <div class="tech-team-img">
+            <img src="img/Tech/Rajiv.png" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Rajiv</h2>
+            <!-- <h3>Designer</h3> -->
+            <!-- <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+        <div class="tech-team-6">
+          <!-- Card 5 -->
+          <div class="tech-team-img">
+            <img src="img/Tech/Marudhu.png" alt="Team Image">
+          </div>
+          <div class="tech-team-content">
+            <h2>Marudhu Paandian</h2>
+            <!-- <h3>Engineer</h3> -->
+            <!-- <div class="new-team-social">
+              <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+        <!-- Add additional cards as needed -->
+      </div>
+    </div>
+
+  <div class="sec-tec-container">
+    <div class="sec-tec-first-grid">
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/Tech/Nishanth.png" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Nishanth M</h2>
+          <!-- <h3>CEO &amp; Founder</h3> -->
+          <div class="new-team-content">
+            <!-- <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+      </div>
+      <!-- Repeat 5 more cards for first row -->
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/Tech/Raja Rajan.png" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Raja Rajan</h2>
+          <!-- <h3>Art Director</h3> -->
+          <div class="new-team-content">
+            <!-- <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+      </div>
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/Tech/Mitun.png" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Mitun</h2>
+          <!-- <h3>Developer</h3> -->
+          <div class="new-team-content">
+            <!-- <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+      </div>
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/Tech/Sivakanesh.png" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Sivakanesh</h2>
+          <!-- <h3>Designer</h3> -->
+          <div class="new-team-content">
+            <!-- <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+      </div>
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/Tech/Yogesh.png" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Yogesh</h2>
+          <!-- <h3>Engineer</h3> -->
+          <div class="new-team-content">
+            <!-- <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+      </div>
+      <div class="sec-tec-team-card">
+        <div class="sec-tec-team-img">
+          <img src="img/Tech/Varshini Shree.png" alt="Team Image">
+        </div>
+        <div class="sec-tec-team-content">
+          <h2>Varshini Shree</h2>
+          <!-- <h3>Manager</h3> -->
+          <div class="new-team-content">
+            <!-- <div class="tech-team-social">
+              <a class="tech-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team #3 Start -->
+  <div class="new-container">
+    <div class="section-title-header text-center">
+      <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Research & Publication</h2>
+    </div>
+    <div class="first-team-3-grid">
+      <div class="first-team-3">
+        <div class="first-team-img">
+          <img src="img/R&P/Aishwarya Final Year.png" alt="Team Image">
+          <!-- <div class="first-team-social">
+            <a class="first-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>-->
+        </div>
+        <div class="first-team-content">
+          <h2>Aishwarya</h2>
+          <!-- <h3>CEO &amp; Founder</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="first-team-3">
+        <div class="first-team-img">
+          <img src="img/R&P/Aishwarya.png" alt="Team Image">
+          <!-- <div class="first-team-social">
+            <a class="first-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>-->
+        </div>
+        <div class="first-team-content">
+          <h2>Aishwarya B</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="first-team-3">
+        <div class="first-team-img">
+          <img src="img/R&P/Ajay.png" alt="Team Image">
+          <!-- <div class="first-team-social">
+            <a class="first-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>-->
+        </div>
+        <div class="first-team-content">
+          <h2>Ajay</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="first-team-3">
+        <div class="first-team-img">
+          <img src="img/R&P/Anumitha.png" alt="Team Image">
+          <!-- <div class="first-team-social">
+            <a class="first-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>-->
+        </div>
+        <div class="first-team-content">
+          <h2>Anumitha</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <!-- Repeat additional .first-team-3 cards as needed -->
+    </div>
+
+    <div class="second-team-3-grid">
+      <div class="second-team-3">
+        <div class="second-team-img">
+          <img src="img/R&P/Kailainaathan.png" alt="Team Image">
+          <!-- <div class="second-team-social">
+            <a class="second-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+        <div class="second-team-content">
+          <h2>Kailainaathan</h2>
+          <!-- <h3>CEO &amp; Founder</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <!-- Repeat additional .second-team-3 cards as needed -->
+      <div class="second-team-3">
+        <div class="second-team-img">
+          <img src="img/R&P/Mahadharshini.png" alt="Team Image">
+          <!-- <div class="second-team-social">
+            <a class="second-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+        <div class="second-team-content">
+          <h2>Mahadharshini</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="second-team-3">
+        <div class="second-team-img">
+          <img src="img/R&P/Gunal.png" alt="Team Image">
+          <!-- <div class="second-team-social">
+            <a class="second-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+        <div class="second-team-content">
+          <h2>Gunal</h2>
+          <!-- <h3>Art Director</h3> -->
+          <!-- <div class="new-team-social">
+            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </div>
+  <!-- Team #3 End -->
+    
+    
+
+    <!-- Team #4 Start -->
+    <div class="new-container-last">
+      <div class="section-title-header text-center">
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">SOC</h2>
+        <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Mentors from industries will guide you through the
+          hackathon!</p> -->
+      </div>
+      <div class="new-team-4-grid">
+        <!-- Card 1 -->
+        <div class="new-team-4">
+          <div class="new-team-content">
+            <h2>Nishanth R</h2>
+            <!-- <h3>CEO &amp; Founder</h3> -->
+          </div>
+          <div class="new-team-img">
+            <img src="img/SOC/Nishanth.png" alt="Team Image">
+            <!-- <div class="new-team-content">
+              <p>Some text goes here that describes about team member</p>
+            </div> -->
+          </div>
+          <div class="new-team-content">
+            <div class="sec-tec-team-social">
+              <a class="sec-tec-social-li" href="https://www.linkedin.com/in/nishanth-r-86388a259/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="new-team-4">
+          <div class="new-team-content">
+            <h2>Nagaroshan</h2>
+            <!-- <h3>Art Director</h3> -->
+          </div>
+          <div class="new-team-img">
+            <img src="img/SOC/Nagaroshan.png" alt="Team Image">
+            <!-- <div class="new-team-content">
+              <p>Some text goes here that describes about team member</p>
+            </div> -->
+          </div>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href="https://www.linkedin.com/in/nagaroshan-ns-87b207259/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="new-team-4">
+          <div class="new-team-content">
+            <h2>Vigneshwar</h2>
+            <!-- <h3>Developer</h3> -->
+          </div>
+          <div class="new-team-img">
+            <img src="img/SOC/Vignesh.png" alt="Team Image">
+            <!-- <div class="new-team-content">
+              <p>Some text goes here that describes about team member</p>
+            </div> -->
+          </div>
+          <div class="new-team-content">
+            <div class="tech-team-social">
+              <a class="tech-social-li" href="https://www.linkedin.com/in/vigneshwar-s-u-1a8467247/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team #4 End -->
+
+
+  
+
+</section>
+
+  <!-- FAQ Section Start -->
+  <section id="faq" class="intro section-padding">
+    <div class="container-fluid  py-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="text-center mx-auto wow fadeInUp " data-wow-delay="0.1s" style="max-width: 500px;">
+        <h1 class=" section-header" style="font-size: 3rem;">STUDENT CORNER</h1>
+      </div>
+    </div>
+    <!-- Page Header End -->
+    <div class="container">
+      <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <p style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;"
+          class="section-title bg-white text-center text-primary px-3">FAQ's</p>
+      </div>
+      <div class="row">
+        <!-- FAQ Card 1 -->
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-card mb-70">
+            <i class="lni-cog"></i>
+            <h3 class="faq-question">Who can participate?</h3>
+            <p class="faq-answer">The hackathon is open to all students from the first year of every department. Anyone
+              interested in learning and innovating with Python is welcome.</p>
+            <span class="count-number">01</span>
+          </div>
+        </div>
+        <!-- FAQ Card 2 -->
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-card mb-70">
+            <i class="lni-heart"></i>
+            <h3 class="faq-question">Can I form my team with students from other departments?</h3>
+            <p class="faq-answer">Of course, interdisciplinary teams are allowed. However, the team will be classified
+              under the team leader's department.</p>
+            <span class="count-number">02</span>
+          </div>
+        </div>
+        <!-- FAQ Card 3 -->
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-card mb-70">
+            <i class="lni-cup"></i>
+            <h3 class="faq-question">Can my friends from other college can apply for the event?</h3>
+            <p class="faq-answer">Unfortunately, no. This is an intra-college event.</p>
+            <span class="count-number">03</span>
+          </div>
+        </div>
+        <!-- FAQ Card 4 -->
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-card mb-70">
+            <i class="lni-bullhorn"></i>
+            <h3 class="faq-question">What if I don’t know how to code?</h3>
+            <p class="faq-answer">No problem! Enthusiasm and the willingness to learn are far more important than your
+              current skill level.</p>
+            <span class="count-number">04</span>
+          </div>
+        </div>
+        <!-- FAQ Card 5 -->
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-card mb-70">
+            <i class="lni-gallery"></i>
+            <h3 class="faq-question">What are the prizes to be won?</h3>
+            <p class="faq-answer">Exciting prizes will be announced soon! Stay tuned for updates!</p>
+            <span class="count-number">05</span>
+          </div>
+        </div>
+        <!-- FAQ Card 6 -->
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-card mb-70">
+            <i class="lni-users"></i>
+            <h3 class="faq-question">Can we apply as a team?</h3>
+            <p class="faq-answer">Yes! You can form teams of 4-6 members, with a mix of design and development skills.
+            </p>
+            <span class="count-number">06</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ Section End -->
+
+
+  <section id="feedback">
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <p style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;"
+            class="section-title bg-white text-center text-primary px-3">Last year Feedback</p>
+          <!-- <h1 class="mb-5">What People Say About Our Dairy Farm</h1> -->
+        </div>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-img">
+              <img class="img-fluid animated pulse infinite" src="assets/samuel.jpg" alt="">
+              <img class="img-fluid animated pulse infinite" src="assets/janesh.png" alt="">
+              <img class="img-fluid animated pulse infinite" src="assets/shreya.png" alt="">
+              <img class="img-fluid animated pulse infinite" src="assets/thejas.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="owl-carousel testimonial-carousel">
+              <div class="testimonial-item">
+                <img class="img-fluid mb-3" src="assets/samuel.jpg" alt="">
+                <p class="fs-5">I had a wonderful experience at PYEXPO'24. They provided us with wifi so that we
+                  wouldn't struggle with the network. They also provided is with dinner and breakfast and the food was
+                  great. Our mentors were helpful and without their contribution and especially motivation, I doubt
+                  whether we would've been able to present our project in the expo. Overall great experience and now I
+                  kinda know how it feels to work in the IT sector.</p>
+                <h5>Samuel</h5>
+                <span class="text-primary">B.E CSE</span>
+              </div>
+              <div class="testimonial-item">
+                <img class="img-fluid mb-3" src="assets/shreya.png" alt="">
+                <p class="fs-5">PYEXPO'24 was an amazing competition that brought out the best in us! My friends and I
+                  had great fun at every stage of the competition, making unforgettable memories while tackling the
+                  challenges. A fantastic experience from start to finish!</p>
+                <h5>Shreya</h5>
+                <span class="text-primary">B.E CSE</span>
+              </div>
+              <div class="testimonial-item">
+                <img class="img-fluid mb-3" src="assets/thejas.png" alt="">
+                <p class="fs-5">PYEXPO'24 was an incredible experience, packed with learning, fun, and collaboration.
+                  The sessions were insightful, the networking was invaluable, and the hackathon was intense but
+                  rewarding—we worked hard to finish our project!</p>
+                <h5>Thejas Anbu Sivaraj</h5>
+                <span class="text-primary">B.Tech AIDS</span>
+              </div>
+              <div class="testimonial-item">
+                <img class="img-fluid mb-3" src="assets/vaishu.png" alt="">
+                <p class="fs-5">The workshops at PyExpo 24 were incredibly insightful, boosting my Python skills and
+                  expanding my knowledge. I had an amazing time, surrounded by a collaborative and inspiring atmosphere.
+                  An unforgettable experience with valuable takeaways for future projects!</p>
+                <h5>Vaishnavi</h5>
+                <span class="text-primary">B.E CSE</span>
+              </div>
+              <div class="testimonial-item">
+                <img class="img-fluid mb-3" src="assets/yoga.png" alt="">
+                <p class="fs-5">PYEXPO'23 was an exciting student-led technical event filled with innovation and
+                  collaboration. The hands-on projects and insightful sessions made it a truly enriching experience. It
+                  was a great platform to explore emerging technologies and connect with like-minded tech enthusiasts.
+                </p>
+                <h5>Yogalakshmi</h5>
+                <span class="text-primary">B.Tech CSBS</span>
+              </div>
+              <div class="testimonial-item">
+                <img class="img-fluid mb-3" src="assets/janesh.png" alt="">
+                <p class="fs-5">Participating in PyExpo, a Python-based hackathon, was an exhilarating experience that
+                  tested my coding skills, teamwork, and problem-solving abilities. The event gathered developers, data
+                  scientists, and AI enthusiasts to build innovative solutions using Python. The theme revolved around
+                  AI, automation, and data-driven applications.</p>
+                <h5>Janeshnanda</h5>
+                <span class="text-primary">B.Tech CSBS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+  </section>
+
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <p class="section-title text-start pe-3"
+            style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color:white;">
+            Location
+          </p>
+          <p class="mb-2" style="color: white;"><i class="fa fa-map-marker-alt me-3" style="color: white;"></i>KGISL Institute Of Technology</p>
+          <!-- <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p> -->
+          <!-- <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <p class="section-title text-start pe-3"
+            style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color:white;">
+            Quick Links
+          </p>
+          <a class="btn btn-link" href="#about">About Us</a>
+          <a class="btn btn-link" href="tel:+919025861567">Contact Us</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <p class="section-title text-start pe-3"
+            style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color:white;">
+            Student Coordinator
+          </p>
+          <p class="mb-2" style="color: white;"><i class="fa fa-phone-alt me-3" style="color: white;"></i><a href="tel:+919025861567" style="color: white;">+91 90258 61567</a></p>
+          <!-- <p class="mb-1">Monday - Friday</p>
+                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
+                    <p class="mb-1">Saturday</p>
+                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>  -->
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <p class="section-title text-start pe-3"
+            style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color:white;">
+            For Queries
+          </p>
+          <p style="color: white;">Feel free to mail us!</p>
+          <div class="position-relative w-100">
+            <p class="mb-2" style="color: white;"><i class="fa fa-envelope me-3" style="color: white;"></i><a style="color: white;" href="mailto:pyexpo@kgkite.ac.in?subject=Help%20Fort%20Pyexpo">pyexpo@kgkite.ac.in</a></p>
+            <!-- <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+
+  <!-- Copyright Start -->
+  <div class="container-fluid copy-bg text-body copyright py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a class="fw-semi-bold" href="#" style="color: white;">PYEXPO'25</a>, All Right Reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+          Designed By <a class="fw-semi-bold" href="https://www.linkedin.com/in/ips-tech-community-9aa024297/" style="color: white;">IPS TECH
+            COMMUNITY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright End -->
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/parallax/parallax.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+
+  <!-- add js -->
+  <script src="js/add.js"></script>
+
+  <!-- Script for my gallery 1 -->
+  <script>
+    const inputs = document.querySelectorAll(".gallery input");
+    const gallery = document.querySelector(".gallery");
+
+    function updateGalleryPosition() {
+      const isMobile = window.innerWidth <= 425; // Check if it's a mobile screen
+      const isChecked = [...inputs].some(input => input.checked);
+
+      if (isChecked) {
+        gallery.style.marginTop = "0"; // Bring gallery down when clicked
+      } else {
+        gallery.style.marginTop = isMobile ? "-15vh" : "-25vh"; // Adjust for mobile vs. desktop
+      }
+    }
+
+    // Attach event listeners to each input
+    inputs.forEach(input => {
+      input.addEventListener("change", updateGalleryPosition);
+    });
+
+    // Adjust on window resize (for responsiveness)
+    window.addEventListener("resize", updateGalleryPosition);
+
+    // Run initially to set correct position
+    updateGalleryPosition();
+  </script>
+
+  <!-- Schedule script -->
+  <script>
+    // Function to Create Calendar with Events
+    function createCalendar(containerId, month, year, events) {
+      const calendar = document.getElementById(containerId);
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const currentDate = new Date();
+      const currentDay = currentDate.getDate();
+      const currentMonth = currentDate.getMonth();
+      const currentYear = currentDate.getFullYear();
+
+      // Weekday Headers
+      const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      weekdays.forEach(day => {
+        const dayHeader = document.createElement("div");
+        dayHeader.classList.add("day", "weekday");
+        dayHeader.textContent = day;
+        calendar.appendChild(dayHeader);
+      });
+
+      // Add Empty Spaces Before 1st Day
+      for (let i = 0; i < firstDay; i++) {
+        const emptyDiv = document.createElement("div");
+        emptyDiv.classList.add("empty");
+        calendar.appendChild(emptyDiv);
+      }
+
+      // Generate Calendar Days
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dateDiv = document.createElement("div");
+        dateDiv.classList.add("day");
+        dateDiv.textContent = day;
+
+        // Check if this date has an event
+        if (events[day]) {
+          dateDiv.classList.add("event-day");
+          dateDiv.style.backgroundColor = events[day].color;
+          dateDiv.setAttribute("data-event", events[day].name);
+          dateDiv.addEventListener("click", function () {
+            // Instead of an alert, update the legend box content
+            // Find the closest calendar container and then the next sibling (the legend)
+            const legend = dateDiv.closest('.calendar-container').nextElementSibling;
+            legend.innerHTML = `
+                            <h3>Event Details:</h3>
+                            <div>
+                                <span class="legend-box" style="background: ${events[day].color};"></span> ${events[day].name} on ${day} ${["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][month]} ${year}
+                            </div>
+                        `;
+          });
         }
 
-        // Update the countdown every second
-        const interval = setInterval(updateCountdown, 1000);
+        // Highlight Current Day (if this calendar is for the current month/year)
+        if (year === currentYear && month === currentMonth && day === currentDay) {
+          dateDiv.style.backgroundColor = "#ff0"; // Yellow highlight
+          dateDiv.style.color = "#000"; // Ensure text is readable
+          dateDiv.style.fontWeight = "bold";
+        }
 
-        // Initial call to avoid 1-second delay
-        updateCountdown();
-    </script>
+        calendar.appendChild(dateDiv);
+      }
+    }
+
+    // Example Events Data
+    const eventsFeb = {
+      17: { name: "Idea2Expo - Day Begins", color: "#3095d2" },
+      18: { name: "Idea2Expo - Day Ends", color: "#3095d2" },
+      19: { name: "Hackshop2Expo", color: "#ff9800" },
+      20: { name: "Hackshop2Expo", color: "#ff9800" },
+      21: { name: "Hackathon2Expo - Start", color: "#2196F3" },
+      22: { name: "Hackathon2Expo - End", color: "#2196F3" },
+      23: { name: "Evaluation Process Begins", color: "#8b4343" },
+      26: { name: "Evaluation Process Ends", color: "#8b4343" },
+      27: { name: "Orientation for Pitch2Expo", color: "#1ebe6c" },
+      28: { name: "Pitch2Expo", color: "#4CAF50" }
+    };
+
+    const eventsMar = {
+      1: { name: "PyExpo Grand Finale", color: "#ff0000" }
+    };
+
+    // Create Calendars for February & March
+    createCalendar("calendar-feb", 1, 2025, eventsFeb);
+    createCalendar("calendar-mar", 2, 2025, eventsMar);
+
+  </script>
+
+  <!-- For navbar -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("section"); // Select all sections
+      const navLinks = document.querySelectorAll(".navbar-nav .nav-link"); // Select all navbar links
+
+      function changeActiveLink() {
+        let scrollPosition = window.scrollY + 200; // Adjust offset for accuracy
+
+        sections.forEach((section) => {
+          let sectionTop = section.offsetTop;
+          let sectionHeight = section.clientHeight;
+          let sectionId = section.getAttribute("id");
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            navLinks.forEach((link) => {
+              link.classList.remove("active"); // Remove active class
+              link.style.color = "white"; // Reset to default color
+            });
+
+            let activeLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
+            if (activeLink) {
+              activeLink.classList.add("active");
+              activeLink.style.color = "#f82249"; // Highlighted color
+            }
+          }
+        });
+      }
+
+      window.addEventListener("scroll", changeActiveLink);
+    });
+  </script>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+
+      if (window.scrollY > 50) {
+        navbar.classList.add("navbar-scrolled"); // Add background change on scroll
+      } else {
+        navbar.classList.remove("navbar-scrolled"); // Reset background when scrolled up
+      }
+    });
+  </script>
+
+
+
 
 </body>
+
 </html>
