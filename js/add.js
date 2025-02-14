@@ -59,3 +59,36 @@ window.addEventListener("load", function() {
     document.body.style.overflow = 'auto';
   }, 1500); // 1.5 seconds delay
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const marquee = document.querySelector(".instagram-marquee");
+  const scrollSpeed = 1; // pixels per interval
+  const intervalTime = 20; // milliseconds per interval
+  let autoScrollInterval = null;
+  
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+      // If not at the end, increment scrollLeft
+      if (marquee.scrollLeft < marquee.scrollWidth - marquee.clientWidth) {
+        marquee.scrollLeft += scrollSpeed;
+      } else {
+        // Reached the end—stop the auto-scroll
+        clearInterval(autoScrollInterval);
+      }
+    }, intervalTime);
+  }
+  
+  // Start auto-scrolling once DOM is loaded
+  startAutoScroll();
+  
+  // Optional: Pause auto-scroll on hover and resume on mouse leave
+  marquee.addEventListener("mouseenter", () => {
+    clearInterval(autoScrollInterval);
+  });
+  marquee.addEventListener("mouseleave", () => {
+    // Only resume if not already at the end
+    if (marquee.scrollLeft < marquee.scrollWidth - marquee.clientWidth) {
+      startAutoScroll();
+    }
+  });
+});

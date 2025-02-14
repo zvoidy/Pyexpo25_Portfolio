@@ -517,6 +517,12 @@
   transition: margin-top 1.5s ease-in-out;
 }
 
+@media (min-width:425px) and (max-width:625px){
+  .gallery{
+    --s: 130px
+  }
+}
+
 /* When an input is checked, bring gallery back down */
 .gallery input:checked~.gallery {
   margin-top: 0;
@@ -840,19 +846,26 @@ z-index: 1;
 
 /* Marquee Container */
 .instagram-marquee {
-  overflow: hidden;
+  /* Enable horizontal scrolling while hiding vertical overflow */
+  overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
   width: 100%;
   background: #f2f2f2;
   padding: 20px 0;
+ 
 }
 
 /* Marquee Inner Container */
 .instagram-cards {
   display: flex;
-  /* No gap between cards to ensure a continuous connection */
-  gap: 20px;
-  animation: marquee 20s linear infinite;
+  gap: 20px; /* Gap between cards */
+ 
+}
+
+/* Pause animation on hover (desktop) */
+.instagram-cards:hover {
+  animation-play-state: paused;
 }
 
 /* Instagram Card Styles */
@@ -862,16 +875,10 @@ z-index: 1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   max-width: 250px;
-  /* Remove margins for seamless connection */
-  margin: 0;
+  margin: 0; /* Remove margins for seamless connection */
   flex-shrink: 0;
   height: auto;
 }
-
-.instagram-cards:hover {
-  animation-play-state: paused;
-}
-
 
 /* Additional styling for inner elements */
 .instagram-header {
@@ -926,10 +933,8 @@ z-index: 1;
   0% {
     transform: translateX(0);
   }
-
   100% {
-    /* Assuming that the .instagram-cards container contains exactly two sets of cards,
-       animate by moving left 50% of its total width */
+    /* Adjust this value if you have a different number of card sets */
     transform: translateX(-50%);
   }
 }
@@ -1673,7 +1678,7 @@ h2 {
 }
 
 #media {
- scroll-margin-top: 100px;
+ scroll-margin-top: 120px;
 }
 
 #crew, #roadmap, #prizes, #sponsors{
