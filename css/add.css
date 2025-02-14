@@ -1779,6 +1779,9 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+ .sponsors-logo{
+  margin: 20px;
+ }
 
 /* Optionally, if using Bootstrap grid, override for 4 columns on large screens: */
 @media (min-width: 992px) {
@@ -1802,7 +1805,7 @@ h2 {
     width: 100%;
     height: 2px;
     background-color: black;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
   }
 }
 
