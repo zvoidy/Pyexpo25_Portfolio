@@ -1804,3 +1804,17 @@ h2 {
     margin-bottom: 15px;
   }
 }
+
+
+@media (min-width:1024px) and (max-width:1300px) {
+
+  .issue-1{
+    height:auto;
+    width: 150px;
+  }
+
+  .issue-2{
+    height: auto; 
+    width: 100px;
+  }
+}
