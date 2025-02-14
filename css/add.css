@@ -1760,7 +1760,7 @@ h2 {
   background-size: cover;
   background-position: center;
   position: relative;
-  min-height: 60vh;
+  /* min-height: 60vh; */
 }
 
 #sponsors .section-title-header .section-title {
