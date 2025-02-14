@@ -1673,7 +1673,7 @@ h2 {
 }
 
 
-#crew, #roadmap{
+#crew, #roadmap, #prizes, #sponsors{
   scroll-margin-top: 110px;
 }
 
@@ -1683,3 +1683,124 @@ h2 {
   #faq {margin-top: 25vh;}
 }
 
+.section-paddin-prize {
+  padding: 60px 0;
+}
+
+#prizes .event-item {
+  position: relative;
+}
+
+#prizes .event-item .overlay-text {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#prizes .event-item .content {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  color: #fff;
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#prizes .event-item .content h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#prizes .event-item .content a {
+  color: #0000ff;
+  margin-top: 10px;
+}
+
+#prizes .event-item:hover .content {
+  top: 50%;
+}
+
+#prizes .event-item .overlay-text:hover {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  #prizes .event-item:hover .content {
+    display: none;
+  }
+  #prizes .event-item .overlay-text:hover {
+    opacity: 0;
+  }
+}
+
+/* Sponsors Area */
+#sponsors {
+  background-color: #ffffff;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 60vh;
+}
+
+#sponsors .section-title-header .section-title {
+  color: black;
+}
+#sponsors .section-title-header p {
+  color: #fff;
+}
+
+#sponsors .sponsors-logo a img {
+  margin: 40px;
+}
+
+#sponsors .sponsors-logo:hover {
+  border-color: transparent;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Sponsors Row Flex Settings */
+.sponsors-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optionally, if using Bootstrap grid, override for 4 columns on large screens: */
+@media (min-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* Mobile Adjustments (if needed) */
+@media (max-width: 767px) {
+  .sponsors-logo img {
+    max-width: 60%;
+  }
+  .sponsors-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sponsor-divider {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 15px;
+  }
+}
