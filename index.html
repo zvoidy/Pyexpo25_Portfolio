@@ -185,20 +185,32 @@
 
     <section id="home">
         <script>
-            function updateVideoSource() {
-                var video = document.querySelector('.mainbanner');
-                if (!video) return;
-                var source = video.querySelector('source');
-                // Adjust source paths as needed for mobile vs desktop:
-                if (window.innerWidth < 768) {
-                    source.src = "assets/pyexpopcbanner.mp4"; // Mobile version
-                } else {
-                    source.src = "assets/pyexpopcbanner.mp4"; // Desktop version
-                }
-                video.load();
-            }
-            document.addEventListener("DOMContentLoaded", updateVideoSource);
-            window.addEventListener("resize", updateVideoSource);
+window.addEventListener("load", function() {
+  // Check if we're in mobile view (viewport less than 768px)
+  if (window.innerWidth < 768) {
+    // Add a slight delay to ensure the carousel is fully initialized
+    setTimeout(function() {
+      // Get all carousel items
+      var carouselItems = document.querySelectorAll("#header-carousel .carousel-item");
+      carouselItems.forEach(function(item) {
+        var videoElem = item.querySelector("video.mainbanner");
+        if (videoElem) {
+          // Create an image element to replace the video
+          var imgElem = document.createElement("img");
+          imgElem.className = "mainbanner";
+          // Use object-fit cover (or fit as desired)
+          imgElem.style.objectFit = "contain";
+          imgElem.src = "assets/pyepopcbannerimage.png"; // Mobile image version
+          imgElem.alt = "PYEXPO";
+          // Replace the video element with the image element
+          item.replaceChild(imgElem, videoElem);
+        }
+      });
+    }, 500); // 500ms delay for safety
+  }
+});
+
+            
         </script>
 
         <!-- Carousel Start -->
@@ -1857,9 +1869,9 @@
                     <div class="new-team-content">
                         <h2>Moulidharan</h2>
                         <!-- <h3>Art Director</h3> -->
-                        <!-- <div class="new-team-social">
-            <a class="new-social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div> -->
+                        <div class="new-team-social">
+            <a class="new-social-li" href="https://www.linkedin.com/in/moulidharan-parthi-6a8034264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+          </div> 
                     </div>
                 </div>
                 <div class="new-team-3">

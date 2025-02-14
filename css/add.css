@@ -938,6 +938,7 @@ z-index: 1;
 @media (max-width: 768px) {
   .instagram-card {
     max-width: 90%;
+    height: 60vh;
   }
 }
 
