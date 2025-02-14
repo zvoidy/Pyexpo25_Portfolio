@@ -865,7 +865,7 @@ z-index: 1;
   /* Remove margins for seamless connection */
   margin: 0;
   flex-shrink: 0;
-  height: 50vh;
+  height: auto;
 }
 
 .instagram-cards:hover {
@@ -938,7 +938,7 @@ z-index: 1;
 @media (max-width: 768px) {
   .instagram-card {
     max-width: 90%;
-    height: 60vh;
+    height: auto;
   }
 }
 
@@ -1683,7 +1683,7 @@ h2 {
 
 
 @media (min-width: 768px) and (max-width: 1200px) {
-  #faq {margin-top: 25vh;}
+  #faq {margin-top: auto;}
 }
 
 .section-paddin-prize {
@@ -1765,9 +1765,7 @@ h2 {
   color: #fff;
 }
 
-#sponsors .sponsors-logo a img {
-  margin: 40px;
-}
+
 
 #sponsors .sponsors-logo:hover {
   border-color: transparent;

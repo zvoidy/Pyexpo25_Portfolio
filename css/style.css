@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
     --primary: #5B8C51;
-    --secondary: #EDDD5E;
+    --secondary: #fF0044;
     --light: #F7F7F7;
     --dark: #404A3D;
 }
@@ -684,6 +684,16 @@
     background: var(--secondary);
 }
 
+@media (max-width: 767px) {
+  .service-item .service-img::after {
+    display: none;
+  }
+
+  .mob{
+    color: white;
+  }
+}
+
 
 /*** Product ***/
 .product-item {
@@ -906,7 +916,7 @@ h1 {
 /**********************************/
 .new-container {
   width: 100%;
-  height: 90vh;
+  height: auto;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -935,7 +945,7 @@ h1 {
 @media (min-width: 1200px) {
   .new-container {
     max-width: 1540px;
-    height: 70vh;
+    height: auto;
     margin-bottom: 5vh;
 }
 
@@ -948,7 +958,7 @@ h1 {
 /* For mobile devices */
 @media (max-width: 768px) {
   .new-container {
-      height: 130vh;
+      height: auto;
   }
 }
 
@@ -1295,16 +1305,17 @@ h1 {
 /* ===================================================== */
 .first-team-3-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px; /* Adjust gap between cards as needed */
-  max-width: 1080px;
+  max-width: 381px;
   margin: 0 auto;
 }
+
 
 /* Responsive Adjustments for .first-team-3-grid */
 @media (max-width: 1200px) {
   .first-team-3-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1432,7 +1443,7 @@ h1 {
 /* ===================================================== */
 .second-team-3-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   /* gap: -0px; */ /* Adjust gap between cards as needed */
   max-width: 900px;
   margin: 0 auto;
@@ -1442,7 +1453,7 @@ h1 {
 /* Responsive Adjustments for .second-team-3-grid */
 @media (max-width: 1200px) {
   .second-team-3-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -1582,13 +1593,19 @@ h1 {
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
   .new-team-4-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 435px) {
   .new-team-4-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width:435px) and (max-width: 768px) {
+  .new-team-4-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1732,7 +1749,7 @@ h1 {
 
 @media (max-width:768px){
   .tech-container{
-    margin-top: 50vh;
+    margin-top: auto;
   }
 }
 
@@ -1772,12 +1789,18 @@ h1 {
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
   .tech-team-6-grid {
-    grid-template-columns: repeat(3, 180px);
+    grid-template-columns: repeat(5, 180px);
+  }
+}
+
+@media (min-width:768px) and (max-width: 900px) {
+  .tech-team-6-grid {
+    grid-template-columns: repeat(4, 180px);
   }
 }
 @media (max-width: 768px) {
   .tech-team-6-grid {
-    grid-template-columns: repeat(2, 180px);
+    grid-template-columns: repeat(2, 1fr);
     /* margin-top: 50vh; */
   }
 }
@@ -1902,13 +1925,19 @@ h1 {
 /* Responsive Adjustments for First Row */
 @media (max-width: 1200px) {
   .sec-tec-first-grid {
-    grid-template-columns: repeat(4, 180px);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
   .sec-tec-first-grid {
-    grid-template-columns: repeat(2, 180px);
+    grid-template-columns: repeat(2, 1fr);
   }
+.sec-tec-team-card .sec-tec-team-img img {
+  width: 70% !important;
+}
+.tech-team-6 .tech-team-img img{
+  width: 70% !important;
+}
 }
 
 /* =============================== */
