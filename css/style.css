@@ -141,7 +141,6 @@
   --------------------------------------------------------------*/
   
   /* Nav Menu Essentials */
-  
   .nav-menu,
   .nav-menu * {
     margin: 0;
@@ -1585,7 +1584,7 @@ h1 {
 .new-team-4-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px; /* Adjust spacing between cards as needed */
+  gap: 10px; /* Adjust spacing between cards as needed */
   max-width: 700px;
   margin: 0 auto;
 }

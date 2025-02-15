@@ -1831,6 +1831,15 @@ h2 {
 
 
 
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ---------- Loader Overlay ---------- */
 .loader-overlay {
   position: fixed;
@@ -1847,59 +1856,76 @@ h2 {
   transition: opacity 0.5s ease;
 }
 
-/* When fading out, apply zero opacity */
-.loader-overlay.fade-out {
+/* Optionally add a fade-out class later via JS */
+/* .loader-overlay.fade-out {
   opacity: 0;
-}
+} */
 
-/* ---------- Loader / Spinner ---------- */
+/* ---------- Blue Dots Spinner ---------- */
 .loader {
-  height: 350px;
-  width: 350px;
-  position: relative; /* relative inside overlay */
-}
-.loader div:nth-child(1) {
-  background-color: #dd1c4b;
-  height: 200px;
-  width: 125px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 40px;
-  right: 0;
-  transform: rotate(45deg);
-  border-radius: 100px 100px 10px 10px;
-  transform-origin: 50% 69%;
-  animation: flip1 4s linear infinite;
-}
-@keyframes flip1 {
-  25% { transform: rotate(45deg) rotateX(180deg); }
-  50% { transform: rotate(45deg) rotateX(180deg); }
-  75% { transform: rotate(45deg); }
-}
-.loader div:nth-child(2) {
-  background-color: #dd1c4b;
-  height: 200px;
-  width: 125px;
-  position: absolute;
-  top: 151px;
-  left: 132px;
-  transform: rotate(135deg);
-  transform-origin: 50% 31%;
-  border-radius: 10px 10px 100px 100px;
-  animation: flip2 4s 1s linear infinite;
-}
-@keyframes flip2 {
-  25% { transform: rotate(135deg) rotateX(180deg); }
-  50% { transform: rotate(135deg) rotateX(180deg); }
-  75% { transform: rotate(135deg); }
-}
-
-/* ---------- Video Styles ---------- */
-.spinning {
-
-  display: none; /* Hidden until loader is removed */
   position: relative;
-  z-index: 1;
+  width: 80px; /* Overall size of the spinner */
+  height: 80px;
 }
+
+.loader span {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #2196F3; /* Blue color */
+  border-radius: 50%;
+  animation: dotPulse 1.2s infinite ease-in-out;
+}
+
+/* Positioning the dots in a circle */
+.loader span:nth-child(1) {
+  top: 8px;
+  left: 37px;
+  animation-delay: -0.4s;
+}
+.loader span:nth-child(2) {
+  top: 14px;
+  left: 56px;
+  animation-delay: -0.3s;
+}
+.loader span:nth-child(3) {
+  top: 28px;
+  left: 62px;
+  animation-delay: -0.2s;
+}
+.loader span:nth-child(4) {
+  top: 42px;
+  left: 56px;
+  animation-delay: -0.1s;
+}
+.loader span:nth-child(5) {
+  top: 48px;
+  left: 37px;
+  animation-delay: 0s;
+}
+.loader span:nth-child(6) {
+  top: 42px;
+  left: 18px;
+  animation-delay: 0.1s;
+}
+.loader span:nth-child(7) {
+  top: 28px;
+  left: 12px;
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(8) {
+  top: 14px;
+  left: 18px;
+  animation-delay: 0.3s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
