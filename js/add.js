@@ -20,6 +20,23 @@ function updateCountDown(){
 }
 setInterval(updateCountDown,1000)
 
+// Update the video source based on viewport width
+function updateVideoSource() {
+  var video = document.querySelector('.mainbanner');
+  if (!video) return;
+  var source = video.querySelector('source');
+  // Adjust the source as needed for mobile vs desktop
+  if (window.innerWidth < 768) {
+    source.src = "assets/pyexpopcbanner.mp4"; // Mobile version
+  } else {
+    source.src = "assets/pyexpopcbanner.mp4"; // Desktop version
+  }
+  video.load();
+}
+
+document.addEventListener("DOMContentLoaded", updateVideoSource);
+window.addEventListener("resize", updateVideoSource);
+
 // When the window fully loads, wait 1.5 seconds, then fade out loader
 window.addEventListener("load", function() {
   setTimeout(function() {
@@ -40,7 +57,7 @@ window.addEventListener("load", function() {
     }
     // Re-enable scrolling
     document.body.style.overflow = 'auto';
-  }, 1500); // 1.5 seconds delay
+  }, 100); // 1.5 seconds delay
 });
 
 document.addEventListener("DOMContentLoaded", function () {

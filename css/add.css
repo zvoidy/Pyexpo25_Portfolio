@@ -1856,29 +1856,29 @@ h2 {
   transition: opacity 0.5s ease;
 }
 
-/* Optionally add a fade-out class later via JS */
-/* .loader-overlay.fade-out {
+/* When fading out, apply zero opacity */
+.loader-overlay.fade-out {
   opacity: 0;
-} */
+}
 
 /* ---------- Blue Dots Spinner ---------- */
 .loader {
   position: relative;
-  width: 80px; /* Overall size of the spinner */
+  width: 80px;  /* Overall spinner size */
   height: 80px;
 }
 
 .loader span {
   position: absolute;
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   background: #2196F3; /* Blue color */
   border-radius: 50%;
-  animation: dotPulse 1.2s infinite ease-in-out;
+  animation: dotPulse 1.5s infinite ease-in-out;
 }
 
-/* Positioning the dots in a circle */
+/* Arrange eight dots in a circle */
 .loader span:nth-child(1) {
   top: 8px;
   left: 37px;
@@ -1929,3 +1929,10 @@ h2 {
   }
 }
 
+/* ---------- Video Styles ---------- */
+.spinning {
+
+  display: none; /* Hidden until loader is removed */
+  position: relative;
+  z-index: 1;
+}
