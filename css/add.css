@@ -1,3 +1,33 @@
+/* For WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #101522; /* Black track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: crimson; /* Crimson thumb */
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc143c; /* Slightly darker crimson on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: crimson #101522;
+}
+
+
+
+
+
 .glightbox_video {
   transform: translate(-50%, -50%);
 }
