@@ -3,7 +3,7 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("min");
 const seconds = document.getElementById("sec");
 
-const timerSet = new Date(2025, 1, 17, 10, 0, 0);
+const timerSet = new Date(2025, 1, 17, 4, 16, 0);
 let fireworksStarted = false;
 let fireworksInterval;
 let fireworksAnimationRunning = true;
@@ -153,11 +153,11 @@ function startFireworks() {
     }
   }, 800);
 
-  // Stop fireworks and fade out after 10 seconds
+  // Stop fireworks and fade out after 30 minutes
   setTimeout(() => {
     stopFireworks();
     fadeOutFireworks();
-  }, 10000);
+  }, 30 * 60 * 1000);
 }
 
 function stopFireworks() {
