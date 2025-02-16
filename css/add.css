@@ -34,6 +34,10 @@
   content: "+";
 }
 
+.counter3::after {
+  content: "+";
+}
+
 @font-face {
   font-family: timer;
   src: url('../lib/Font/DS-DIGIB.TTF') format('truetype');
@@ -1279,6 +1283,54 @@ Roadmap Section
   color: #333;
 }
 
+@media (max-width:425px){
+  .section-header {
+    font-size: 3rem; /* Reduced font size */
+  }
+
+  .invite-poster{
+    width: 80%; 
+    max-width: 500%; 
+    height: auto;
+  }
+}
+
+@media (min-width:320px) {
+  .invite-poster{
+    width: 140%; 
+    max-width: 500%; 
+    height: auto; 
+    border-radius: 20px;
+  }
+}
+
+@media (min-width:375px) {
+  .invite-poster{
+    width: 140%; 
+    max-width: 500%; 
+    height: auto; 
+    border-radius: 20px;
+  }
+}
+
+@media (min-width:425px) {
+  .invite-poster{
+    width: 130%; 
+    max-width: 500%; 
+    height: auto; 
+    border-radius: 20px;
+  }
+}
+
+@media (min-width:530px) {
+  .invite-poster{
+    width: 100vw; 
+    max-width: 500%; 
+    height: auto; 
+    border-radius: 20px;
+  }
+}
+
 .section-header-new {
   font-family: 'Oswald', sans-serif;
   font-size: 5rem; /* Reduced font size */
@@ -1875,7 +1927,7 @@ h2 {
 }
 
 .py-team-1 .py-team-img img {
-  width: 70%;
+  width: 50%;
   height: auto;
   transition: all 0.3s;
 }
