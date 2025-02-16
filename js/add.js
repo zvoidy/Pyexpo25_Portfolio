@@ -7,6 +7,7 @@ const timerSet = new Date(2025, 1, 17, 10, 0, 0);
 let fireworksStarted = false;
 let fireworksInterval;
 let fireworksAnimationRunning = true;
+const countdownMessage = document.getElementById("countdown-message");
 
 function updateCountDown() {
   const currentTime = new Date();
@@ -17,6 +18,13 @@ function updateCountDown() {
     hours.innerHTML = "00";
     minutes.innerHTML = "00";
     seconds.innerHTML = "00";
+
+    document.querySelector(".timer").style.display = "none"; // Hide the timer
+    
+    setTimeout(() => {
+      countdownMessage.innerHTML = "🎉 Welcome to PyExpo 2025 – Let the Grand Event Begin! 🎊";
+      countdownMessage.style.display = "block"; // Show the message
+    }, 500); // Slight delay before showing text
 
     if (!fireworksStarted) {
       startFireworks();
@@ -38,6 +46,9 @@ function updateCountDown() {
 
 setInterval(updateCountDown, 1000);
 updateCountDown();
+
+
+
 
 const canvas = document.getElementById("fireworksCanvas");
 const ctx = canvas.getContext("2d");
