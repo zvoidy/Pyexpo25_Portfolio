@@ -38,26 +38,28 @@ document.addEventListener("DOMContentLoaded", updateVideoSource);
 window.addEventListener("resize", updateVideoSource);
 
 // When the window fully loads, wait 1.5 seconds, then fade out loader
-window.addEventListener("load", function() {
-  setTimeout(function() {
-    var loaderOverlay = document.querySelector('.loader-overlay');
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    var loaderOverlay = document.querySelector(".preloader");
     if (loaderOverlay) {
-      // Add fade-out class
       loaderOverlay.classList.add("fade-out");
-      // After the transition (0.5s), hide the overlay completely
-      setTimeout(function() {
-        loaderOverlay.style.display = 'none';
-      }, 500);
+
+      // Wait for transition to complete before hiding it
+      loaderOverlay.addEventListener("transitionend", function () {
+        loaderOverlay.style.display = "none";
+      }, { once: true });
     }
-    // Show and play the video
-    var video = document.querySelector('.mainbanner');
+
+    // Show and play the video smoothly
+    var video = document.querySelector(".mainbanner");
     if (video) {
-      video.style.display = 'block';
+      video.style.display = "block";
       video.play();
     }
+
     // Re-enable scrolling
-    document.body.style.overflow = 'auto';
-  }, 100); // 1.5 seconds delay
+    document.body.style.overflow = "auto";
+  }, 100); // Adjust delay if needed
 });
 
 document.addEventListener("DOMContentLoaded", function () {
