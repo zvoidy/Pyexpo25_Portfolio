@@ -3001,64 +3001,75 @@
     <!-- Schedule script -->
     <script>
        // Function to Create Calendar with Events
-      function createCalendar(containerId, month, year, events) {
-        const calendar = document.getElementById(containerId);
-        const firstDay = new Date(year, month, 1).getDay();
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-        const currentDate = new Date();
-        const currentDay = currentDate.getDate();
-        const currentMonth = currentDate.getMonth();
-        const currentYear = currentDate.getFullYear();
-      
-        // Weekday Headers
-        const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        weekdays.forEach(day => {
-          const dayHeader = document.createElement("div");
-          dayHeader.classList.add("day", "weekday");
-          dayHeader.textContent = day;
-          calendar.appendChild(dayHeader);
-        });
-      
-        // Add Empty Spaces Before 1st Day
-        for (let i = 0; i < firstDay; i++) {
-          const emptyDiv = document.createElement("div");
-          emptyDiv.classList.add("empty");
-          calendar.appendChild(emptyDiv);
-        }
-      
-        // Generate Calendar Days
-        for (let day = 1; day <= daysInMonth; day++) {
-          const dateDiv = document.createElement("div");
-          dateDiv.classList.add("day");
-          dateDiv.textContent = day;
-        
-          // Check if this date has an event
-          if (events[day]) {
-            dateDiv.classList.add("event-day");
-            dateDiv.style.backgroundColor = events[day].color;
-            dateDiv.setAttribute("data-event", events[day].name);
-            dateDiv.addEventListener("click", function () {
-              // Update the legend content with event details
-              const legend = dateDiv.closest('.calendar-container').nextElementSibling;
-              legend.innerHTML = `
-                <h3>Event Details:</h3>
-                <div>
-                  <span class="legend-box" style="background: ${events[day].color};"></span> ${events[day].name} on ${day} ${["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][month]} ${year}
-                </div>
-              `;
-            });
-          }
-          
-          // Highlight current day with a black dotted border
-          if (year === currentYear && month === currentMonth && day === currentDay) {
-            dateDiv.style.border = "2px dotted black";
-            dateDiv.style.color = "#000"; // Ensure text is readable
-            dateDiv.style.fontWeight = "bold";
-          }
-        
-          calendar.appendChild(dateDiv);
-        }
+    // Function to Create Calendar with Events
+function createCalendar(containerId, month, year, events) {
+  const calendar = document.getElementById(containerId);
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const currentDate = new Date();
+  const currentDay = currentDate.getDate();
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
+  let legend = calendar.closest('.calendar-container').nextElementSibling;
+
+  // Weekday Headers
+  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  weekdays.forEach(day => {
+    const dayHeader = document.createElement("div");
+    dayHeader.classList.add("day", "weekday");
+    dayHeader.textContent = day;
+    calendar.appendChild(dayHeader);
+  });
+
+  // Add Empty Spaces Before 1st Day
+  for (let i = 0; i < firstDay; i++) {
+    const emptyDiv = document.createElement("div");
+    emptyDiv.classList.add("empty");
+    calendar.appendChild(emptyDiv);
+  }
+
+  // Generate Calendar Days
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateDiv = document.createElement("div");
+    dateDiv.classList.add("day");
+    dateDiv.textContent = day;
+
+    // Check if this date has an event
+    if (events[day]) {
+      dateDiv.classList.add("event-day");
+      dateDiv.style.backgroundColor = events[day].color;
+      dateDiv.setAttribute("data-event", events[day].name);
+      dateDiv.addEventListener("click", function () {
+        updateLegend(legend, events[day].name, events[day].color, day, month, year);
+      });
+
+      // **Set March 1st event as default**
+      if (containerId === "calendar-mar" && day === 1) {
+        updateLegend(legend, events[day].name, events[day].color, day, month, year);
       }
+    }
+
+    // Highlight current day with a black dotted border
+    if (year === currentYear && month === currentMonth && day === currentDay) {
+      dateDiv.style.border = "4px solid crimson";
+      dateDiv.style.color = "#000";
+      dateDiv.style.fontWeight = "bold";
+    }
+
+    calendar.appendChild(dateDiv);
+  }
+}
+
+// Function to update the legend
+function updateLegend(legend, eventName, eventColor, day, month, year) {
+  legend.innerHTML = `
+    <h3>Event Details:</h3>
+    <div>
+      <span class="legend-box" style="background: ${eventColor};"></span> 
+      ${eventName}
+    </div>
+  `;
+}
 
 // Example Events Data
 const eventsFeb = {
@@ -3083,6 +3094,7 @@ const eventsMar = {
 // Create Calendars for February & March
 createCalendar("calendar-feb", 1, 2025, eventsFeb);
 createCalendar("calendar-mar", 2, 2025, eventsMar);
+
 
     </script>
 
