@@ -3,7 +3,7 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("min");
 const seconds = document.getElementById("sec");
 
-const timerSet = new Date(2025, 1, 17, 4, 16, 0);
+const timerSet = new Date(2025, 1, 17, 10, 0, 0);
 let fireworksStarted = false;
 let fireworksInterval;
 let fireworksAnimationRunning = true;
