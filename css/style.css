@@ -949,7 +949,7 @@ h1 {
 }
 
 .new-container-last{
-  height: 50vh;
+  height: auto;
 }
 }
 
@@ -1596,13 +1596,13 @@ h1 {
   }
 }
 
-@media (max-width: 435px) {
+@media (max-width: 500px) {
   .new-team-4-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 768px) {
   .new-team-4-grid {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -1828,111 +1828,196 @@ h2 {
   }
 }
 
-
-
-
-/* ---------- Reset ---------- */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.py-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-/* ---------- Loader Overlay ---------- */
-.loader-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+@media (min-width: 576px) {
+  .py-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .py-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .py-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .py-container {
+    max-width: 1140px;
+  }
+}
+
+.py-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+.py-team-1 {
+  margin-bottom: 30px;
+}
+
+.py-team-1 .py-team-img {
+  overflow: hidden;
+}
+
+.py-team-1 .py-team-img img {
+  width: 70%;
+  height: auto;
+  transition: all 0.3s;
+}
+
+.py-team-1:hover .py-team-img img {
+  transform: scale(1.2);
+}
+
+.py-team-1 .py-team-content {
+  padding: 20px;
+}
+
+
+.py-new-team-social a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  padding: 11px 0 10px 0;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+@media (max-width: 992px) {
+  .sponsors-logo img {
+    width: 150px !important;
+  }
+  .py-row{
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* Custom Hexagon Grid Styles */
+.custom-hex-grid {
+  /* Calculate dimensions based on custom properties */
+  --l: calc(100vmin / var(--n, var(--n-cols)));
+  --hl: calc(0.5 * var(--l));
+  --ri: calc(0.5 * sqrt(3) * var(--l));
+  display: grid;
+  place-content: center;
+  /* Create grid rows and columns based on custom properties */
+  grid-template: repeat(var(--n-rows), var(--l)) / repeat(var(--n-cols), var(--ri));
+  grid-gap: var(--hl) 0;
+  margin: 0 auto;
+  /* Optional: set a fixed height if desired */
   height: 100vh;
-  background-color: #fff; /* Full white background */
-  z-index: 9999; /* On top of everything */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-  transition: opacity 0.5s ease;
+  background: none;
 }
 
-/* When fading out, apply zero opacity */
-.loader-overlay.fade-out {
-  opacity: 0;
+/* Hexagon Cell Styles */
+.custom-hex-grid .hex-cell {
+  overflow: hidden;
+  grid-column-end: span 2;
+  margin: calc(-1 * var(--hl)) 0;
+  transform: scale(0.95);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
-/* ---------- Blue Dots Spinner ---------- */
-.loader {
-  position: relative;
-  width: 80px;  /* Overall spinner size */
-  height: 80px;
+/* Image Styles within Hexagon */
+.custom-hex-grid .hex-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s, filter 0.7s;
 }
 
-.loader span {
-  position: absolute;
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: #2196F3; /* Blue color */
-  border-radius: 50%;
-  animation: dotPulse 1.5s infinite ease-in-out;
-}
-
-/* Arrange eight dots in a circle */
-.loader span:nth-child(1) {
-  top: 8px;
-  left: 37px;
-  animation-delay: -0.4s;
-}
-.loader span:nth-child(2) {
-  top: 14px;
-  left: 56px;
-  animation-delay: -0.3s;
-}
-.loader span:nth-child(3) {
-  top: 28px;
-  left: 62px;
-  animation-delay: -0.2s;
-}
-.loader span:nth-child(4) {
-  top: 42px;
-  left: 56px;
-  animation-delay: -0.1s;
-}
-.loader span:nth-child(5) {
-  top: 48px;
-  left: 37px;
-  animation-delay: 0s;
-}
-.loader span:nth-child(6) {
-  top: 42px;
-  left: 18px;
-  animation-delay: 0.1s;
-}
-.loader span:nth-child(7) {
-  top: 28px;
-  left: 12px;
-  animation-delay: 0.2s;
-}
-.loader span:nth-child(8) {
-  top: 14px;
-  left: 18px;
-  animation-delay: 0.3s;
-}
-
-@keyframes dotPulse {
-  0%, 80%, 100% {
-    transform: scale(0);
-  }
-  40% {
-    transform: scale(1);
+@media (max-width:425px){
+  .custom-hex-grid {
+    height: 50vh;
   }
 }
 
-/* ---------- Video Styles ---------- */
-.spinning {
-
-  display: none; /* Hidden until loader is removed */
-  position: relative;
-  z-index: 1;
+@media (min-width:425px) and (max-width:600px){
+  .custom-hex-grid {
+    height: 60vh;
+  }
 }
+
+    /* ----------------------------------------
+       Horizontal Scrolling Gallery (Desktop)
+    ----------------------------------------- */
+    .auto-scroll-gallery {
+      width: 100%;
+      max-width: 1000px;  /* Container max width on desktop */
+      margin: 0 auto;
+      overflow-x: auto;
+      scrollbar-width: none; /* Firefox */
+    }
+    .auto-scroll-gallery::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    .auto-scroll-inner {
+      display: flex;
+      /* For desktop, we assume 6 items each 300px wide with 10px gap */
+      width: 1860px; /* (300+10)*6 = 1860px */
+      animation: scrollToEnd 10s linear forwards;
+    }
+    /* Pause animation on hover */
+    .auto-scroll-gallery:hover .auto-scroll-inner {
+      animation-play-state: paused;
+    }
+    .gallery-item {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 300px;
+      margin-right: 10px;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @keyframes scrollToEnd {
+      from { transform: translateX(0); }
+      /* The translation value is: total inner width - container width = 1860 - 1000 = 860px */
+      to { transform: translateX(-860px); }
+    }
+
+    /* ----------------------------------------
+       Mobile Adjustments (max-width: 768px)
+    ----------------------------------------- */
+    @media (max-width: 768px) {
+      .auto-scroll-gallery {
+        max-width: 100%;  /* Use full width on mobile */
+      }
+      .gallery-item {
+        width: 150px;
+        height: 150px;
+        margin-right: 8px;
+      }
+      .auto-scroll-inner {
+        /* Calculate inner width: (150px + 8px) * 6 */
+        width: calc((150px + 8px) * 6);
+        animation: scrollToEndMobile 10s linear forwards;
+      }
+      @keyframes scrollToEndMobile {
+        from { transform: translateX(0); }
+        /* Instead of using 100vw, we use 100% (container width) to avoid overflow */
+        to { transform: translateX(-calc(((150px + 8px) * 6) - 100%)); }
+      }
+    }
+

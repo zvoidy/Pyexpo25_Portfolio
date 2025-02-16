@@ -3,7 +3,7 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("min");
 const seconds = document.getElementById("sec");
 
-const timerSet = new Date(2025, 1, 17, 0, 0, 0);
+const timerSet = new Date(2025, 1, 17, 10, 0, 0);
 
 function updateCountDown(){
   const currentTime = new Date();
@@ -27,9 +27,9 @@ function updateVideoSource() {
   var source = video.querySelector('source');
   // Adjust the source as needed for mobile vs desktop
   if (window.innerWidth < 768) {
-    source.src = "assets/pyexpopcbanner.mp4"; // Mobile version
+    source.src = "assets/pyexpopcbanner.webm"; // Mobile version
   } else {
-    source.src = "assets/pyexpopcbanner.mp4"; // Desktop version
+    source.src = "assets/pyexpopcbanner.webm"; // Desktop version
   }
   video.load();
 }
