@@ -6,6 +6,19 @@
     --dark: #404A3D;
 }
 
+body{
+  background-color: #000;
+}
+img {
+  user-select: none !important; /* Prevents text/image selection */
+  pointer-events: auto !important; /* Ensures images are clickable if needed */
+  -webkit-user-drag: none !important; /* Disables dragging in WebKit browsers */
+  -moz-user-select: none !important; /* Firefox-specific */
+  -webkit-user-select: none !important; /* WebKit-specific */
+  -ms-user-select: none !important; /* Internet Explorer/Edge */
+}
+
+
 .back-to-top {
     position: fixed;
     display: none;

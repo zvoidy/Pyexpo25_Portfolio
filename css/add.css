@@ -118,8 +118,24 @@
   }
 }
 
+#fireworksCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;  /* Allows clicking through the canvas */
+  z-index: 9999;  /* Ensures it's above everything */
+}
+
+
 @media (min-width:1300px) and (min-height:600px) {
   .mainbanner {
+    vertical-align: middle;
+    height: 64vh;
+    width: 100vw;
+  }
+  .sidebanner {
     vertical-align: middle;
     height: 64vh;
     width: 100vw;
@@ -988,6 +1004,14 @@ z-index: 1;
   /* margin-top: 0px; */
   background-color: black;
 }
+.sidebanner {
+  width: 100%;
+  height: 30%;
+  object-fit: contain; 
+  /* Ensures proper aspect ratio */
+  /* margin-top: 0px; */
+  background-color: black;
+}
 /* Responsive controls for captions (if enabled) */
 @media (max-width: 992px) {
   .carousel-caption {
@@ -1008,6 +1032,9 @@ z-index: 1;
   }
 
   .mainbanner{
+    height: 20vh;
+  }
+  .sidebanner{
     height: 20vh;
   }
 }

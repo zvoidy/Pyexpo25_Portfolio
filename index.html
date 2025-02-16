@@ -301,6 +301,7 @@
     </div>
   </div>
 
+
   <!-- Topbar -->
   <div class="container-fluid px-0" style="background-color: #100f45;">
     <div class="row g-0 d-none d-lg-flex">
@@ -412,10 +413,12 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <video class="mainbanner spinning" autoplay muted playsinline>
+              <!-- <video class="mainbanner spinning" autoplay muted playsinline>
                 <source src="assets/pyexpopcbanner.webm" type="video/webm">
                 Your browser does not support the video tag.
-              </video>
+              </video> -->
+              <img class="mainbanner" style="object-fit: fit;" src="assets/pyepopcbannerimage.webp" alt="PYEXPO" title="PYEXPO25">
+
             </div>
             <div class="carousel-item">
               <img class="mainbanner" style="object-fit: fit;" src="assets/pyexpo YT BANNER cropped.webp" alt="PYEXPO" title="PYEXPO25">
@@ -454,6 +457,8 @@
           <span id="secondLabel" style="color: #f82249 !important;">Seconds</span>
         </div>
       </div>
+      <p id="countdown-message" style="display: none; text-align: center; font-size: 24px; font-weight: bold; color: white;"></p>
+
       <h2 class="home-h2" title="PYEXPO">Countdown for PyExpo week</h2>
     </section>
   </main>
@@ -3118,6 +3123,7 @@ createCalendar("calendar-mar", 2, 2025, eventsMar);
           }
       });
   </script>
+  <canvas id="fireworksCanvas"></canvas>
 
 </body>
 
