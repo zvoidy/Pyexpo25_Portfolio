@@ -127,7 +127,7 @@
 /* Mobile adjustments */
 @media (max-width: 625px) {
   #countdown-message {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
   }
 }
