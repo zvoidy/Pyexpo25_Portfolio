@@ -27,6 +27,14 @@ img {
     z-index: 99;
 }
 
+.announc-btn {
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 100px;
+  z-index: 99;
+}
+
 .fw-bold {
     font-weight: 700 !important;
 }

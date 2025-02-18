@@ -266,6 +266,49 @@
 }
 
 
+.floating-icon {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #8B0000; /* Crimson background */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.floating-icon:hover {
+  transform: scale(1.1);
+}
+
+#notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #fff;
+  color: #8B0000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px solid #8B0000;
+}
+
+
+
 </style>
 
 <body>
@@ -332,7 +375,6 @@
           <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#crew">Pycrew</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="contact.html">Announcements</a></li>
           <li class="login"><a href="https://portal.pyexpo.co">Login</a></li>
         </ul>
       </nav>
@@ -366,6 +408,13 @@
       });
     </script>
   </nav>
+  
+  <a href="contact.html" class="btn btn-lg btn-primary btn-lg-square rounded-circle announc-btn">
+    <i class="bi bi-bell">
+      <span id="notification-count">1</span>
+    </i>
+  </a>
+  
 
   <!-- Main Content -->
   <main>
