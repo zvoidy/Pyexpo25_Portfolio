@@ -35,6 +35,13 @@ img {
   z-index: 99;
 }
 
+@media (max-width: 768px) {
+  .announc-btn{
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .fw-bold {
     font-weight: 700 !important;
 }
