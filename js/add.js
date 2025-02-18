@@ -27,7 +27,7 @@ function updateCountDown() {
     }, 500); // Slight delay before showing text
 
     if (!fireworksStarted) {
-      startFireworks();
+      stopFireworks();
       fireworksStarted = true;
     }
     return;
@@ -327,3 +327,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+  const sheetId = "1BhFC_q__hk_1wy0vSku1Y7ySNpen3mCEknUva6waEZw"; // Your Google Sheet ID
+  const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv`;
+
+  async function fetchData() {
+    try {
+      const response = await fetch(csvUrl);
+      const csvData = await response.text();
+      const rows = csvData.split("\n").map(row => row.split(","));
+      populateTable(rows);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+
+  function populateTable(rows) {
+    const tableBody = document.getElementById("announcement-table").querySelector("tbody");
+    tableBody.innerHTML = "";
+
+    // Skip the header row and add rows to the table
+    for (let i = 1; i < rows.length; i++) {
+      const row = document.createElement("tr");
+      rows[i].forEach(cell => {
+        const cellElement = document.createElement("td");
+        cellElement.textContent = cell.trim(); // Ensure no extra spaces
+        row.appendChild(cellElement);
+      });
+      tableBody.appendChild(row);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", fetchData);
+
