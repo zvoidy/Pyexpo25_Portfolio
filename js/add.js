@@ -1,9 +1,8 @@
-const days = document.getElementById("days");
 const hours = document.getElementById("hours");
 const minutes = document.getElementById("min");
 const seconds = document.getElementById("sec");
 
-const timerSet = new Date(2025, 1, 17, 10, 0, 0);
+const timerSet = new Date(2025, 1, 22, 15, 30, 0); // February 22, 2025, at 4:30 PM
 let fireworksStarted = false;
 let fireworksInterval;
 let fireworksAnimationRunning = true;
@@ -14,7 +13,7 @@ function updateCountDown() {
   const diff = timerSet - currentTime;
   
   if (diff <= 0) {
-    days.innerHTML = "00";
+    // Timer has ended
     hours.innerHTML = "00";
     minutes.innerHTML = "00";
     seconds.innerHTML = "00";
@@ -22,33 +21,31 @@ function updateCountDown() {
     document.querySelector(".timer").style.display = "none"; // Hide the timer
     
     setTimeout(() => {
-      countdownMessage.innerHTML = "🎉 Welcome to PyExpo 2025 – Let the Grand Event Begin! 🎊";
+      countdownMessage.innerHTML = "Hackathon2Expo'25 has officially ended!";
       countdownMessage.style.display = "block"; // Show the message
     }, 500); // Slight delay before showing text
 
     if (!fireworksStarted) {
-      stopFireworks();
+      stopFireworks(); // Call your stop fireworks function here
       fireworksStarted = true;
     }
     return;
   }
 
-  const d = Math.floor(diff / 1000 / 60 / 60 / 24);
-  const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+  // Calculate hours, minutes, and seconds
+  const h = Math.floor(diff / 1000 / 60 / 60);
   const m = Math.floor(diff / 1000 / 60) % 60;
   const s = Math.floor(diff / 1000) % 60;
 
-  days.innerHTML = d;
+  // Update the timer display
   hours.innerHTML = h < 10 ? "0" + h : h;
   minutes.innerHTML = m < 10 ? "0" + m : m;
   seconds.innerHTML = s < 10 ? "0" + s : s;
 }
 
+// Update the timer every second
 setInterval(updateCountDown, 1000);
 updateCountDown();
-
-
-
 
 const canvas = document.getElementById("fireworksCanvas");
 const ctx = canvas.getContext("2d");
