@@ -2,7 +2,7 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("min");
 const seconds = document.getElementById("sec");
 
-const timerSet = new Date(2025, 1, 22, 15, 30, 0); // February 22, 2025, at 4:30 PM
+const timerSet = new Date(2025, 1, 22, 14, 30, 0); // February 22, 2025, at 4:30 PM
 let fireworksStarted = false;
 let fireworksInterval;
 let fireworksAnimationRunning = true;
