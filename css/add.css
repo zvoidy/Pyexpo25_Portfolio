@@ -1101,7 +1101,7 @@ z-index: 1;
   }
 
   #home{
-    height: 100vh;
+    height: auto;
   }
 
   .mainbanner{
