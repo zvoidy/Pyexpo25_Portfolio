@@ -21,7 +21,7 @@ function updateCountDown() {
     document.querySelector(".timer").style.display = "none"; // Hide the timer
     
     setTimeout(() => {
-      countdownMessage.innerHTML = "Hackathon2Expo'25 has officially ended!";
+      countdownMessage.innerHTML = "Hackathon2Expo has officially ended!";
       countdownMessage.style.display = "block"; // Show the message
     }, 500); // Slight delay before showing text
 
