@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PYEXPO'25 - Empowering students with innovation and technical growth.</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="keywords" content="PYEXPO, hackathon, KGISL Institute of Technology, IPS Tech Community, first-year students, innovation, collaboration, technical growth, hackathon event, student empowerment, coding competition, technology, teamwork, technical excellence, industry, embedded, team, crew, Hackathon in Coimbatore">
+  <meta name="description" content="PYEXPO is an exclusive hackathon event hosted at KGISL Institute of Technology, organized by the IPS Tech Community. Designed specifically for first-year students, this event offers a unique opportunity to dive into the exciting world of hackathons, empowering students with innovation, teamwork, and technical growth.">
+  
+  <!-- Canonical URL & Alternate -->
+  <link rel="canonical" href="https://pyexpo.co">
+  <link rel="alternate" hreflang="en" href="https://pyexpo.co/">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="PYEXPO'25 - Empowering students with innovation and technical growth.">
+  <meta property="og:description" content="PYEXPO is an exclusive hackathon event hosted at KGISL Institute of Technology, organized by the IPS Tech Community. Dive into hackathons and empower your innovation, teamwork, and technical growth.">
+  <meta property="og:image" content="https://pyexpo.co/SEO_IMAGE.webp">
+  <meta property="og:url" content="https://pyexpo.co">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="PYEXPO">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PYEXPO'25 - Empowering students with innovation and technical growth.">
+  <meta name="twitter:description" content="PYEXPO is an exclusive hackathon event at KGISL Institute of Technology, organized by the IPS Tech Community. Dive into hackathons and empower your innovation, teamwork, and technical growth.">
+  <meta name="twitter:image" content="https://pyexpo.co/SEO_IMAGE.webp">
+  
+  <!-- Additional Meta -->
+  <meta name="web_author" content="PYEXPO">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Favicon -->
+  <link href="https://pyexpo.netlify.app/assets/img/background/PyExpoLogo.png" rel="icon">
+  
+  <!-- Resource Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Lugrasimo&family=Nova+Cut&family=Orbitron:wght@400..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Icon Font Stylesheets -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Libraries CSS -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap & Template CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/add.css" rel="stylesheet">
+  
+  <!-- Defer External Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax-video.min.js" defer></script>
+</head>
+<style>
+  /* ---------- Reset ---------- */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .preloader {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  transition: opacity 0.5s ease-out;
+}
+
+
+.preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sk-circle {
+  margin: 0px auto;
+  width: 40px;
+  height: 40px;
+  top: 45%;
+  position: relative;
+}
+
+.sk-circle .sk-child {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sk-circle .sk-child:before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 15%;
+  height: 15%;
+  background-color: #FF0044;
+  border-radius: 100%;
+  -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+  animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+}
+
+.sk-circle .sk-circle2 {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.sk-circle .sk-circle3 {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.sk-circle .sk-circle4 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.sk-circle .sk-circle5 {
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.sk-circle .sk-circle6 {
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.sk-circle .sk-circle7 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sk-circle .sk-circle8 {
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+
+.sk-circle .sk-circle9 {
+  -webkit-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+
+.sk-circle .sk-circle10 {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.sk-circle .sk-circle11 {
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.sk-circle .sk-circle12 {
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+
+.sk-circle .sk-circle2:before {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.sk-circle .sk-circle3:before {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.sk-circle .sk-circle4:before {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.sk-circle .sk-circle5:before {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.sk-circle .sk-circle6:before {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.sk-circle .sk-circle7:before {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.sk-circle .sk-circle8:before {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.sk-circle .sk-circle9:before {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.sk-circle .sk-circle10:before {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.sk-circle .sk-circle11:before {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.sk-circle .sk-circle12:before {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes sk-circleBounceDelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes sk-circleBounceDelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #8B0000; /* Crimson border */
+  }
+
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #8B0000; /* Crimson background */
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid #5c0000; /* Darker crimson border */
+  }
+
+  td {
+    border-bottom: 1px solid #ddd; /* Light border for table cells */
+  }
+
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+  }
+
+  #announcements {
+    scroll-margin-top: 15px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #announcements {
+      scroll-margin-top: 55px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #announcements {
+      scroll-margin-top: 55px;
+    }
+  }
+
+  #ann-message {
+    display: none;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: #f82249;
+    padding: 20px;
+    animation: popIn 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  @media (max-width: 625px) {
+    #ann-message {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+</style>
+
+<body>
+
+
+  <div class="preloader" id="loaderOverlay">
+    <div class="sk-circle">
+      <div class="sk-circle1 sk-child"></div>
+      <div class="sk-circle2 sk-child"></div>
+      <div class="sk-circle3 sk-child"></div>
+      <div class="sk-circle4 sk-child"></div>
+      <div class="sk-circle5 sk-child"></div>
+      <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+      <div class="sk-circle8 sk-child"></div>
+      <div class="sk-circle9 sk-child"></div>
+      <div class="sk-circle10 sk-child"></div>
+      <div class="sk-circle11 sk-child"></div>
+      <div class="sk-circle12 sk-child"></div>
+    </div>
+  </div>
+
+  <!-- Topbar -->
+  <div class="container-fluid px-0" style="background-color: #100f45;">
+    <div class="row g-0 d-none d-lg-flex">
+      <!-- Left Section: Social Media -->
+      <div class="col-lg-6 ps-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center text-light">
+          <span title="PYEXPO25">Follow IPS Tech Community:</span>
+          <a class="btn btn-link text-light" href="https://www.linkedin.com/in/ips-tech-community-9aa024297/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a class="btn btn-link text-light" href="https://www.instagram.com/ips_tech.community?igsh=MXA4dWJhaXFyaHljcg==">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Right Section: Slogan -->
+      <div class="col-lg-6 pe-5 text-end">
+        <div class="h-100 text-light d-inline-flex align-items-center">
+          <span title="PYEXPO25">Genius Innovation Creates a Lasting Legacy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top px-4 px-lg-5" style="background-color: #101522;">
+    <div class="container">
+      <button id="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+      <div id="logo" class="pull-left">
+        <a href="#intro" class="scrollto">
+          <img src="assets/PyExpoLogo.webp" alt="PYEXPO LOGO" title="PYEXPO25">
+        </a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html#" style="color: #fff;">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="speaker.html">Speakers</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#domains">Domains</a></li>
+          <li><a href="index.html#sponsors">Sponsors</a></li>
+          <li><a href="index.html#crew">Pycrew</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li class="login"><a href="https://portal.pyexpo.co">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-menu a");
+        const observerOptions = { root: null, threshold: 0.1 };
+        const observerCallback = (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((link) => link.parentElement.classList.remove("menu-active"));
+              const activeLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
+              if (activeLink) activeLink.parentElement.classList.add("menu-active");
+            }
+          });
+        };
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        sections.forEach((section) => observer.observe(section));
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+        const navMenuContainer = document.getElementById("nav-menu-container");
+        if (mobileNavToggle && navMenuContainer) {
+          mobileNavToggle.addEventListener("click", () => {
+            navMenuContainer.classList.toggle("mobile-active");
+            mobileNavToggle.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <script>
+        // Replace video with image for mobile devices
+        window.addEventListener("load", function () {
+          if (window.innerWidth < 768) {
+            setTimeout(function () {
+              const carouselItems = document.querySelectorAll("#header-carousel .carousel-item");
+              carouselItems.forEach(function (item) {
+                const videoElem = item.querySelector("video.mainbanner");
+                if (videoElem) {
+                  const imgElem = document.createElement("img");
+                  imgElem.className = "mainbanner";
+                  imgElem.style.objectFit = "contain";
+                  imgElem.src = "assets/pyepopcbannerimage.webp"; // Mobile image version
+                  imgElem.alt = "PYEXPO";
+                  item.replaceChild(imgElem, videoElem);
+                }
+              });
+            }, 500);
+          }
+        });
+      </script>
+      <!-- Carousel -->
+      <div class="container-fluid h-30 px-0">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="mainbanner" style="object-fit: fit;" src="assets/ann-banner.webp" alt="PYEXPO" title="PYEXPO25">
+              <!-- <img class="mainbanner" style="object-fit: fit;" src="assets/pyepopcbannerimage.webp" alt="PYEXPO" title="PYEXPO25"> -->
+            </div>
+
+        </div>
+      </div>
+      <!-- Mobile Banner -->
+      <div class="mobile-banner">
+        <img src="assets/newmobbanner.webp" alt="PYEXPO25 Mobile Banner">
+        <div class="banner-text">
+          <h1 class="section-header-new" style="font-size: 0.6rem;" title="PYEXPO25">
+            GENIUS INNOVATION CREATES A LASTING LEGACY
+          </h1>
+        </div>
+      </div>
+      <!-- Countdown Timer -->
+      <div class="timer">
+        <div class="time">
+          <h1 id="days">--</h1>
+          <span id="daysLabel">Days</span>
+        </div>
+        <div class="time-btn">:</div>
+        <div class="time">
+          <h1 id="hours">--</h1>
+          <span id="hoursLabel">Hours</span>
+        </div>
+        <div class="time-btn">:</div>
+        <div class="time">
+          <h1 id="min">--</h1>
+          <span id="minutesLabel">Minutes</span>
+        </div>
+        <div class="time-btn">:</div>
+        <div class="time">
+          <h1 id="sec" style="color: #f82249 !important;">--</h1>
+          <span id="secondLabel" style="color: #f82249 !important;">Seconds</span>
+        </div>
+      </div>
+      <p id="ann-message"></p>
+      <h5 style="text-align: center; font-family: 'Orbitron', sans-serif;">The Top 25 selected team for the grand finale of PYEXPO'25</h5>
+
+      <!-- <h2 class="home-h2" title="PYEXPO">Results will be announced soon!</h2> -->
+    </section>
+  </main>
+
+  <!-- <br> -->
+  <hr class="style2">
+  <section id="announcements">
+    <div class="section-title-header text-center">
+      <!-- <h2 id="sponsor-heading" class="section-title wow fadeInUp" data-wow-delay="0.2s" style="font-family: 'Orbitron', sans-serif;padding-top: 10vh; padding-bottom: 2vh;">
+        Idea2Expo Final Results!
+      </h2> -->
+    </div>
+    <div class="table-container">
+      <table id="announcement-table">
+        <thead>
+          <tr>
+            <th>Team ID</th>
+            <th>Team Name</th>
+            <th>Leader Name</th>
+            <th>Member 1</th>
+            <th>Member 2</th>
+            <th>Member 3</th>
+            <th>Member 4</th>
+            <th>Member 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div> 
+  </section>
+
+ 
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <p class="section-title text-start pe-3"
+                        style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color:white;">
+                        Location
+                    </p>
+                    <p class="mb-2" style="color: white;"><i class="fa fa-map-marker-alt me-3"
+                            style="color: white;"></i>KGISL Institute Of Technology</p>
+                    <!-- <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p> -->
+                    <!-- <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <p class="section-title text-start pe-3"
+                        style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color:white;">
+                        Quick Links
+                    </p>
+                    <a class="btn btn-link" href="#about">About Us</a>
+                    <a class="btn btn-link" href="tel:+919025861567">Contact Us</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <p class="section-title text-start pe-3"
+                        style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color:white;">
+                        Student Coordinator
+                    </p>
+                    <p class="mb-2" style="color: white;"><i class="fa fa-phone-alt me-3" style="color: white;"></i><a
+                            href="tel:+919025861567" style="color: white;">+91 90258 61567</a></p>
+                            <p class="mb-2" style="color: white;"><i class="fa fa-phone-alt me-3" style="color: white;"></i><a
+                              href="tel:+918248564527" style="color: white;">+91 82485 64527</a></p>
+                              <p class="mb-2" style="color: white;"><i class="fa fa-phone-alt me-3" style="color: white;"></i><a
+                                href="tel:+916381788288" style="color: white;">+91 63817 88288</a></p>
+                    <!-- <p class="mb-1">Monday - Friday</p>
+                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
+                    <p class="mb-1">Saturday</p>
+                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>  -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <p class="section-title text-start pe-3"
+                        style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color:white;">
+                        For Queries
+                    </p>
+                    <p style="color: white;">Feel free to mail us!</p>
+                    <div class="position-relative w-100">
+                        <p class="mb-2" style="color: white;"><i class="fa fa-envelope me-3"
+                                style="color: white;"></i><a style="color: white;"
+                                href="mailto:pyexpo@kgkite.ac.in?subject=Help%20Fort%20Pyexpo">pyexpo@kgkite.ac.in</a>
+                        </p>
+                        <!-- <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copy-bg text-body copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-semi-bold" href="#" style="color: white;">PYEXPO'25</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Developed with ❤️ By <a class="fw-semi-bold" href="https://www.linkedin.com/in/ips-tech-community-9aa024297/"
+                        style="color: white;">IPS TECH
+                        COMMUNITY</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- add js -->
+    <script defer src="js/add.js"></script>
+
+    <!-- Script for my gallery 1 -->
+    <script>
+        const inputs = document.querySelectorAll(".gallery input");
+        const gallery = document.querySelector(".gallery");
+
+        function updateGalleryPosition() {
+            const isMobile = window.innerWidth <= 425; // Check if it's a mobile screen
+            const isChecked = [...inputs].some(input => input.checked);
+
+            if (isChecked) {
+                gallery.style.marginTop = "0"; // Bring gallery down when clicked
+            } else {
+                gallery.style.marginTop = isMobile ? "-15vh" : "-25vh"; // Adjust for mobile vs. desktop
+            }
+        }
+
+        // Attach event listeners to each input
+        inputs.forEach(input => {
+            input.addEventListener("change", updateGalleryPosition);
+        });
+
+        // Adjust on window resize (for responsiveness)
+        window.addEventListener("resize", updateGalleryPosition);
+
+        // Run initially to set correct position
+        updateGalleryPosition();
+    </script>
+
+  <!-- For navbar -->
+
+  <script>
+      window.addEventListener("scroll", function () {
+          const navbar = document.querySelector(".navbar");
+          if (window.scrollY > 50) {
+              navbar.classList.add("navbar-scrolled"); // Add background change on scroll
+          } else {
+              navbar.classList.remove("navbar-scrolled"); // Reset background when scrolled up
+          }
+      });
+  </script>
+  <canvas id="fireworksCanvas"></canvas>
+
+  <script>
+    const announcementMessage = document.getElementById("ann-message");
+    function updateann() {
+      announcementMessage.innerHTML = "🎉Hackathon Results🎉";
+      announcementMessage.style.display = "block";  
+    }
+    updateann()
+  </script>
+
+</body>
+
+</html>
