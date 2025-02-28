@@ -3,151 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Persistent Countdown Timer</title>
+    <title>Background Video with Button</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             overflow: hidden;
-            position: relative;
+            font-family: Arial, sans-serif;
         }
-        button {
-            background-color: #007BFF;
-            color: white;
+
+        /* Background Video */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            display: none; /* Hide the video initially */
+        }
+
+        /* Button Container */
+        .button-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Button Styling */
+        #play-button {
             padding: 15px 30px;
             font-size: 18px;
+            color: white;
+            background-color: #007bff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        button:hover {
+
+        #play-button:hover {
             background-color: #0056b3;
-        }
-        #countdown {
-            font-size: 50px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: red;
-            opacity: 0.8;
-            border-radius: 50%;
-            animation: popper 1.5s linear infinite;
-        }
-        @keyframes popper {
-            0% { transform: translateY(0) rotate(0); opacity: 1; }
-            100% { transform: translateY(-300px) rotate(720deg); opacity: 0; }
-        }
-        @keyframes shake {
-            0% { transform: translate(2px, 2px) rotate(0deg); }
-            20% { transform: translate(-2px, -2px) rotate(-2deg); }
-            40% { transform: translate(2px, -2px) rotate(2deg); }
-            60% { transform: translate(-2px, 2px) rotate(0deg); }
-            80% { transform: translate(2px, 2px) rotate(-2deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
-        }
-        .shake {
-            animation: shake 0.5s infinite;
-            color: red;
         }
     </style>
 </head>
 <body>
+    <!-- Background Video -->
+    <video id="background-video" muted>
+        <source src="assets/Pyexpo24.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
 
-    <button id="startButton">Start Countdown</button>
-    <div id="countdown"></div>
+    <!-- Button -->
+    <div class="button-container">
+        <button id="play-button">Start Experience</button>
+    </div>
 
     <script>
-        const countdownDiv = document.getElementById("countdown");
-        const startButton = document.getElementById("startButton");
-
-        function startCountdown() {
-            startButton.style.display = "none"; // Hide button
-            let preCountdown = 3;
-
-            let preTimer = setInterval(() => {
-                countdownDiv.textContent = preCountdown;
-                preCountdown--;
-
-                if (preCountdown < 0) {
-                    clearInterval(preTimer);
-                    localStorage.setItem("countdownStart", Date.now());
-                    startMainCountdown();
-                }
-            }, 1000);
-        }
-
-        function startMainCountdown() {
-            const countdownStart = localStorage.getItem("countdownStart");
-
-            if (!countdownStart) return;
-
-            let endTime = parseInt(countdownStart) + 30 * 1000; // 30 hours in milliseconds
-
-            let timer = setInterval(() => {
-                let now = Date.now();
-                let remainingTime = Math.max(0, endTime - now);
-
-                if (remainingTime === 0) {
-                    clearInterval(timer);
-                    countdownDiv.textContent = "Time’s Up!";
-                    countdownDiv.classList.add("shake"); // Apply shake effect
-                    localStorage.removeItem("countdownStart");
-                    return;
-                }
-
-                let hours = Math.floor(remainingTime / (1000 * 60 * 60));
-                let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-                let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-                countdownDiv.textContent = 
-                    String(hours).padStart(2, '0') + ":" +
-                    String(minutes).padStart(2, '0') + ":" +
-                    String(seconds).padStart(2, '0');
-
-                triggerConfetti(); // Start confetti animation
-            }, 1000);
-        }
-
-        function triggerConfetti() {
-            for (let i = 0; i < 5; i++) { // Fewer confetti per second to avoid too much load
-                let popper = document.createElement("div");
-                popper.classList.add("confetti");
-                popper.style.backgroundColor = getRandomColor();
-                popper.style.left = Math.random() * 100 + "vw";
-                popper.style.top = Math.random() * 100 + "vh";
-                popper.style.animationDuration = Math.random() * 2 + 1 + "s";
-                document.body.appendChild(popper);
-
-                setTimeout(() => {
-                    popper.remove();
-                }, 2000);
+        // Prevent unintentional reload
+        window.addEventListener('beforeunload', function (e) {
+            const video = document.getElementById('background-video');
+            if (!video.paused) { // Only trigger if the video is playing
+                e.preventDefault();
+                e.returnValue = '';
             }
-        }
+        });
 
-        function getRandomColor() {
-            const colors = ["#ff0a54", "#ff477e", "#ff7096", "#ff85a1", "#ffa5b1", "#ffc2d1"];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
+        // Button click event
+        document.getElementById('play-button').addEventListener('click', function () {
+            const video = document.getElementById('background-video');
+            const button = document.getElementById('play-button');
 
-        // Check if countdown was already started
-        if (localStorage.getItem("countdownStart")) {
-            startButton.style.display = "none";
-            startMainCountdown();
-        } else {
-            startButton.addEventListener("click", startCountdown);
-        }
+            // Show and play the video
+            video.style.display = 'block';
+            video.play();
+
+            // Hide the button
+            button.style.display = 'none';
+        });
+
+        // Pause video at the last frame after it ends
+        const video = document.getElementById('background-video');
+        video.addEventListener('ended', function () {
+            video.pause(); // Pause the video at the last frame
+        });
     </script>
-
 </body>
 </html>
