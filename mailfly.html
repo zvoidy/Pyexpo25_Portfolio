@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video with Button</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+
+        /* Background Video */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            display: none;
+        }
+
+        /* Content Before Video Starts */
+        .intro-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        /* Center the entire container */
+        .intro-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px; /* Space between elements */
+        }
+    
+        /* Email Container */
+        .email-container {
+            width: 600px;
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+    
+        /* Email Header */
+        .email-header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        .profile-icon {
+            background: #007bff;
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    
+        .email-info span {
+            font-size: 12px;
+            color: gray;
+        }
+    
+        /* Email Content */
+        .email-content {
+            margin-top: 10px;
+        }
+    
+        .email-subject {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    
+        .email-content p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 5px 0;
+        }
+    
+        /* Send Certificate Button */
+        #play-button {
+            margin-top: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        #play-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video id="background-video">
+        <source src="assets/mailanimation.mp4" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="intro-container" id="intro-container">
+        <!-- Email UI -->
+        <div class="email-container">
+            <div class="email-header">
+                <div class="profile-icon">📧</div>
+                <div class="email-info">
+                    <strong>PYEXPO Team</strong> <br>
+                    <span>&lt;primemover@kgkite.ac.in&gt;</span>
+                </div>
+            </div>
+            
+            <div class="email-content">
+                <p class="email-subject"><strong>Subject:</strong> 🎉 Congratulations! Your PYEXPO'25 Participation Certificate is Ready</p>
+                <p><strong>Dear Participant,</strong></p>
+                <p>We are happy to inform you that you have successfully received your <b>Participation Certificate</b> for PYEXPO'25.</p>
+                <br>
+                <p>Best regards,</p>
+                <p><strong>PYEXPO Team</strong></p>
+            </div>
+        </div>
+    
+        <!-- Send Certificate Button -->
+        <button id="play-button">Send E-Certificates</button>
+    </div>
+
+    <script>
+        // Prevent unintentional reload
+        window.addEventListener('beforeunload', function (e) {
+            const video = document.getElementById('background-video');
+            if (!video.paused) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+    
+        // Button click event
+        document.getElementById('play-button').addEventListener('click', function () {
+            const video = document.getElementById('background-video');
+            const introContainer = document.getElementById('intro-container');
+    
+            // Show and play the video with sound
+            video.style.display = 'block';
+            video.muted = false;
+            video.play();
+            
+            // Remove the background color after video starts
+            document.body.style.background = 'none';
+            
+            // Hide the intro section
+            introContainer.style.display = 'none';
+    
+            // Pause the video 1 second before it ends
+            video.addEventListener('timeupdate', function () {
+                if (video.duration - video.currentTime <= 1) {
+                    video.pause();
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
